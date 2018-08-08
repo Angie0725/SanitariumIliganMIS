@@ -29,10 +29,12 @@ namespace LogIn
                 + txtlastname.Text + "','"
                 + txtaddress.Text + "','"
                 + txttelnumber.Text + "','"
-                + dateTimePicker1.Text + "','" //asdasdasdasdasdasd
+                + dateTimePicker1.Text + "','" // format to MySQL Datetime
                 + comboBox1.Text  + "','"
                 + txtNIN.Text + 
             "')");
+
+            DB.Query("INSERT INTO workexperience VALUES('')");
         }
     }
 }
