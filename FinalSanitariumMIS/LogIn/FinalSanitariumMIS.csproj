@@ -120,12 +120,6 @@
     <Compile Include="StaffRegistration.Designer.cs">
       <DependentUpon>StaffRegistration.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffRequisitions.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StaffRequisitions.Designer.cs">
-      <DependentUpon>StaffRequisitions.cs</DependentUpon>
-    </Compile>
     <Compile Include="StaffWardAllocation.cs">
       <SubType>Form</SubType>
     </Compile>

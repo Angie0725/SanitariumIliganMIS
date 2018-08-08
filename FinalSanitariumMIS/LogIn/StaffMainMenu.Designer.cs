@@ -79,7 +79,7 @@
             this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(122, 135);
+            this.button1.Location = new System.Drawing.Point(105, 137);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 121);
             this.button1.TabIndex = 40;
@@ -95,7 +95,7 @@
             this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(276, 135);
+            this.button2.Location = new System.Drawing.Point(259, 137);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 121);
             this.button2.TabIndex = 41;
@@ -111,7 +111,7 @@
             this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(430, 135);
+            this.button3.Location = new System.Drawing.Point(413, 137);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(148, 121);
             this.button3.TabIndex = 42;
