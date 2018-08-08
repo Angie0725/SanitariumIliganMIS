@@ -12,9 +12,13 @@ namespace LogIn
 {
     public partial class HRMainMenu : Form
     {
+        private FinalSanitariumMIS.Helpers.DatabaseHelper DB;
+        
         public HRMainMenu()
         {
             InitializeComponent();
+
+            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Rheamaesabas12", "BILL-LAWRENCE", "sanita");
         }
     }
 }
