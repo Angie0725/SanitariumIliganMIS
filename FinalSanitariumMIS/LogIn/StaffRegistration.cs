@@ -113,5 +113,23 @@ namespace LogIn
 
             emptyExperienceInputFields();
         }
+
+        private void btn_clear_exit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(null, "Close the Staff Registration Form","Confirm Action", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                emptyAllInputFields();
+                Dispose();
+            }
+        }
+
+        private void StaffRegistration_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show(null, "Close the Staff Registration Form", "Confirm Action", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                emptyAllInputFields();
+                e.Cancel = true;
+            }
+        }
     }
 }

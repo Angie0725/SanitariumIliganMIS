@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_register = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.txtQualification = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_clear_exit = new System.Windows.Forms.Button();
             this.cbEmploymentType = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -180,14 +180,14 @@
             this.dgvQualifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQualifications.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.qualifications});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQualifications.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQualifications.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvQualifications.Location = new System.Drawing.Point(37, 302);
             this.dgvQualifications.Margin = new System.Windows.Forms.Padding(4);
             this.dgvQualifications.MultiSelect = false;
@@ -405,18 +405,19 @@
             this.label13.TabIndex = 24;
             this.label13.Text = "NUMBER OF HOURS WORKED:";
             // 
-            // button2
+            // btn_clear_exit
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(932, 684);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(365, 70);
-            this.button2.TabIndex = 42;
-            this.button2.Text = "CLEAR AND EXIT";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_clear_exit.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_clear_exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_clear_exit.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear_exit.Location = new System.Drawing.Point(932, 684);
+            this.btn_clear_exit.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_clear_exit.Name = "btn_clear_exit";
+            this.btn_clear_exit.Size = new System.Drawing.Size(365, 70);
+            this.btn_clear_exit.TabIndex = 42;
+            this.btn_clear_exit.Text = "CLEAR AND EXIT";
+            this.btn_clear_exit.UseVisualStyleBackColor = false;
+            this.btn_clear_exit.Click += new System.EventHandler(this.btn_clear_exit_Click);
             // 
             // cbEmploymentType
             // 
@@ -732,13 +733,14 @@
             this.ClientSize = new System.Drawing.Size(1327, 768);
             this.Controls.Add(this.btn_register);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_clear_exit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StaffRegistration";
             this.Text = "STAFF REGISTRATION";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StaffRegistration_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkExperience)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQualifications)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -777,7 +779,7 @@
         private System.Windows.Forms.TextBox txtQualification;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_clear_exit;
         private System.Windows.Forms.ComboBox cbEmploymentType;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
