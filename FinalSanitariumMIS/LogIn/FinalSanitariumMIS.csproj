@@ -79,6 +79,12 @@
     <Compile Include="MedDirMainMenu.Designer.cs">
       <DependentUpon>MedDirMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MedicationRequisitions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicationRequisitions.Designer.cs">
+      <DependentUpon>MedicationRequisitions.cs</DependentUpon>
+    </Compile>
     <Compile Include="PositionMaintenance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,12 +129,6 @@
     <Compile Include="StaffRegistration.Designer.cs">
       <DependentUpon>StaffRegistration.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffRequisitions.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StaffRequisitions.Designer.cs">
-      <DependentUpon>StaffRequisitions.cs</DependentUpon>
-    </Compile>
     <Compile Include="StaffWardAllocation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MedDirMainMenu.resx">
       <DependentUpon>MedDirMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicationRequisitions.resx">
+      <DependentUpon>MedicationRequisitions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PositionMaintenance.resx">
       <DependentUpon>PositionMaintenance.cs</DependentUpon>

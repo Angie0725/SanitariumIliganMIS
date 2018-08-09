@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LogIn
 {
-    public partial class StaffRequisitions : Form
+    public partial class MedicationRequisitions : Form
     {
-        public StaffRequisitions()
+        public MedicationRequisitions()
         {
             InitializeComponent();
         }
