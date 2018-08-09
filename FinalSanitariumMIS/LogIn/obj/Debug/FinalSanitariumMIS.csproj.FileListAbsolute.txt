@@ -36,3 +36,4 @@ D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.StaffRegistratio
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.StaffWardAllocation.resources
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csproj.GenerateResource.Cache
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csprojResolveAssemblyReference.cache
+D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.MedicationRequisitions.resources

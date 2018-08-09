@@ -25,25 +25,35 @@ namespace LogIn
         {
             // Add Code For Input Constraint Implementation
 
-            DB.Query("INSERT INTO staff VALUES('" 
-                + txtstaffnumber.Text + "','"
-                + txtfirstname.Text + "','"
-                + txtlastname.Text + "','"
-                + txtaddress.Text + "','"
-                + txttelnumber.Text + "','"
-                + dtp_work_experrience_start.Value.ToString("yyyy-MM-dd") + "','" 
-                + cbPosition.Text  + "','"
-                + txtNIN.Text + 
-            "')");
+            //DB.Query("INSERT INTO staff VALUES('" 
+            //    + txtstaffnumber.Text + "','"
+            //    + txtfirstname.Text + "','"
+            //    + txtlastname.Text + "','"
+            //    + txtaddress.Text + "','"
+            //    + txttelnumber.Text + "','"
+            //    + dpbirthdate.Value.ToString("yyyy-MM-dd") + "','"
+            //    + cbsex.Text + "','" 
+            //    + txtNIN.Text + "',"
+            //    + cbPosition.Text  + ","
+            //    + cbEmploymentType.Text  + ","
+            //    + txtNoHoursWorked.Text  + ","
+            //    + cbSalaryPaymnetType.Text  +
+            //")");
 
-            foreach (DataGridViewRow row in dgvQualifications.Rows)
+            // positionheld table insert
+
+            if (dgvQualifications.Rows.Count > 1)
             {
-                DB.Query("INSERT INTO qualifications VALUES(0," + txtstaffnumber.Text + ",'" + row.Cells[0].Value.ToString() + "')");
+                foreach (DataGridViewRow row in dgvQualifications.Rows)
+                {
+                    MessageBox.Show(row.Cells[0].Value.ToString());
+                     DB.Query("INSERT INTO qualifications VALUES(0," + txtstaffnumber.Text + ",'" + row.Cells[0].Value.ToString() + "')");
+                }
             }
 
-            foreach (DataGridViewRow row in dgvQualifications.Rows)
+            foreach (DataGridViewRow row in dgvWorkExperience.Rows)
             {
-                DB.Query("INSERT INTO workexperience VALUES(0," + txtstaffnumber.Text + ",'" + row.Cells[0].Value.ToString() + "')");
+              //  DB.Query("INSERT INTO workexperience VALUES(0," + txtstaffnumber.Text + ",'" + row.Cells[0].Value.ToString() + "')");
             }
 
             dgvQualifications.Rows.Clear();
