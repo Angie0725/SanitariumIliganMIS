@@ -28,30 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_register = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dgvWorkExperience = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvQualifications = new System.Windows.Forms.DataGridView();
+            this.qualifications = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtp_work_experrience_finish = new System.Windows.Forms.DateTimePicker();
+            this.dtp_work_experrience_start = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btn_add_experience = new System.Windows.Forms.Button();
+            this.txtPosition = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNoHoursWorked = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtOrganization = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.btnlogin = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnaddqualification = new System.Windows.Forms.Button();
+            this.txtQualification = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbEmploymentType = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -74,12 +80,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtpWorkStartDate = new System.Windows.Forms.DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cbPosition = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkExperience)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQualifications)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -92,7 +98,7 @@
             this.btn_register.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_register.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_register.Location = new System.Drawing.Point(543, 684);
-            this.btn_register.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_register.Margin = new System.Windows.Forms.Padding(4);
             this.btn_register.Name = "btn_register";
             this.btn_register.Size = new System.Drawing.Size(365, 70);
             this.btn_register.TabIndex = 41;
@@ -122,43 +128,100 @@
             this.label21.TabIndex = 32;
             this.label21.Text = "WORK EXPERIENCE:";
             // 
-            // dataGridView2
+            // dgvWorkExperience
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.PaleGreen;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(321, 302);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(411, 203);
-            this.dataGridView2.TabIndex = 31;
+            this.dgvWorkExperience.AllowUserToAddRows = false;
+            this.dgvWorkExperience.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvWorkExperience.BackgroundColor = System.Drawing.Color.PaleGreen;
+            this.dgvWorkExperience.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWorkExperience.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dgvWorkExperience.Location = new System.Drawing.Point(321, 302);
+            this.dgvWorkExperience.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvWorkExperience.Name = "dgvWorkExperience";
+            this.dgvWorkExperience.ReadOnly = true;
+            this.dgvWorkExperience.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvWorkExperience.RowHeadersVisible = false;
+            this.dgvWorkExperience.Size = new System.Drawing.Size(411, 203);
+            this.dgvWorkExperience.TabIndex = 31;
             // 
-            // dataGridView1
+            // Column1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.PaleGreen;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 302);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(263, 203);
-            this.dataGridView1.TabIndex = 30;
+            this.Column1.HeaderText = "Organization";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
-            // dateTimePicker2
+            // Column2
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(436, 219);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(135, 26);
-            this.dateTimePicker2.TabIndex = 29;
+            this.Column2.HeaderText = "Position";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
-            // dateTimePicker1
+            // Column3
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(164, 219);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(135, 26);
-            this.dateTimePicker1.TabIndex = 20;
+            this.Column3.HeaderText = "Start Date";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Finish Date";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // dgvQualifications
+            // 
+            this.dgvQualifications.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvQualifications.BackgroundColor = System.Drawing.Color.PaleGreen;
+            this.dgvQualifications.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvQualifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQualifications.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.qualifications});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQualifications.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvQualifications.Location = new System.Drawing.Point(37, 302);
+            this.dgvQualifications.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvQualifications.MultiSelect = false;
+            this.dgvQualifications.Name = "dgvQualifications";
+            this.dgvQualifications.ReadOnly = true;
+            this.dgvQualifications.RowHeadersVisible = false;
+            this.dgvQualifications.RowTemplate.ReadOnly = true;
+            this.dgvQualifications.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQualifications.Size = new System.Drawing.Size(263, 203);
+            this.dgvQualifications.TabIndex = 30;
+            // 
+            // qualifications
+            // 
+            this.qualifications.HeaderText = "List of Qualifications:";
+            this.qualifications.Name = "qualifications";
+            this.qualifications.ReadOnly = true;
+            // 
+            // dtp_work_experrience_finish
+            // 
+            this.dtp_work_experrience_finish.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_work_experrience_finish.Location = new System.Drawing.Point(436, 219);
+            this.dtp_work_experrience_finish.Margin = new System.Windows.Forms.Padding(4);
+            this.dtp_work_experrience_finish.Name = "dtp_work_experrience_finish";
+            this.dtp_work_experrience_finish.Size = new System.Drawing.Size(135, 26);
+            this.dtp_work_experrience_finish.TabIndex = 29;
+            // 
+            // dtp_work_experrience_start
+            // 
+            this.dtp_work_experrience_start.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_work_experrience_start.Location = new System.Drawing.Point(164, 219);
+            this.dtp_work_experrience_start.Margin = new System.Windows.Forms.Padding(4);
+            this.dtp_work_experrience_start.Name = "dtp_work_experrience_start";
+            this.dtp_work_experrience_start.Size = new System.Drawing.Size(135, 26);
+            this.dtp_work_experrience_start.TabIndex = 20;
             // 
             // label20
             // 
@@ -182,27 +245,28 @@
             this.label19.TabIndex = 27;
             this.label19.Text = "START DATE:";
             // 
-            // button1
+            // btn_add_experience
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(581, 146);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 54);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "ADD WORK EXPERIENCE";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_add_experience.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_add_experience.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_add_experience.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_experience.Location = new System.Drawing.Point(581, 146);
+            this.btn_add_experience.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_add_experience.Name = "btn_add_experience";
+            this.btn_add_experience.Size = new System.Drawing.Size(151, 54);
+            this.btn_add_experience.TabIndex = 26;
+            this.btn_add_experience.Text = "ADD WORK EXPERIENCE";
+            this.btn_add_experience.UseVisualStyleBackColor = false;
+            this.btn_add_experience.Click += new System.EventHandler(this.btn_add_experience_Click);
             // 
-            // textBox4
+            // txtPosition
             // 
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(164, 183);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(407, 26);
-            this.textBox4.TabIndex = 25;
+            this.txtPosition.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPosition.Location = new System.Drawing.Point(164, 183);
+            this.txtPosition.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPosition.Name = "txtPosition";
+            this.txtPosition.Size = new System.Drawing.Size(407, 26);
+            this.txtPosition.TabIndex = 25;
             // 
             // label14
             // 
@@ -215,52 +279,52 @@
             this.label14.TabIndex = 25;
             this.label14.Text = "(in a week)";
             // 
-            // textBox1
+            // txtNoHoursWorked
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(332, 100);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(115, 26);
-            this.textBox1.TabIndex = 20;
+            this.txtNoHoursWorked.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoHoursWorked.Location = new System.Drawing.Point(332, 100);
+            this.txtNoHoursWorked.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNoHoursWorked.Name = "txtNoHoursWorked";
+            this.txtNoHoursWorked.Size = new System.Drawing.Size(115, 26);
+            this.txtNoHoursWorked.TabIndex = 20;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.dataGridView2);
-            this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Controls.Add(this.dateTimePicker2);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.dgvWorkExperience);
+            this.groupBox3.Controls.Add(this.dgvQualifications);
+            this.groupBox3.Controls.Add(this.dtp_work_experrience_finish);
+            this.groupBox3.Controls.Add(this.dtp_work_experrience_start);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.btn_add_experience);
+            this.groupBox3.Controls.Add(this.txtPosition);
+            this.groupBox3.Controls.Add(this.txtOrganization);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.btnlogin);
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.btnaddqualification);
+            this.groupBox3.Controls.Add(this.txtQualification);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(543, 149);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(755, 528);
             this.groupBox3.TabIndex = 40;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "QUALIFICATIONS AND WORK EXPERIENCE";
             // 
-            // textBox3
+            // txtOrganization
             // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(164, 146);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(407, 26);
-            this.textBox3.TabIndex = 20;
+            this.txtOrganization.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrganization.Location = new System.Drawing.Point(164, 146);
+            this.txtOrganization.Margin = new System.Windows.Forms.Padding(5);
+            this.txtOrganization.Name = "txtOrganization";
+            this.txtOrganization.Size = new System.Drawing.Size(407, 26);
+            this.txtOrganization.TabIndex = 20;
             // 
             // label18
             // 
@@ -295,28 +359,29 @@
             this.label16.TabIndex = 22;
             this.label16.Text = "WORK EXPERIENCE:";
             // 
-            // btnlogin
+            // btnaddqualification
             // 
-            this.btnlogin.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnlogin.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogin.Location = new System.Drawing.Point(581, 32);
-            this.btnlogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(151, 54);
-            this.btnlogin.TabIndex = 21;
-            this.btnlogin.Text = "ADD QUALIFICATION";
-            this.btnlogin.UseVisualStyleBackColor = false;
+            this.btnaddqualification.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnaddqualification.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnaddqualification.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddqualification.Location = new System.Drawing.Point(581, 32);
+            this.btnaddqualification.Margin = new System.Windows.Forms.Padding(4);
+            this.btnaddqualification.Name = "btnaddqualification";
+            this.btnaddqualification.Size = new System.Drawing.Size(151, 54);
+            this.btnaddqualification.TabIndex = 21;
+            this.btnaddqualification.Text = "ADD QUALIFICATION";
+            this.btnaddqualification.UseVisualStyleBackColor = false;
+            this.btnaddqualification.Click += new System.EventHandler(this.btnaddqualification_Click);
             // 
-            // textBox2
+            // txtQualification
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(164, 32);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(407, 53);
-            this.textBox2.TabIndex = 20;
+            this.txtQualification.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQualification.Location = new System.Drawing.Point(164, 32);
+            this.txtQualification.Margin = new System.Windows.Forms.Padding(5);
+            this.txtQualification.Multiline = true;
+            this.txtQualification.Name = "txtQualification";
+            this.txtQualification.Size = new System.Drawing.Size(407, 53);
+            this.txtQualification.TabIndex = 20;
             // 
             // label15
             // 
@@ -346,22 +411,22 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(932, 684);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(365, 70);
             this.button2.TabIndex = 42;
             this.button2.Text = "CLEAR AND EXIT";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // comboBox2
+            // cbEmploymentType
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(209, 64);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(237, 26);
-            this.comboBox2.TabIndex = 23;
+            this.cbEmploymentType.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEmploymentType.FormattingEnabled = true;
+            this.cbEmploymentType.Location = new System.Drawing.Point(209, 64);
+            this.cbEmploymentType.Margin = new System.Windows.Forms.Padding(4);
+            this.cbEmploymentType.Name = "cbEmploymentType";
+            this.cbEmploymentType.Size = new System.Drawing.Size(237, 26);
+            this.cbEmploymentType.TabIndex = 23;
             // 
             // panel1
             // 
@@ -369,7 +434,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-8, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1343, 123);
             this.panel1.TabIndex = 37;
@@ -400,7 +465,7 @@
             // 
             this.txtNIN.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNIN.Location = new System.Drawing.Point(29, 369);
-            this.txtNIN.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNIN.Margin = new System.Windows.Forms.Padding(5);
             this.txtNIN.Name = "txtNIN";
             this.txtNIN.Size = new System.Drawing.Size(417, 26);
             this.txtNIN.TabIndex = 19;
@@ -421,7 +486,7 @@
             this.cbsex.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbsex.FormattingEnabled = true;
             this.cbsex.Location = new System.Drawing.Point(287, 308);
-            this.cbsex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbsex.Margin = new System.Windows.Forms.Padding(4);
             this.cbsex.Name = "cbsex";
             this.cbsex.Size = new System.Drawing.Size(160, 26);
             this.cbsex.TabIndex = 17;
@@ -441,7 +506,7 @@
             // 
             this.dpbirthdate.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpbirthdate.Location = new System.Drawing.Point(209, 273);
-            this.dpbirthdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dpbirthdate.Margin = new System.Windows.Forms.Padding(4);
             this.dpbirthdate.Name = "dpbirthdate";
             this.dpbirthdate.Size = new System.Drawing.Size(237, 26);
             this.dpbirthdate.TabIndex = 15;
@@ -461,7 +526,7 @@
             // 
             this.txttelnumber.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttelnumber.Location = new System.Drawing.Point(209, 238);
-            this.txttelnumber.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txttelnumber.Margin = new System.Windows.Forms.Padding(5);
             this.txttelnumber.Name = "txttelnumber";
             this.txttelnumber.Size = new System.Drawing.Size(237, 26);
             this.txttelnumber.TabIndex = 13;
@@ -497,9 +562,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(20, 149);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(500, 414);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
@@ -509,7 +574,7 @@
             // 
             this.txtaddress.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtaddress.Location = new System.Drawing.Point(209, 146);
-            this.txtaddress.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtaddress.Margin = new System.Windows.Forms.Padding(5);
             this.txtaddress.Multiline = true;
             this.txtaddress.Name = "txtaddress";
             this.txtaddress.Size = new System.Drawing.Size(237, 80);
@@ -519,7 +584,7 @@
             // 
             this.txtlastname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtlastname.Location = new System.Drawing.Point(209, 110);
-            this.txtlastname.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtlastname.Margin = new System.Windows.Forms.Padding(5);
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.Size = new System.Drawing.Size(237, 26);
             this.txtlastname.TabIndex = 10;
@@ -528,7 +593,7 @@
             // 
             this.txtfirstname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtfirstname.Location = new System.Drawing.Point(209, 79);
-            this.txtfirstname.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtfirstname.Margin = new System.Windows.Forms.Padding(5);
             this.txtfirstname.Name = "txtfirstname";
             this.txtfirstname.Size = new System.Drawing.Size(237, 26);
             this.txtfirstname.TabIndex = 9;
@@ -570,7 +635,7 @@
             // 
             this.txtstaffnumber.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtstaffnumber.Location = new System.Drawing.Point(209, 36);
-            this.txtstaffnumber.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtstaffnumber.Margin = new System.Windows.Forms.Padding(5);
             this.txtstaffnumber.Name = "txtstaffnumber";
             this.txtstaffnumber.Size = new System.Drawing.Size(237, 26);
             this.txtstaffnumber.TabIndex = 5;
@@ -599,33 +664,33 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dateTimePicker3);
+            this.groupBox2.Controls.Add(this.dtpWorkStartDate);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtNoHoursWorked);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.cbEmploymentType);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cbPosition);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(20, 570);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(500, 185);
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "EMPLOYMENT DETAILS";
             // 
-            // dateTimePicker3
+            // dtpWorkStartDate
             // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(209, 145);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(237, 26);
-            this.dateTimePicker3.TabIndex = 34;
+            this.dtpWorkStartDate.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpWorkStartDate.Location = new System.Drawing.Point(209, 145);
+            this.dtpWorkStartDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpWorkStartDate.Name = "dtpWorkStartDate";
+            this.dtpWorkStartDate.Size = new System.Drawing.Size(237, 26);
+            this.dtpWorkStartDate.TabIndex = 34;
             // 
             // label23
             // 
@@ -649,15 +714,15 @@
             this.label12.TabIndex = 22;
             this.label12.Text = "TYPE OF EMPLOYMENT:";
             // 
-            // comboBox1
+            // cbPosition
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(209, 31);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(237, 26);
-            this.comboBox1.TabIndex = 21;
+            this.cbPosition.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPosition.FormattingEnabled = true;
+            this.cbPosition.Location = new System.Drawing.Point(209, 31);
+            this.cbPosition.Margin = new System.Windows.Forms.Padding(4);
+            this.cbPosition.Name = "cbPosition";
+            this.cbPosition.Size = new System.Drawing.Size(237, 26);
+            this.cbPosition.TabIndex = 21;
             // 
             // StaffRegistration
             // 
@@ -671,11 +736,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StaffRegistration";
             this.Text = "STAFF REGISTRATION";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkExperience)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQualifications)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -693,27 +758,27 @@
         private System.Windows.Forms.Button btn_register;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dgvWorkExperience;
+        private System.Windows.Forms.DataGridView dgvQualifications;
+        private System.Windows.Forms.DateTimePicker dtp_work_experrience_finish;
+        private System.Windows.Forms.DateTimePicker dtp_work_experrience_start;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button btn_add_experience;
+        private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNoHoursWorked;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtOrganization;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btnlogin;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnaddqualification;
+        private System.Windows.Forms.TextBox txtQualification;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbEmploymentType;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -737,8 +802,13 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.ComboBox cbPosition;
+        private System.Windows.Forms.DateTimePicker dtpWorkStartDate;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qualifications;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

@@ -20,5 +20,11 @@ namespace LogIn
 
             DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Rheamaesabas12", "BILL-LAWRENCE", "sanita");
         }
+
+        private void btn_StaffRegistration_Click(object sender, EventArgs e)
+        {
+            StaffRegistration sr = new StaffRegistration();
+            sr.ShowDialog();
+        }
     }
 }

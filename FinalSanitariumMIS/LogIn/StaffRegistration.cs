@@ -17,24 +17,101 @@ namespace LogIn
         public StaffRegistration()
         {
             InitializeComponent();
-
+            emptyAllInputFields();
             DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Rheamaesabas12", "BILL-LAWRENCE", "sanita");
         }
 
         private void btn_register_Click(object sender, EventArgs e)
         {
+            // Add Code For Input Constraint Implementation
+
             DB.Query("INSERT INTO staff VALUES('" 
                 + txtstaffnumber.Text + "','"
                 + txtfirstname.Text + "','"
                 + txtlastname.Text + "','"
                 + txtaddress.Text + "','"
                 + txttelnumber.Text + "','"
-                + dateTimePicker1.Text + "','" // format to MySQL Datetime
-                + comboBox1.Text  + "','"
+                + dtp_work_experrience_start.Value.ToString("yyyy-MM-dd") + "','" 
+                + cbPosition.Text  + "','"
                 + txtNIN.Text + 
             "')");
 
-            DB.Query("INSERT INTO workexperience VALUES('')");
+            foreach (DataGridViewRow row in dgvQualifications.Rows)
+            {
+                DB.Query("INSERT INTO qualifications VALUES(0," + txtstaffnumber.Text + ",'" + row.Cells[0].Value.ToString() + "')");
+            }
+
+            foreach (DataGridViewRow row in dgvQualifications.Rows)
+            {
+                DB.Query("INSERT INTO workexperience VALUES(0," + txtstaffnumber.Text + ",'" + row.Cells[0].Value.ToString() + "')");
+            }
+
+            dgvQualifications.Rows.Clear();
+            dgvWorkExperience.Rows.Clear();
+            emptyAllInputFields();
+        }
+
+        private void btnaddqualification_Click(object sender, EventArgs e)
+        {
+            if(String.IsNullOrEmpty(txtQualification.Text))
+            {
+                return;
+            }
+            else
+            {
+                Object[] d = new Object[1];
+
+                d[0] = txtQualification.Text;
+
+                dgvQualifications.Rows.Add(d);
+                txtQualification.Text = "";
+            }
+        }
+
+        private void btn_add_experience_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtOrganization.Text) || String.IsNullOrEmpty(txtPosition.Text) || String.IsNullOrEmpty(dtp_work_experrience_start.Text) || String.IsNullOrEmpty(dtp_work_experrience_finish.Text))
+            {
+                return;
+            }
+            else
+            {
+                Object[] d = new Object[4];
+
+                d[0] = txtOrganization.Text;
+                d[1] = txtPosition.Text;
+                d[2] = dtp_work_experrience_start.Text;
+                d[3] = dtp_work_experrience_finish.Text;
+
+                dgvWorkExperience.Rows.Add(d);
+                emptyExperienceInputFields();
+            }
+        }
+
+        private void emptyExperienceInputFields()
+        {
+            txtOrganization.Text = "";
+            txtPosition.Text = "";
+            dtp_work_experrience_start.Text = "";
+            dtp_work_experrience_finish.Text = "";
+        }
+
+        private void emptyAllInputFields()
+        {
+            txtstaffnumber.Text = "";
+            txtfirstname.Text = "";
+            txtlastname.Text = "";
+            txtaddress.Text = "";
+            txttelnumber.Text = "";
+            dpbirthdate.Text = "";
+            cbsex.SelectedIndex = -1;
+            txtNIN.Text = "";
+            cbPosition.SelectedIndex = -1;
+            cbEmploymentType.SelectedIndex = -1;
+            txtNoHoursWorked.Text = "";
+            dtpWorkStartDate.Text = "";
+
+            emptyExperienceInputFields();
         }
     }
 }

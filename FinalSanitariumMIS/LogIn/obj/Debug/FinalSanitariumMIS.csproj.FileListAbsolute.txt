@@ -21,7 +21,6 @@ D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.pdb
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\bin\Debug\LogIn.exe
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\bin\Debug\LogIn.pdb
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\bin\Debug\IBM.Data.DB2.dll
-D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csprojResolveAssemblyReference.cache
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.ChargeNurseMainMenu.resources
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.Form1.resources
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.HRMainMenu.resources
@@ -36,3 +35,4 @@ D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.StaffPositionMan
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.StaffRegistration.resources
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.StaffWardAllocation.resources
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csproj.GenerateResource.Cache
+D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csprojResolveAssemblyReference.cache
