@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace LogIn
 {
-    public partial class Requisitions : Form
+    public partial class Suppliers : Form
     {
-        public Requisitions()
+        public Suppliers()
         {
             InitializeComponent();
-        }
-
-        private void linkback_Click(object sender, EventArgs e)
-        {
-            MedDirMainMenu frmMD = new MedDirMainMenu();
-            frmMD.Show();
-            this.Hide();
         }
     }
 }

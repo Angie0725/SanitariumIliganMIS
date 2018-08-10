@@ -26,5 +26,12 @@ namespace LogIn
             StaffRegistration sr = new StaffRegistration();
             sr.ShowDialog();
         }
+
+        private void linkback_Click(object sender, EventArgs e)
+        {
+            MedDirMainMenu frmMD = new MedDirMainMenu();
+            frmMD.Show();
+            this.Hide();
+        }
     }
 }

@@ -10,31 +10,11 @@ using System.Windows.Forms;
 
 namespace LogIn
 {
-    public partial class InventoryManagement : Form
+    public partial class PatientRegistration : Form
     {
-        public InventoryManagement()
+        public PatientRegistration()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void linkback_Click(object sender, EventArgs e)

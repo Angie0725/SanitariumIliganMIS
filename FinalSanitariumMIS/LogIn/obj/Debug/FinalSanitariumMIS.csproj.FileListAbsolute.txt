@@ -15,6 +15,34 @@ C:\Users\Angelie Buen\documents\visual studio 2015\Projects\FinalSanitariumMIS\L
 C:\Users\Angelie Buen\Documents\GitHub\FinalSanitarium\FinalSanitariumMIS\LogIn\bin\Debug\LogIn.exe.config
 C:\Users\Angelie Buen\Documents\GitHub\FinalSanitarium\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.exe
 C:\Users\Angelie Buen\Documents\GitHub\FinalSanitarium\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.pdb
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.exe
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.pdb
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\bin\Debug\LogIn.exe.config
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\bin\Debug\LogIn.exe
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\bin\Debug\LogIn.pdb
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csprojResolveAssemblyReference.cache
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.Appointments.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.ChargeNurseMainMenu.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.Doctors.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.Form1.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.HRMainMenu.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.InPatients.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.InventoryManagement.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.MedDirMainMenu.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.MedicationRequisitions.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.PatientRegistration.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.PositionMaintenance.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.Properties.Resources.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.Requisitions.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.RoomManagement.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.SalaryManagement.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.StaffMainMenu.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.StaffManagement.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.StaffPositionManagement.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.StaffRegistration.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.StaffWardAllocation.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.Suppliers.resources
+C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csproj.GenerateResource.Cache
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\bin\Debug\LogIn.exe.config
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.exe
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.pdb
