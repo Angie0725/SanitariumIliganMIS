@@ -10,31 +10,16 @@ using System.Windows.Forms;
 
 namespace LogIn
 {
-    public partial class InventoryManagement : Form
+    public partial class RoomManagement : Form
     {
-        public InventoryManagement()
+        public RoomManagement()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
+             
         }
 
         private void linkback_Click(object sender, EventArgs e)

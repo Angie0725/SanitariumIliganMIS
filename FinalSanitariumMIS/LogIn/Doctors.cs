@@ -10,18 +10,26 @@ using System.Windows.Forms;
 
 namespace LogIn
 {
-    public partial class Requisitions : Form
+    public partial class Doctors : Form
     {
-        public Requisitions()
+        public Doctors()
         {
             InitializeComponent();
         }
 
-        private void linkback_Click(object sender, EventArgs e)
+        private void label11_Click(object sender, EventArgs e)
         {
-            MedDirMainMenu frmMD = new MedDirMainMenu();
-            frmMD.Show();
-            this.Hide();
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
