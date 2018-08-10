@@ -37,12 +37,14 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.linkback = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel1.Controls.Add(this.linkback);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-2, -1);
@@ -152,6 +154,19 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = false;
             // 
+            // linkback
+            // 
+            this.linkback.AutoSize = true;
+            this.linkback.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkback.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.linkback.Location = new System.Drawing.Point(478, 71);
+            this.linkback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkback.Name = "linkback";
+            this.linkback.Size = new System.Drawing.Size(189, 23);
+            this.linkback.TabIndex = 11;
+            this.linkback.Text = "Go back to Main Menu";
+            this.linkback.Click += new System.EventHandler(this.linkback_Click);
+            // 
             // HRMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,5 +197,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label linkback;
     }
 }

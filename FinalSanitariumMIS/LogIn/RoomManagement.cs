@@ -16,5 +16,17 @@ namespace LogIn
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+             
+        }
+
+        private void linkback_Click(object sender, EventArgs e)
+        {
+            MedDirMainMenu frmMD = new MedDirMainMenu();
+            frmMD.Show();
+            this.Hide();
+        }
     }
 }
