@@ -120,6 +120,12 @@
     <Compile Include="Requisitions.Designer.cs">
       <DependentUpon>Requisitions.cs</DependentUpon>
     </Compile>
+    <Compile Include="RoomManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomManagement.Designer.cs">
+      <DependentUpon>RoomManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="SalaryManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,12 @@
     </Compile>
     <Compile Include="StaffWardAllocation.Designer.cs">
       <DependentUpon>StaffWardAllocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suppliers.Designer.cs">
+      <DependentUpon>Suppliers.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Appointments.resx">
       <DependentUpon>Appointments.cs</DependentUpon>
@@ -201,6 +213,9 @@
     <EmbeddedResource Include="Requisitions.resx">
       <DependentUpon>Requisitions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RoomManagement.resx">
+      <DependentUpon>RoomManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SalaryManagement.resx">
       <DependentUpon>SalaryManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffWardAllocation.resx">
       <DependentUpon>StaffWardAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suppliers.resx">
+      <DependentUpon>Suppliers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
