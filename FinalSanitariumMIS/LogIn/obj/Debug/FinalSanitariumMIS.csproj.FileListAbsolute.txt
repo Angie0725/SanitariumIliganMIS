@@ -65,3 +65,5 @@ D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.StaffWardAllocat
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csproj.GenerateResource.Cache
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csprojResolveAssemblyReference.cache
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.MedicationRequisitions.resources
+C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.exe
+C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.pdb
