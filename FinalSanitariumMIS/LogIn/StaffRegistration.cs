@@ -18,7 +18,7 @@ namespace LogIn
         {
             InitializeComponent();
             emptyAllInputFields();
-            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Rheamaesabas12", "BILL-LAWRENCE", "sanita");
+            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Nicksplat93", "ANGELIE BUEN", "sanita");
         }
 
         private void btn_register_Click(object sender, EventArgs e)
