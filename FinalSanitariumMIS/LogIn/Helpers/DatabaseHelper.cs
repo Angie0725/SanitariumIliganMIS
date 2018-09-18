@@ -10,7 +10,16 @@ namespace FinalSanitariumMIS.Helpers
 {
     public class DatabaseHelper
     {
+        // Written By : Bill-Lawrence Samar
+
         private DB2Connection Connection;
+
+        // Default credentials used to auto initialize DB2 Connection
+        private String SCHEMA = "";
+        private String USERID = "";
+        private String PASSWORD = "";
+        private String SERVERIP = "";
+        private String POST = "";
 
         public DatabaseHelper(String ip, String port, String password, String user, String schema)
         {
@@ -31,6 +40,21 @@ namespace FinalSanitariumMIS.Helpers
                 {
                     MessageBox.Show(null, "Error: no connection initialization parameters might be incorrect : " + ex.Message, "Database Helper");
                 }
+            }
+        }
+
+        public DatabaseHelper()
+        {
+            Connection = new DB2Connection("Database=" + SCHEMA + ";UserID=" + USERID + ";Password=" + PASSWORD + ";Server=" + SERVERIP + ":" + POST);
+
+            try
+            {
+                Connection.Open();
+                Connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(null, "Error (Using Default Credentials): no connection initialization parameters might be incorrect : " + ex.Message, "Database Helper");
             }
         }
 
