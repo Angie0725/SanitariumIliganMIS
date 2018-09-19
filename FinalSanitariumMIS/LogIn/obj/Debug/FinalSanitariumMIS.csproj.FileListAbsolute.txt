@@ -43,7 +43,6 @@ C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\Lo
 C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.StaffWardAllocation.resources
 C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.Suppliers.resources
 C:\Users\Angelie Buen\Documents\GitHub\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csproj.GenerateResource.Cache
-D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\bin\Debug\LogIn.exe.config
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.exe
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.pdb
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\bin\Debug\LogIn.exe
@@ -67,3 +66,10 @@ D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csp
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.MedicationRequisitions.resources
 C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.exe
 C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.pdb
+D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.Appointments.resources
+D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.Doctors.resources
+D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.InPatients.resources
+D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.InventoryManagement.resources
+D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.PatientRegistration.resources
+D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.RoomManagement.resources
+D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.Suppliers.resources

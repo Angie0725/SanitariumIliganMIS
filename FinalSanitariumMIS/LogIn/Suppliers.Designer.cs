@@ -47,6 +47,11 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dgv_masterlist = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_masterlist)).BeginInit();
@@ -59,7 +64,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-3, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1295, 123);
             this.panel1.TabIndex = 41;
@@ -105,7 +110,7 @@
             this.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnupdate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnupdate.Location = new System.Drawing.Point(264, 510);
-            this.btnupdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnupdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(228, 43);
             this.btnupdate.TabIndex = 88;
@@ -119,7 +124,7 @@
             this.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsave.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsave.Location = new System.Drawing.Point(27, 510);
-            this.btnsave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(4);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(227, 43);
             this.btnsave.TabIndex = 87;
@@ -141,9 +146,9 @@
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(27, 150);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(465, 352);
             this.groupBox2.TabIndex = 86;
             this.groupBox2.TabStop = false;
@@ -153,7 +158,7 @@
             // 
             this.tb_fax_no.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_fax_no.Location = new System.Drawing.Point(221, 238);
-            this.tb_fax_no.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tb_fax_no.Margin = new System.Windows.Forms.Padding(5);
             this.tb_fax_no.Name = "tb_fax_no";
             this.tb_fax_no.Size = new System.Drawing.Size(212, 26);
             this.tb_fax_no.TabIndex = 84;
@@ -173,7 +178,7 @@
             // 
             this.tb_tel_no.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_tel_no.Location = new System.Drawing.Point(221, 201);
-            this.tb_tel_no.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tb_tel_no.Margin = new System.Windows.Forms.Padding(5);
             this.tb_tel_no.Name = "tb_tel_no";
             this.tb_tel_no.Size = new System.Drawing.Size(212, 26);
             this.tb_tel_no.TabIndex = 82;
@@ -193,7 +198,7 @@
             // 
             this.tb_address.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_address.Location = new System.Drawing.Point(221, 121);
-            this.tb_address.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tb_address.Margin = new System.Windows.Forms.Padding(5);
             this.tb_address.Multiline = true;
             this.tb_address.Name = "tb_address";
             this.tb_address.Size = new System.Drawing.Size(212, 67);
@@ -214,7 +219,7 @@
             // 
             this.tb_supplier_number.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_supplier_number.Location = new System.Drawing.Point(221, 42);
-            this.tb_supplier_number.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tb_supplier_number.Margin = new System.Windows.Forms.Padding(5);
             this.tb_supplier_number.Name = "tb_supplier_number";
             this.tb_supplier_number.Size = new System.Drawing.Size(212, 26);
             this.tb_supplier_number.TabIndex = 60;
@@ -234,7 +239,7 @@
             // 
             this.tb_supplier_name.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_supplier_name.Location = new System.Drawing.Point(221, 84);
-            this.tb_supplier_name.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tb_supplier_name.Margin = new System.Windows.Forms.Padding(5);
             this.tb_supplier_name.Name = "tb_supplier_name";
             this.tb_supplier_name.Size = new System.Drawing.Size(212, 26);
             this.tb_supplier_name.TabIndex = 58;
@@ -265,11 +270,42 @@
             // 
             this.dgv_masterlist.BackgroundColor = System.Drawing.Color.PaleGreen;
             this.dgv_masterlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_masterlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.dgv_masterlist.Location = new System.Drawing.Point(531, 172);
-            this.dgv_masterlist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_masterlist.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_masterlist.Name = "dgv_masterlist";
             this.dgv_masterlist.Size = new System.Drawing.Size(731, 380);
             this.dgv_masterlist.TabIndex = 84;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Column4";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Column5";
+            this.Column5.Name = "Column5";
             // 
             // Suppliers
             // 
@@ -282,7 +318,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dgv_masterlist);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Suppliers";
             this.Text = "SUPPLIERS";
             this.panel1.ResumeLayout(false);
@@ -316,5 +352,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dgv_masterlist;
         private System.Windows.Forms.Label linkback;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

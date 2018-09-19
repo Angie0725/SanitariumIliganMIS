@@ -51,11 +51,19 @@ namespace LogIn
 
             if (rs.Read())
             {
-                DB.Query("UPDATE SET ---- WHERE ----");
+                DB.Query("UPDATE SUPPLIER SET " +
+                    "SUPPLIER_NUMBER = " + tb_supplier_number.Text + "," +
+                    "SUPPLIER_NAME = '" + tb_supplier_name.Text + "'," +
+                    "ADDRESS = '" + tb_address.Text + "'," +
+                    "TELNUMBER = " + tb_tel_no.Text + "," +
+                    "FAXNUMBER = " + tb_fax_no.Text + " WHERE SUPPLIER_NUMBER = " + 
+                    dgv_masterlist.CurrentRow.Cells[0].Value.ToString());
             }
             else
             {
-                DB.Query("INSERT INTO SET ---- WHERE ----");
+                DB.Query("INSERT INTO SUPPLIER VALUES (" +
+                    tb_supplier_number.Text + ",'" + tb_supplier_name.Text + "','" +
+                    tb_address.Text + "'," + tb_tel_no.Text + "," + tb_fax_no.Text + ")");
             }
         }
 
@@ -71,11 +79,11 @@ namespace LogIn
             {
                 Object[] d = new Object[5];
 
-                d[0] = tb_supplier_number.Text;
-                d[1] = tb_supplier_name.Text;
-                d[2] = tb_address.Text;
-                d[3] = tb_tel_no.Text;
-                d[4] = tb_fax_no.Text;
+                d[0] = rs.GetString(0);
+                d[1] = rs.GetString(1);
+                d[2] = rs.GetString(2);
+                d[3] = rs.GetString(3);
+                d[4] = rs.GetString(4);
 
                 dgv_masterlist.Rows.Add(d);
             }

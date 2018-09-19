@@ -15,11 +15,11 @@ namespace FinalSanitariumMIS.Helpers
         private DB2Connection Connection;
 
         // Default credentials used to auto initialize DB2 Connection
-        private String SCHEMA = "";
-        private String USERID = "";
-        private String PASSWORD = "";
-        private String SERVERIP = "";
-        private String POST = "";
+        private String SCHEMA = "sanita";
+        private String USERID = "BILL-LAWRENCE";
+        private String PASSWORD = "Rheamaesabas12";
+        private String SERVERIP = "127.0.0.1";
+        private String PORT = "50000";
 
         public DatabaseHelper(String ip, String port, String password, String user, String schema)
         {
@@ -45,8 +45,8 @@ namespace FinalSanitariumMIS.Helpers
 
         public DatabaseHelper()
         {
-            Connection = new DB2Connection("Database=" + SCHEMA + ";UserID=" + USERID + ";Password=" + PASSWORD + ";Server=" + SERVERIP + ":" + POST);
-
+            Connection = new DB2Connection("Database=" + SCHEMA + ";UserID=" + USERID + ";Password=" + PASSWORD + ";Server=" + SERVERIP + ":" + PORT);
+            
             try
             {
                 Connection.Open();

@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IBM.Data.DB2;
+using FinalSanitariumMIS.Helpers;
 
 namespace LogIn
 {
     public partial class Doctors : Form
     {
+        private FinalSanitariumMIS.Helpers.DatabaseHelper DB;
+
         public Doctors()
         {
             InitializeComponent();
@@ -30,6 +34,13 @@ namespace LogIn
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void refreshMasterList()
+        {
+            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper();
+
+            DB2ResultSet rs = DB.QueryWithResultSet("SELECT * FROM STAFF WHERE");
         }
     }
 }
