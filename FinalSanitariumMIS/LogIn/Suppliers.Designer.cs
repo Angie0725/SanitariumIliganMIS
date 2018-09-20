@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkback = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -77,9 +78,9 @@
             this.linkback.Location = new System.Drawing.Point(1021, 82);
             this.linkback.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.linkback.Name = "linkback";
-            this.linkback.Size = new System.Drawing.Size(240, 29);
+            this.linkback.Size = new System.Drawing.Size(242, 29);
             this.linkback.TabIndex = 10;
-            this.linkback.Text = "Go back to Main Menu";
+            this.linkback.Text = "Back to Previous Menu";
             this.linkback.Click += new System.EventHandler(this.linkback_Click);
             // 
             // label4
@@ -276,9 +277,19 @@
             this.Column3,
             this.Column4,
             this.Column5});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_masterlist.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_masterlist.Location = new System.Drawing.Point(531, 172);
             this.dgv_masterlist.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_masterlist.Name = "dgv_masterlist";
+            this.dgv_masterlist.ReadOnly = true;
+            this.dgv_masterlist.RowHeadersVisible = false;
             this.dgv_masterlist.Size = new System.Drawing.Size(731, 380);
             this.dgv_masterlist.TabIndex = 84;
             // 
@@ -286,26 +297,31 @@
             // 
             this.Column1.HeaderText = "Column1";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Column2";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Column3";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Column4";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Column5";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Suppliers
             // 

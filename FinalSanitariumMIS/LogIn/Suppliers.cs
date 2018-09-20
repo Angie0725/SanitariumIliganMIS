@@ -25,7 +25,9 @@ namespace LogIn
 
         private void linkback_Click(object sender, EventArgs e)
         {
-            
+            InventoryManagement frm= new InventoryManagement();
+            frm.Show();
+            this.Dispose();
         }
 
         private void btnupdate_Click(object sender, EventArgs e)

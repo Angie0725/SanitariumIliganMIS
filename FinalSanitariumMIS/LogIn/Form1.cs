@@ -25,7 +25,7 @@ namespace LogIn
         {
             DB = new FinalSanitariumMIS.Helpers.DatabaseHelper();
 
-            DB2ResultSet rs = DB.QueryWithResultSet("SELECT * FROM users WHERE username = '" + txtusername.Text + "' AND pass = '" + txtpassword.Text + "'");
+            DB2ResultSet rs = DB.QueryWithResultSet("SELECT * FROM VW_ACCOUNT WHERE USERNAME = '" + txtusername.Text + "' AND PASSCODE = '" + txtpassword.Text + "'");
 
             if(rs.Read())
             {
@@ -33,23 +33,8 @@ namespace LogIn
 
                 this.Visible = false;
 
-                if(session.usertype == 1)
-                {
-                    new HRMainMenu().Visible = true;
-                }
-                else if(session.usertype == 2)
-                {
-                    new StaffMainMenu().Visible = true;
-                }
-                else if(session.usertype == 3)
-                {
-                    new ChargeNurseMainMenu().Visible = true;
-                }
-                else if(session.usertype == 4)
-                {
-                    new MedDirMainMenu().Visible = true;
-                }
-
+                new MedDirMainMenu().Visible = true;
+  
             }
             else 
             {
