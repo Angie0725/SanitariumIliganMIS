@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkback = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -184,7 +183,7 @@
             this.tb_supplier.Margin = new System.Windows.Forms.Padding(5);
             this.tb_supplier.Name = "tb_supplier";
             this.tb_supplier.Size = new System.Drawing.Size(212, 26);
-            this.tb_supplier.TabIndex = 96;
+            this.tb_supplier.TabIndex = 7;
             // 
             // label21
             // 
@@ -231,7 +230,7 @@
             this.cb_type_of_supply.Margin = new System.Windows.Forms.Padding(4);
             this.cb_type_of_supply.Name = "cb_type_of_supply";
             this.cb_type_of_supply.Size = new System.Drawing.Size(212, 26);
-            this.cb_type_of_supply.TabIndex = 86;
+            this.cb_type_of_supply.TabIndex = 8;
             this.cb_type_of_supply.SelectedIndexChanged += new System.EventHandler(this.cb_type_of_supply_SelectedIndexChanged);
             // 
             // groupBox1
@@ -292,7 +291,7 @@
             this.tb_dosage.Margin = new System.Windows.Forms.Padding(5);
             this.tb_dosage.Name = "tb_dosage";
             this.tb_dosage.Size = new System.Drawing.Size(244, 26);
-            this.tb_dosage.TabIndex = 60;
+            this.tb_dosage.TabIndex = 9;
             // 
             // cb_method_administration
             // 
@@ -303,7 +302,7 @@
             this.cb_method_administration.Margin = new System.Windows.Forms.Padding(4);
             this.cb_method_administration.Name = "cb_method_administration";
             this.cb_method_administration.Size = new System.Drawing.Size(193, 26);
-            this.cb_method_administration.TabIndex = 74;
+            this.cb_method_administration.TabIndex = 10;
             // 
             // label12
             // 
@@ -345,7 +344,7 @@
             this.tb_unit.Margin = new System.Windows.Forms.Padding(5);
             this.tb_unit.Name = "tb_unit";
             this.tb_unit.Size = new System.Drawing.Size(212, 26);
-            this.tb_unit.TabIndex = 86;
+            this.tb_unit.TabIndex = 5;
             // 
             // label6
             // 
@@ -365,7 +364,7 @@
             this.tb_cost_per_unit.Margin = new System.Windows.Forms.Padding(5);
             this.tb_cost_per_unit.Name = "tb_cost_per_unit";
             this.tb_cost_per_unit.Size = new System.Drawing.Size(212, 26);
-            this.tb_cost_per_unit.TabIndex = 84;
+            this.tb_cost_per_unit.TabIndex = 6;
             // 
             // label2
             // 
@@ -385,7 +384,7 @@
             this.tb_reorder_level.Margin = new System.Windows.Forms.Padding(5);
             this.tb_reorder_level.Name = "tb_reorder_level";
             this.tb_reorder_level.Size = new System.Drawing.Size(212, 26);
-            this.tb_reorder_level.TabIndex = 82;
+            this.tb_reorder_level.TabIndex = 4;
             // 
             // label7
             // 
@@ -406,7 +405,7 @@
             this.tb_description.Multiline = true;
             this.tb_description.Name = "tb_description";
             this.tb_description.Size = new System.Drawing.Size(212, 67);
-            this.tb_description.TabIndex = 68;
+            this.tb_description.TabIndex = 3;
             // 
             // label5
             // 
@@ -426,7 +425,7 @@
             this.tb_supply_no.Margin = new System.Windows.Forms.Padding(5);
             this.tb_supply_no.Name = "tb_supply_no";
             this.tb_supply_no.Size = new System.Drawing.Size(212, 26);
-            this.tb_supply_no.TabIndex = 60;
+            this.tb_supply_no.TabIndex = 1;
             // 
             // label1
             // 
@@ -446,7 +445,7 @@
             this.tb_supply_name.Margin = new System.Windows.Forms.Padding(5);
             this.tb_supply_name.Name = "tb_supply_name";
             this.tb_supply_name.Size = new System.Drawing.Size(212, 26);
-            this.tb_supply_name.TabIndex = 58;
+            this.tb_supply_name.TabIndex = 2;
             // 
             // label15
             // 
@@ -468,7 +467,7 @@
             this.btn_save_supply.Margin = new System.Windows.Forms.Padding(4);
             this.btn_save_supply.Name = "btn_save_supply";
             this.btn_save_supply.Size = new System.Drawing.Size(229, 43);
-            this.btn_save_supply.TabIndex = 92;
+            this.btn_save_supply.TabIndex = 11;
             this.btn_save_supply.Text = "SAVE SUPPLY";
             this.btn_save_supply.UseVisualStyleBackColor = false;
             this.btn_save_supply.Click += new System.EventHandler(this.btn_save_supply_Click);
@@ -481,14 +480,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_inventory.BackgroundColor = System.Drawing.Color.PaleGreen;
             this.dgv_inventory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_inventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_inventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_inventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_inventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -502,14 +501,6 @@
             this.Column8,
             this.Column9,
             this.Column10});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_inventory.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_inventory.Location = new System.Drawing.Point(512, 169);
             this.dgv_inventory.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_inventory.MultiSelect = false;
@@ -583,7 +574,7 @@
             this.cb_filter.Margin = new System.Windows.Forms.Padding(4);
             this.cb_filter.Name = "cb_filter";
             this.cb_filter.Size = new System.Drawing.Size(214, 26);
-            this.cb_filter.TabIndex = 95;
+            this.cb_filter.TabIndex = 13;
             this.cb_filter.SelectedIndexChanged += new System.EventHandler(this.cb_filter_SelectedIndexChanged);
             // 
             // btn_suppliers
@@ -651,7 +642,7 @@
             // 
             this.label_product_name.AutoSize = true;
             this.label_product_name.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_product_name.Location = new System.Drawing.Point(35, 60);
+            this.label_product_name.Location = new System.Drawing.Point(35, 87);
             this.label_product_name.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label_product_name.Name = "label_product_name";
             this.label_product_name.Size = new System.Drawing.Size(214, 24);
@@ -711,7 +702,7 @@
             this.tb_search.Margin = new System.Windows.Forms.Padding(5);
             this.tb_search.Name = "tb_search";
             this.tb_search.Size = new System.Drawing.Size(212, 26);
-            this.tb_search.TabIndex = 97;
+            this.tb_search.TabIndex = 12;
             this.tb_search.TextChanged += new System.EventHandler(this.tb_search_TextChanged);
             // 
             // label22
@@ -812,7 +803,10 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InventoryManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sanitarium Hospital : Inventory Management";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InventoryManagement_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

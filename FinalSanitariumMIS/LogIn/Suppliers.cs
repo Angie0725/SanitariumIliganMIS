@@ -90,5 +90,12 @@ namespace LogIn
                 dgv_masterlist.Rows.Add(d);
             }
         }
+
+        private void Suppliers_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            InventoryManagement frm = new InventoryManagement();
+            frm.Show();
+            this.Dispose();
+        }
     }
 }

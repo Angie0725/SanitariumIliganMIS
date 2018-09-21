@@ -82,21 +82,21 @@ namespace LogIn
             if (cb_filter.SelectedIndex == 0 || cb_filter.SelectedIndex == -1)
             {
                 modifier = "WHERE " +
-                    " ITEM_NUMBER LIKE '%" + tb_search.Text + "' OR " +
-                    " SUPPLIER_NUMBER LIKE '%" + tb_search.Text + "' OR " +
-                    " ITEM_NAME LIKE '%" + tb_search.Text + "' OR " +
-                    " DESCRIPTION LIKE '%" + tb_search.Text + "' OR " +
-                    " QUANTITY LIKE '%" + tb_search.Text + "' OR " +
-                    " REORDER_LEVEL LIKE '%" + tb_search.Text + "' OR " +
-                    " UNIT LIKE '%" + tb_search.Text + "' OR " +
-                    " COST_PER_UNIT LIKE '%" + tb_search.Text + "' OR " +
-                    " ITEM_TYPE LIKE '%" + tb_search.Text + "' OR " +
-                    " DOSAGE LIKE '%" + tb_search.Text + "' OR " +
-                    " METHOD_OF_ADMINISTRATION  LIKE '" + tb_search.Text + "%'";
+                    " ITEM_NUMBER LIKE '" + tb_search.Text + "%' OR " +
+                    " SUPPLIER_NUMBER LIKE '" + tb_search.Text + "%' OR " +
+                    " ITEM_NAME LIKE '" + tb_search.Text + "%' OR " +
+                    " DESCRIPTION LIKE '" + tb_search.Text + "%' OR " +
+                    " QUANTITY LIKE '" + tb_search.Text + "%' OR " +
+                    " REORDER_LEVEL LIKE '" + tb_search.Text + "%' OR " +
+                    " UNIT LIKE '" + tb_search.Text + "%' OR " +
+                    " COST_PER_UNIT LIKE '" + tb_search.Text + "%' OR " +
+                    " ITEM_TYPE LIKE '" + tb_search.Text + "%' OR " +
+                    " DOSAGE LIKE '" + tb_search.Text + "%' OR " +
+                    " METHOD_OF_ADMINISTRATION  LIKE '%" + tb_search.Text + "'";
             }
             else 
             {
-                modifier = "WHERE " + cb_filter.SelectedItem.ToString() + " LIKE '%" + tb_search.Text + "%'"; 
+                modifier = "WHERE " + cb_filter.SelectedItem.ToString() + " LIKE '" + tb_search.Text + "%'"; 
             }
 
             DB = new FinalSanitariumMIS.Helpers.DatabaseHelper();
@@ -209,6 +209,13 @@ namespace LogIn
             cb_type_of_supply.Text = "";
             tb_dosage.Text = "";
             cb_method_administration.Text = "";
+        }
+
+        private void InventoryManagement_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MedDirMainMenu frmMD = new MedDirMainMenu();
+            frmMD.Show();
+            this.Hide();
         }
     }
 }

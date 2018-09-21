@@ -75,7 +75,7 @@
             this.linkback.AutoSize = true;
             this.linkback.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkback.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.linkback.Location = new System.Drawing.Point(1021, 82);
+            this.linkback.Location = new System.Drawing.Point(1029, 82);
             this.linkback.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.linkback.Name = "linkback";
             this.linkback.Size = new System.Drawing.Size(242, 29);
@@ -87,7 +87,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 60);
+            this.label4.Location = new System.Drawing.Point(19, 63);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(482, 41);
@@ -98,7 +98,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 12);
+            this.label3.Location = new System.Drawing.Point(19, 15);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(450, 54);
@@ -269,6 +269,10 @@
             // 
             // dgv_masterlist
             // 
+            this.dgv_masterlist.AllowUserToAddRows = false;
+            this.dgv_masterlist.AllowUserToDeleteRows = false;
+            this.dgv_masterlist.AllowUserToResizeColumns = false;
+            this.dgv_masterlist.AllowUserToResizeRows = false;
             this.dgv_masterlist.BackgroundColor = System.Drawing.Color.PaleGreen;
             this.dgv_masterlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_masterlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -287,39 +291,41 @@
             this.dgv_masterlist.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_masterlist.Location = new System.Drawing.Point(531, 172);
             this.dgv_masterlist.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_masterlist.MultiSelect = false;
             this.dgv_masterlist.Name = "dgv_masterlist";
             this.dgv_masterlist.ReadOnly = true;
             this.dgv_masterlist.RowHeadersVisible = false;
+            this.dgv_masterlist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_masterlist.Size = new System.Drawing.Size(731, 380);
             this.dgv_masterlist.TabIndex = 84;
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Column1";
+            this.Column1.HeaderText = "Supplier #";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Column2";
+            this.Column2.HeaderText = "Supplier Name";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Column3";
+            this.Column3.HeaderText = "Address";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Column4";
+            this.Column4.HeaderText = "Telephone Number";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Column5";
+            this.Column5.HeaderText = "Fax";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
@@ -336,7 +342,9 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Suppliers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SUPPLIERS";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Suppliers_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
