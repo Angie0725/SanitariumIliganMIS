@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IBM.Data.DB2;
 
 namespace LogIn
 {
@@ -25,23 +26,45 @@ namespace LogIn
         {
             // Add Code For Input Constraint Implementation
 
-            DB.Query("INSERT INTO staff VALUES('"
-                + txtstaffnumber.Text + "','"
+            DB.Query("INSERT INTO STAFF VALUES("
+                + Convert.ToInt32(txtstaffnumber.Text) + ",'"
                 + txtfirstname.Text + "','"
                 + txtlastname.Text + "','"
-                + txtaddress.Text + "','"
-                + txttelnumber.Text + "','"
+                + txtaddress.Text + "',"
+                + Convert.ToInt32(txttelnumber.Text) + ",'"
                 + dpbirthdate.Value.ToString("yyyy-MM-dd") + "','"
-                + cbsex.Text + "','"
-                + txtNIN.Text + "',"
-                + cbPosition.Text + ","
-                + cbEmploymentType.Text + ","
-                + txtNoHoursWorked.Text + ","
-                + cbSalaryPaymnetType.Text +
+                + cbsex.Text +  "',"
+                + Convert.ToInt32(txtNIN.Text) + 
+            ")");
+
+
+            DB2ResultSet max_posID = DB.QueryWithResultSet("SELECT MAX(POSITIONHELD_ID) as MAXID FROM POSITIONHELD");
+            int posid = 0;
+
+            while (max_posID.Read())
+            {
+                try
+                {
+                    posid = Convert.ToInt32(max_posID["MAXID"]) + 1;
+                }
+                catch (Exception er)
+                {
+                    posid = 1;
+                }
+            }
+
+            DB.Query("INSERT INTO POSITIONHELD VALUES("
+                + posid + ","
+                + Convert.ToInt32(txtstaffnumber.Text) + ","
+                + cbPosition.SelectedIndex + ","
+                + 0 + ","
+                + (cbSalaryPaymnetType.SelectedIndex + 1) + ",'"
+                + dtpWorkStartDate.Value.ToString("yyyy-MM-dd") + "',"
+                + cbEmploymentType.SelectedIndex + 
             ")");
 
             // positionheld table insert
-
+            /*
             if (dgvQualifications.Rows.Count > 1)
             {
                 foreach (DataGridViewRow row in dgvQualifications.Rows)
@@ -58,7 +81,7 @@ namespace LogIn
                     //  DB.Query("INSERT INTO workexperience VALUES(0," + txtstaffnumber.Text + ",'" + row.Cells[0].Value.ToString() + "')");
                 }
             }
-
+            */
             dgvQualifications.Rows.Clear();
             dgvWorkExperience.Rows.Clear();
             emptyAllInputFields();
@@ -143,6 +166,56 @@ namespace LogIn
                 emptyAllInputFields();
                 e.Cancel = true;
             }
+        }
+
+        private void StaffRegistration_Load(object sender, EventArgs e)
+        {
+            cbsex.Items.Add("MALE");
+            cbsex.Items.Add("FEMALE");
+
+            DB2ResultSet rsposition = DB.QueryWithResultSet("SELECT POSITION_TITLE FROM POSITION");
+            
+            while (rsposition.Read())
+            {
+                cbPosition.Items.Add(rsposition["POSITION_TITLE"]);
+            }
+
+            DB2ResultSet rsemploy = DB.QueryWithResultSet("SELECT TYPE FROM EMPLOYMENTTYPE");
+
+            while (rsemploy.Read())
+            {
+                cbEmploymentType.Items.Add(rsemploy["TYPE"]);
+            }
+
+            DB2ResultSet rssalary = DB.QueryWithResultSet("SELECT SALARY_ID, SALARY FROM SALARY");
+
+            while (rssalary.Read())
+            {
+                cbSalaryPaymnetType.Items.Add(rssalary["SALARY_ID"] + " - Php" + rssalary["SALARY"]);
+            }
+
+
+            DB2ResultSet max_staffID = DB.QueryWithResultSet("SELECT MAX(STAFF_NUMBER) as MAXID FROM STAFF");
+            int max_id = 0;
+            
+            while (max_staffID.Read())
+            {
+                try
+                {
+                    txtstaffnumber.Text = (Convert.ToInt32(max_staffID["MAXID"]) + 1).ToString();
+                }
+                catch(Exception er)
+                {
+                    txtstaffnumber.Text = "10001";
+                }
+            }
+
+  
+                
+            
+            
+
+           
         }
     }
 }

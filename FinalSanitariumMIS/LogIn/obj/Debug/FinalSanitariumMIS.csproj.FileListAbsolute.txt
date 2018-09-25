@@ -92,3 +92,4 @@ C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSa
 C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\bin\Debug\IBM.Data.DB2.dll
 C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.exe
 C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.pdb
+C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csprojResolveAssemblyReference.cache
