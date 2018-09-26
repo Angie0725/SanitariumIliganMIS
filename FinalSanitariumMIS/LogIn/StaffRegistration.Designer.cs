@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_register = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -80,12 +80,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbSalaryPaymnetType = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.dtpWorkStartDate = new System.Windows.Forms.DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.cbPosition = new System.Windows.Forms.ComboBox();
-            this.cbSalaryPaymnetType = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkExperience)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQualifications)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -189,14 +189,14 @@
             this.dgvQualifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQualifications.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.qualifications});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQualifications.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQualifications.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvQualifications.Location = new System.Drawing.Point(37, 302);
             this.dgvQualifications.Margin = new System.Windows.Forms.Padding(4);
             this.dgvQualifications.MultiSelect = false;
@@ -453,7 +453,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 53);
+            this.label4.Location = new System.Drawing.Point(22, 62);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(482, 41);
@@ -464,7 +464,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 5);
+            this.label3.Location = new System.Drawing.Point(22, 14);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(450, 54);
@@ -695,6 +695,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "EMPLOYMENT DETAILS";
             // 
+            // cbSalaryPaymnetType
+            // 
+            this.cbSalaryPaymnetType.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSalaryPaymnetType.FormattingEnabled = true;
+            this.cbSalaryPaymnetType.Location = new System.Drawing.Point(210, 179);
+            this.cbSalaryPaymnetType.Margin = new System.Windows.Forms.Padding(4);
+            this.cbSalaryPaymnetType.Name = "cbSalaryPaymnetType";
+            this.cbSalaryPaymnetType.Size = new System.Drawing.Size(237, 26);
+            this.cbSalaryPaymnetType.TabIndex = 37;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(29, 183);
+            this.label24.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(147, 18);
+            this.label24.TabIndex = 36;
+            this.label24.Text = "SALARY PAYMENT TYPE";
+            // 
             // dtpWorkStartDate
             // 
             this.dtpWorkStartDate.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -735,27 +756,6 @@
             this.cbPosition.Name = "cbPosition";
             this.cbPosition.Size = new System.Drawing.Size(237, 26);
             this.cbPosition.TabIndex = 21;
-            // 
-            // cbSalaryPaymnetType
-            // 
-            this.cbSalaryPaymnetType.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSalaryPaymnetType.FormattingEnabled = true;
-            this.cbSalaryPaymnetType.Location = new System.Drawing.Point(210, 179);
-            this.cbSalaryPaymnetType.Margin = new System.Windows.Forms.Padding(4);
-            this.cbSalaryPaymnetType.Name = "cbSalaryPaymnetType";
-            this.cbSalaryPaymnetType.Size = new System.Drawing.Size(237, 26);
-            this.cbSalaryPaymnetType.TabIndex = 37;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(29, 183);
-            this.label24.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(147, 18);
-            this.label24.TabIndex = 36;
-            this.label24.Text = "SALARY PAYMENT TYPE";
             // 
             // StaffRegistration
             // 

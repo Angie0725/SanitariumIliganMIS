@@ -1,51 +1,52 @@
-create database sanita
 
-connect to sanita
+CREATE DATABASE "sanita"
+CONNECT TO "SANITA"
 
-create table suppliers (supplier_number int not null primary key generated always as identity (start with 1 increment by 1), supplier_name varchar(100), address varchar(250), telnumber varchar(20), fax_number varchar(20))
+CREATE TABLE REQUESITION (REQUESITION_NUMBER INT NOT NULL ,STAFF_NUMBER INT NOT NULL,WARD_NUMBER VARCHAR(6) NOT NULL,DATE_REQUESTED DATE NOT NULL)
 
-create table supplies (item_number int not null primary key generated always as identity (start with 1 increment by 1), supplier_number int, item_name varchar(100), description varchar(250), quantity_in_stock int, reorder_level int, cost_per_unit decimal(4,4), type varchar(100))
+CREATE TABLE REQUESITIONDETAIL (REQUESITION_NUMBER INT NOT NULL,ITEM_NUMBER INT NOT NULL,QUANTITY INT NOT NULL)
 
-create table pharmasupplies (drug_number int not null primary key generated always as identity (start with 1 increment by 1), supplier_number int, drug_name varchar(100), description varchar(250), dosage varchar(100), method_of_administration varchar(300), quantity_in_stock int, reorder_level int, cost_per_unit decimal(4,4))
+CREATE VIEW VW_REQUESITIONDETAIL AS SELECT REQUESITIONDETAIL.REQUESITION_NUMBER, REQUESITIONDETAIL.ITEM_NUMBER, SUPPLY.ITEM_NAME, SUPPLY DESCRIPTION, REQUESITIONDETAIL.QUANTITY FROM REQUESITIONDETAIL, SUPPLY WHERE SUPPLY.ITEM_NUMBER = REQUESITIONDETAIL.ITEM_NUMBER
 
-create table requisition (drug_number int not null primary key generated always as identity (start with 1 increment by 1), supplier_number int, drug_name varchar(100), description varchar(250), dosage varchar(100),method_of_administration varchar(300), quantity_in_stock int, reorder_level int, cost_per_unit decimal(4,4))
+CREATE TABLE SUPPLIER (SUPPLIER_NUMBER INT NOT NULL,SUPPLIER_NAME VARCHAR(20) NOT NULL,ADDRESS VARCHAR(20) NOT NULL,TELNUMBER INT NOT NULL,FAXNUMBER INT NULL)
 
-create table medications (medication_id int not null primary key generated always as identity (start with 1 increment by 1), in_patient_id int, drug_number int, units_per_day int , startdate date, finishdate date)
+CREATE TABLE SUPPLY (ITEM_NUMBER INT NOT NULL,SUPPLIER_NUMBER INT NOT NULL,ITEM_NAME VARCHAR(50) NOT NULL,DESCRIPTION VARCHAR(100) NULL,QUANTITY INT NOT NULL,REORDER_LEVEL INT NOT NULL,UNIT VARCHAR(20), COST_PER_UNIT DECIMAL(7,2) NOT NULL,ITEM_TYPE INT NOT NULL,DOSAGE VARCHAR(20) NULL,METHOD_OF_ADMINISTRATION VARCHAR(5) NULL)
 
-create table inpatients (in_patient_id int not null primary key generated always as identity (start with 1 increment by 1), patient_number int, date_arrived timestamp, bednumber varchar(5), expected_duration varchar(200), date_placed_in_ward date, date_expected_to_leave date, date_left date)
+CREATE TABLE MEDICATION (MEDICATION_ID INT NOT NULL,STAFF_NUMBER INT NOT NULL,INPATIENT_ID INT NOT NULL,DATE_FILED DATE NOT NULL,TIME_FILED VARCHAR(5) NOT NULL)
 
-create table patients (patient_number int not null primary key generated always as identity (start with 1 increment by 1), firstname varchar(100), lastname varchar(100), address varchar(200), telnumber varchar(20), birthdate date, sex varchar(7), marital_status varchar(50), date_registered date)
+CREATE TABLE MEDICATIONDETAIL (MEDICATION_ID INT NOT NULL,ITEM_NUMBER INT NULL,METHOD_OF_ADMINISTRATION VARCHAR(5) NULL,DOSAGE VARCHAR(20) NULL)
 
-create table patientkins (PKID int not null primary key generated always as identity (start with 1 increment by 1), patient_number int, next_of_kin_id int, relationship_to_patient varchar(200))
+CREATE TABLE STAFF (STAFF_NUMBER INT NOT NULL,FIRSTNAME VARCHAR(50) NOT NULL,LASTNAME VARCHAR(50) NOT NULL,ADDRESS VARCHAR(100) NOT NULL,TELNUMBER INT NOT NULL,BIRTHDATE DATE NOT NULL,SEX VARCHAR(6) NOT NULL,NIN INT NOT NULL)
 
-create table patientdoctors (PDID int not null primary key generated always as identity (start with 1 increment by 1), patient_number int, doctor_id int, date_assigned date)
+-- CREATE VIEW FOR VW_STAFF 
 
-create table nextofkin (next_of_kin_id int not null primary key generated always as identity (start with 1 increment by 1), firstname varchar(100), lastname varchar(100), address varchar(200), telnumber varchar(20))
+CREATE TABLE ACCOUNT (ACCOUNT_NO INT NOT NULL, STAFF_NUMBER INT, USERNAME VARCHAR(50), PASSCODE VARCHAR(50), ACCOUNT_TYPE INT)
 
-create table outsidedoctors (doctor_id int not null primary key generated always as identity (start with 1 increment by 1), firstname varchar(100), lastname varchar(100), clinic_number int, address varchar(200), telnumber varchar(20))
+CREATE VIEW VW_ACCOUNT AS SELECT ACCOUNT.ACCOUNT_NO, ACCOUNT.STAFF_NUMBER, STAFF.FIRSTNAME, STAFF.LASTNAME, ACCOUNT.USERNAME, ACCOUNT.PASSCODE, ACCOUNT.ACCOUNT_TYPE FROM ACCOUNT, STAFF WHERE ACCOUNT.STAFF_NUMBER = STAFF.STAFF_NUMBER
 
-create table outpatient (out_patient_id int not null primary key generated always as identity (start with 1 increment by 1), patient_number int, appointment_number int)
+CREATE TABLE WORKEXPERIENCE (WORKEXPERIENCE_ID INT NOT NULL,STAFF_NUMBER INT NOT NULL,POSITION VARCHAR(5) NOT NULL,ORGANIZATION VARCHAR(20) NOT NULL,START_DATE DATE NOT NULL,END_DATE DATE NOT NULL)
 
-create table beds (bed_number int not null primary key generated always as identity (start with 1 increment by 1), ward_number int, availability varchar(20))
+CREATE TABLE QUALIFICATION (QUALIFICATION_ID INT NOT NULL,STAFF_NUMBER INT NOT NULL,DESCRIPTION VARCHAR(50) NOT NULL)
 
-create table wardnames (ward_name_id int not null primary key generated always as identity (start with 1 increment by 1), ward_name int, description varchar(200))
+CREATE TABLE POSITIONHELD (POSITIONHELD_ID INT NOT NULL,STAFF_NUMBER INT NOT NULL,POSITION_ID INT NOT NULL,WORKSHIFTTYPE_ID INT NOT NULL,SALARY_ID INT NOT NULL,DATE_ASSIGNED DATE NOT NULL)
 
-create table clinic (clinic_number int not null primary key generated always as identity (start with 1 increment by 1), description varchar(200))
+CREATE TABLE SALARY (SALARY_ID INT NOT NULL,SALARY FLOAT NOT NULL,DESCRIPTION VARCHAR(20) NOT NULL)
 
-create table clinicwardstaff (CSID int not null primary key generated always as identity (start with 1 increment by 1), clinic_ward_number int, staff_number int, date_assigned date, shift varchar(20))
+CREATE TABLE WORKSHIFTTYPE (WORKSHIFTTYPE_ID INT NOT NULL,SHIFT VARCHAR(10) NOT NULL,DESCRIPTION VARCHAR(20) NOT NULL)
 
-create table wards (ward_number int not null primary key generated always as identity (start with 1 increment by 1), wardname_id int, location varchar(200), total_num_beds int, tel_phone_ext varchar(20))
+CREATE TABLE ASSIGNEDWARD (WARD_NUMBER INT NOT NULL,STAFF_NUMBER INT NOT NULL,DATE_ASSIGNED DATE NOT NULL)
 
-create table appointments (appointment_number int not null primary key generated always as identity (start with 1 increment by 1), patient_number int, staff_number int, appointmemt_date date, appointment_time time,  examination_room varchar(200))
+CREATE TABLE WARD (WARD_NUMBER VARCHAR(6) NOT NULL,NAME VARCHAR(15) NOT NULL,DESCRIPTION VARCHAR(50) NOT NULL)
 
-create table staff (staff_number varchar(20), firstname varchar(100), lastname varchar(100), address varchar(200), telnumber varchar(20),birthdate date, sex varchar(7), NIN varchar(200), position_held_id int, type_of_employment varchar(50), num_hours_worked int, salary_payment_type varchar(100))
+CREATE TABLE BED (BED_ID INT NOT NULL,WARD_NUMBER VARCHAR(6) NOT NULL,DESCRIPTION VARCHAR(50) NOT NULL)
 
-create table positionheld (position_held_id int not null primary key generated always as identity (start with 1 increment by 1), positionid int, staff_number int, start_date date, type_of_employment varchar(100), num_hours_worked decimal(4,4), salary_payment_type varchar(80))
+CREATE TABLE PATIENT (PATIENT_NUMBER INT NOT NULL,FIRSTNAME INT NOT NULL,LASTNAME VARCHAR(50) NOT NULL,ADDRESS VARCHAR(100) NULL,TELNUMBER INT NOT NULL,BIRTHDATE INT NOT NULL,SEX DECIMAL(7,2) NOT NULL,MARITAL_STATUS INT NOT NULL)
 
-create table position (position_id int not null primary key generated always as identity (start with 1 increment by 1), position_title varchar(100), salary_scale int)
+CREATE TABLE NEXTOFKIN (NEXTOFKIN_ID INT NOT NULL,PATIENT_NUMBER INT NOT NULL,FIRSTNAME VARCHAR(50) NOT NULL,LASTNAME VARCHAR(50) NOT NULL,ADDRESS VARCHAR(100) NOT NULL,TELNUMBER INT NOT NULL,RELATIONSHIP VARCHAR(15) NOT NULL)
 
-create table salary (salary_scale int not null primary key generated always as identity (start with 1 increment by 1), salary decimal(7,4), description varchar(200))
+CREATE TABLE INPATIENTRECORD (WORKEXPERIENCE_ID INT NOT NULL,STAFF_NUMBER INT NOT NULL,POSITION VARCHAR(5) NOT NULL,INPATIENT_ID INT NOT NULL,PATIENT_NUMBER INT NOT NULL,BED_ID INT NOT NULL,DATE_ARRIVED DATE NOT NULL,EXPECTED_DURATION INT NOT NULL,DATE_LEFT DATE NOT NULL)
 
-create table qualifications (qualification_id int not null primary key generated always as identity (start with 1 increment by 1), staff_number int, qualification_description varchar(200))
+CREATE TABLE OUTPATIENTRECORD (OUTPATIENT_ID INT NOT NULL,PATIENT_NUMBER INT NOT NULL,APPOINTMENT_NUMBER INT NOT NULL)
 
-create table workexperience (work_experience_id int not null primary key generated always as identity (start with 1 increment by 1), staff_number int, position varchar(200), organzation_name varchar(200), start_date date,finish_date date)
+CREATE TABLE APPOINTMENT (APPOINTMENT_NUMBER INT NOT NULL,STAFF_NUMBER INT NOT NULL,OUTPATIENT_ID INT NOT NULL,APPOINTMENT_DATE DATE NOT NULL,APPOINTMENT_TIME VARCHAR(5) NOT NULL,EXAMINATION_ROOM VARCHAR(10) NOT NULL)
+

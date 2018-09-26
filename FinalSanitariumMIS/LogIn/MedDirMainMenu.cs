@@ -21,42 +21,48 @@ namespace LogIn
         {
             PatientRegistration frmPR = new PatientRegistration();
             frmPR.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void btnhumanresource_Click(object sender, EventArgs e)
         {
             HRMainMenu frmHR = new HRMainMenu();
             frmHR.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void btnrequisitions_Click(object sender, EventArgs e)
         {
             Requisitions frmReq = new Requisitions();
             frmReq.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void btnappointments_Click(object sender, EventArgs e)
         {
             Appointments frmAppoint = new Appointments();
             frmAppoint.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void btninventory_Click(object sender, EventArgs e)
         {
             InventoryManagement frmIM = new InventoryManagement();
             frmIM.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         private void btnrooms_Click(object sender, EventArgs e)
         {
             RoomManagement frmRM = new RoomManagement();
             frmRM.Show();
-            this.Hide();
+            this.Dispose();
+        }
+
+        private void MedDirMainMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.LoginScreen.Show();
+            this.Dispose();
         }
     }
 }

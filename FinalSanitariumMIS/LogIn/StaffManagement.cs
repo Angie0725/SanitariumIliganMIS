@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using IBM.Data.DB2*;
+using IBM.Data.DB2;
 
 namespace LogIn
 {
