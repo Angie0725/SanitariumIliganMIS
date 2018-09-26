@@ -198,7 +198,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MedDirMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MEDICAL DIRECTOR - MAIN MENU";
+            this.Text = " ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MedDirMainMenu_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
