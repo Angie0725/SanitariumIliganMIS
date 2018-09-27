@@ -52,23 +52,27 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 49);
+            this.label4.Location = new System.Drawing.Point(6, 49);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(382, 33);
+            this.label4.Size = new System.Drawing.Size(482, 41);
             this.label4.TabIndex = 7;
             this.label4.Text = "Management Information System";
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 10);
+            this.label3.Location = new System.Drawing.Point(21, 6);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(355, 42);
+            this.label3.Size = new System.Drawing.Size(450, 54);
             this.label3.TabIndex = 6;
             this.label3.Text = "SANITARIUM HOSPITAL";
             // 
@@ -76,10 +80,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(142, 129);
+            this.label1.Location = new System.Drawing.Point(27, 129);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 18);
+            this.label1.Size = new System.Drawing.Size(107, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "USERNAME:";
             // 
@@ -87,51 +91,51 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(142, 163);
+            this.label2.Location = new System.Drawing.Point(27, 163);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 18);
+            this.label2.Size = new System.Drawing.Size(107, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "PASSWORD:";
             // 
             // txtusername
             // 
             this.txtusername.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusername.Location = new System.Drawing.Point(233, 126);
+            this.txtusername.Location = new System.Drawing.Point(138, 126);
             this.txtusername.Margin = new System.Windows.Forms.Padding(4);
             this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(120, 26);
+            this.txtusername.Size = new System.Drawing.Size(308, 30);
             this.txtusername.TabIndex = 3;
-            this.txtusername.Text = "default";
             // 
             // txtpassword
             // 
             this.txtpassword.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword.Location = new System.Drawing.Point(233, 160);
+            this.txtpassword.Location = new System.Drawing.Point(138, 160);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtpassword.Name = "txtpassword";
-            this.txtpassword.Size = new System.Drawing.Size(120, 26);
+            this.txtpassword.Size = new System.Drawing.Size(308, 30);
             this.txtpassword.TabIndex = 4;
-            this.txtpassword.Text = "default";
+            this.txtpassword.UseSystemPasswordChar = true;
             // 
             // btnlogin
             // 
             this.btnlogin.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnlogin.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogin.Location = new System.Drawing.Point(145, 203);
+            this.btnlogin.Location = new System.Drawing.Point(138, 197);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(208, 28);
+            this.btnlogin.Size = new System.Drawing.Size(308, 45);
             this.btnlogin.TabIndex = 5;
             this.btnlogin.Text = "LOG IN";
             this.btnlogin.UseVisualStyleBackColor = false;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(487, 282);
+            this.ClientSize = new System.Drawing.Size(487, 263);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtusername);
@@ -141,6 +145,7 @@
             this.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOG IN";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -103,6 +103,7 @@
     <Compile Include="MedicationRequisitions.Designer.cs">
       <DependentUpon>MedicationRequisitions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\SessionMeta.cs" />
     <Compile Include="PatientRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
