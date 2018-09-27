@@ -30,8 +30,8 @@ namespace LogIn
                 + Convert.ToInt32(txtstaffnumber.Text) + ",'"
                 + txtfirstname.Text + "','"
                 + txtlastname.Text + "','"
-                + txtaddress.Text + "',"
-                + Convert.ToInt32(txttelnumber.Text) + ",'"
+                + txtaddress.Text + "','"
+                + txttelnumber.Text + "','"
                 + dpbirthdate.Value.ToString("yyyy-MM-dd") + "','"
                 + cbsex.Text +  "',"
                 + Convert.ToInt32(txtNIN.Text) + 
@@ -56,35 +56,80 @@ namespace LogIn
             DB.Query("INSERT INTO POSITIONHELD VALUES("
                 + posid + ","
                 + Convert.ToInt32(txtstaffnumber.Text) + ","
-                + cbPosition.SelectedIndex + ","
-                + 0 + ","
+                + (cbPosition.SelectedIndex + 1) + ","
+                + (cbworkshift.SelectedIndex + 1) + ","
                 + (cbSalaryPaymnetType.SelectedIndex + 1) + ",'"
                 + dtpWorkStartDate.Value.ToString("yyyy-MM-dd") + "',"
-                + cbEmploymentType.SelectedIndex + 
+                + (cbEmploymentType.SelectedIndex + 1) + 
             ")");
 
             // positionheld table insert
-            /*
-            if (dgvQualifications.Rows.Count > 1)
+
+            int qID = 0;
+            int weID = 0;
+
+            if (dgvQualifications.Rows.Count >= 1)
             {
                 foreach (DataGridViewRow row in dgvQualifications.Rows)
                 {
-                    MessageBox.Show(row.Cells[0].Value.ToString());
-                    //DB.Query("INSERT INTO qualifications VALUES(0," + txtstaffnumber.Text + ",'" + row.Cells[0].Value.ToString() + "')");
-                }
-            }
 
-            if (dgvWorkExperience.Rows.Count > 1)
-            {
-                foreach (DataGridViewRow row in dgvWorkExperience.Rows)
-                {
-                    //  DB.Query("INSERT INTO workexperience VALUES(0," + txtstaffnumber.Text + ",'" + row.Cells[0].Value.ToString() + "')");
+                    DB2ResultSet rsqualID = DB.QueryWithResultSet("SELECT MAX(QUALIFICATION_ID) as QUALMAX FROM QUALIFICATION");
+
+                    while (rsqualID.Read())
+                    {
+                        try
+                        {
+                            qID = Convert.ToInt32(rsqualID["QUALMAX"]) + 1;
+                        }
+                        catch (Exception er)
+                        {
+                            qID = 1;
+                        }
+                    }
+                    DB.Query("INSERT INTO QUALIFICATION VALUES(" + qID + "," + Convert.ToInt32(txtstaffnumber.Text) + ",'" + row.Cells[0].Value.ToString() + "')");
                 }
             }
-            */
+            
+            if (dgvWorkExperience.Rows.Count >= 1)
+            {
+                foreach (DataGridViewRow row2 in dgvWorkExperience.Rows)
+                {
+                    
+                    DB2ResultSet rsweID = DB.QueryWithResultSet("SELECT MAX(WORKEXPERIENCE_ID) as WEMAX FROM WORKEXPERIENCE");
+
+                    while (rsweID.Read())
+                    {
+                        try
+                        {
+                            weID = Convert.ToInt32(rsweID["WEMAX"]) + 1;
+                        }
+                        catch (Exception er)
+                        {
+                            weID = 1;
+                        }
+                    }
+                    DB.Query("INSERT INTO WORKEXPERIENCE VALUES(" + weID + "," + Convert.ToInt32(txtstaffnumber.Text) + ",'" + row2.Cells[0].Value.ToString() + "', '" + row2.Cells[1].Value.ToString() + "', '" + row2.Cells[2].Value.ToString() + "', '" + row2.Cells[3].Value.ToString() + "')");
+                }
+            }
+            
+            
             dgvQualifications.Rows.Clear();
             dgvWorkExperience.Rows.Clear();
             emptyAllInputFields();
+
+            DB2ResultSet max_staffID = DB.QueryWithResultSet("SELECT MAX(STAFF_NUMBER) as MAXID FROM STAFF");
+
+            while (max_staffID.Read())
+            {
+                try
+                {
+                    txtstaffnumber.Text = (Convert.ToInt32(max_staffID["MAXID"]) + 1).ToString();
+                }
+                catch (Exception er)
+                {
+                    txtstaffnumber.Text = "10001";
+                }
+            }
         }
 
         private void btnaddqualification_Click(object sender, EventArgs e)
@@ -116,8 +161,8 @@ namespace LogIn
 
                 d[0] = txtOrganization.Text;
                 d[1] = txtPosition.Text;
-                d[2] = dtp_work_experrience_start.Text;
-                d[3] = dtp_work_experrience_finish.Text;
+                d[2] = dtp_work_experrience_start.Value.ToString("yyyy-MM-dd");
+                d[3] = dtp_work_experrience_finish.Value.ToString("yyyy-MM-dd");
 
                 dgvWorkExperience.Rows.Add(d);
                 emptyExperienceInputFields();
@@ -144,8 +189,9 @@ namespace LogIn
             txtNIN.Text = "";
             cbPosition.SelectedIndex = -1;
             cbEmploymentType.SelectedIndex = -1;
-            txtNoHoursWorked.Text = "";
+            cbworkshift.SelectedIndex = -1;
             dtpWorkStartDate.Text = "";
+            cbSalaryPaymnetType.SelectedIndex = -1;
 
             emptyExperienceInputFields();
         }
@@ -194,9 +240,14 @@ namespace LogIn
                 cbSalaryPaymnetType.Items.Add(rssalary["SALARY_ID"] + " - Php" + rssalary["SALARY"]);
             }
 
+            DB2ResultSet rsshift = DB.QueryWithResultSet("SELECT * FROM WORKSHIFTTYPE");
+
+            while (rsshift.Read())
+            {
+                cbworkshift.Items.Add(rsshift["SHIFT"]);
+            }
 
             DB2ResultSet max_staffID = DB.QueryWithResultSet("SELECT MAX(STAFF_NUMBER) as MAXID FROM STAFF");
-            int max_id = 0;
             
             while (max_staffID.Read())
             {

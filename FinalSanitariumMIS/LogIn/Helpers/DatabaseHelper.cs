@@ -52,7 +52,7 @@ namespace FinalSanitariumMIS.Helpers
             }
             catch (DB2Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message.ToString(), "Database Helper");
+                MessageBox.Show("Error: " + ex.Message.ToString(), "Database Helper ResultSet");
             }
 
             return rs;
@@ -76,7 +76,7 @@ namespace FinalSanitariumMIS.Helpers
             }
             catch (DB2Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message.ToString(), "Database Helper");
+                MessageBox.Show("Error: " + ex.Message.ToString(), "Database Helper Query");
             }
 
             return false;
