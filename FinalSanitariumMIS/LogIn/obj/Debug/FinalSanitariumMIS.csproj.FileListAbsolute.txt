@@ -91,11 +91,9 @@ C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSa
 C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\bin\Debug\IBM.Data.DB2.dll
 C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.exe
 C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.pdb
-<<<<<<< HEAD
 C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csprojAssemblyReference.cache
 C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csproj.CoreCompileInputs.cache
 C:\Users\Angelie Buen\Documents\GitHub\NewSanitarium\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csproj.CopyComplete
-=======
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.Appointments.resources
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.Doctors.resources
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.InPatients.resources
@@ -103,4 +101,3 @@ D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.InventoryManagem
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.PatientRegistration.resources
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.RoomManagement.resources
 D:\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.Suppliers.resources
->>>>>>> master
