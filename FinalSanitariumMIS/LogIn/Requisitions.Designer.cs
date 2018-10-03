@@ -33,33 +33,47 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dtp_request_date = new System.Windows.Forms.DateTimePicker();
-            this.label23 = new System.Windows.Forms.Label();
+            this.btn_remove_item = new System.Windows.Forms.Button();
+            this.btn_additem = new System.Windows.Forms.Button();
+            this.btn_save_request = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dgv_requesition_details = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tb_requesition_number = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tb_requested_by = new System.Windows.Forms.TextBox();
             this.cb_wardnames = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dgv_requesition_details = new System.Windows.Forms.DataGridView();
-            this.btn_save_request = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_requesition_list = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_request_history_search = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel_add_stock = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dgv_add_items = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tb_item_search = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_cancel_add_stock = new System.Windows.Forms.Button();
+            this.btn_add_stock = new System.Windows.Forms.Button();
+            this.tb_stock_quantity = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_requesition_details)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_requesition_list)).BeginInit();
+            this.panel_add_stock.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_add_items)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -111,13 +125,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btn_remove_item);
+            this.groupBox2.Controls.Add(this.btn_additem);
             this.groupBox2.Controls.Add(this.btn_save_request);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.dgv_requesition_details);
-            this.groupBox2.Controls.Add(this.dtp_request_date);
-            this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.tb_requesition_number);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.tb_requested_by);
@@ -134,100 +146,47 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "NEW REQUESITION";
             // 
-            // button1
+            // btn_remove_item
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1017, 23);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 33);
-            this.button1.TabIndex = 65;
-            this.button1.Text = "ADD ITEM";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_remove_item.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_remove_item.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_remove_item.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_remove_item.Location = new System.Drawing.Point(838, 23);
+            this.btn_remove_item.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_remove_item.Name = "btn_remove_item";
+            this.btn_remove_item.Size = new System.Drawing.Size(171, 33);
+            this.btn_remove_item.TabIndex = 66;
+            this.btn_remove_item.Text = "REMOVE ITEM";
+            this.btn_remove_item.UseVisualStyleBackColor = false;
+            this.btn_remove_item.Click += new System.EventHandler(this.btn_remove_item_Click);
             // 
-            // dtp_request_date
+            // btn_additem
             // 
-            this.dtp_request_date.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_request_date.Location = new System.Drawing.Point(275, 195);
-            this.dtp_request_date.Margin = new System.Windows.Forms.Padding(4);
-            this.dtp_request_date.Name = "dtp_request_date";
-            this.dtp_request_date.Size = new System.Drawing.Size(212, 26);
-            this.dtp_request_date.TabIndex = 61;
+            this.btn_additem.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_additem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_additem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_additem.Location = new System.Drawing.Point(1017, 23);
+            this.btn_additem.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_additem.Name = "btn_additem";
+            this.btn_additem.Size = new System.Drawing.Size(171, 33);
+            this.btn_additem.TabIndex = 65;
+            this.btn_additem.Text = "ADD ITEM";
+            this.btn_additem.UseVisualStyleBackColor = false;
+            this.btn_additem.Click += new System.EventHandler(this.btn_additem_Click);
             // 
-            // label23
+            // btn_save_request
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(25, 202);
-            this.label23.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(126, 18);
-            this.label23.TabIndex = 62;
-            this.label23.Text = "REQUISITION DATE:";
-            // 
-            // tb_requesition_number
-            // 
-            this.tb_requesition_number.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_requesition_number.Location = new System.Drawing.Point(275, 69);
-            this.tb_requesition_number.Margin = new System.Windows.Forms.Padding(5);
-            this.tb_requesition_number.Name = "tb_requesition_number";
-            this.tb_requesition_number.Size = new System.Drawing.Size(212, 26);
-            this.tb_requesition_number.TabIndex = 60;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 73);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 18);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "REQUISITION NUMBER:";
-            // 
-            // tb_requested_by
-            // 
-            this.tb_requested_by.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_requested_by.Location = new System.Drawing.Point(275, 154);
-            this.tb_requested_by.Margin = new System.Windows.Forms.Padding(5);
-            this.tb_requested_by.Name = "tb_requested_by";
-            this.tb_requested_by.Size = new System.Drawing.Size(212, 26);
-            this.tb_requested_by.TabIndex = 58;
-            // 
-            // cb_wardnames
-            // 
-            this.cb_wardnames.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_wardnames.FormattingEnabled = true;
-            this.cb_wardnames.Location = new System.Drawing.Point(275, 110);
-            this.cb_wardnames.Margin = new System.Windows.Forms.Padding(4);
-            this.cb_wardnames.Name = "cb_wardnames";
-            this.cb_wardnames.Size = new System.Drawing.Size(212, 26);
-            this.cb_wardnames.TabIndex = 57;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(25, 114);
-            this.label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(212, 18);
-            this.label15.TabIndex = 56;
-            this.label15.Text = "REQUISITION FOR (WARD NAME):";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(25, 157);
-            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(100, 18);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "REQUESTED BY:";
+            this.btn_save_request.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_save_request.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_save_request.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save_request.Location = new System.Drawing.Point(28, 243);
+            this.btn_save_request.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_save_request.Name = "btn_save_request";
+            this.btn_save_request.Size = new System.Drawing.Size(459, 43);
+            this.btn_save_request.TabIndex = 58;
+            this.btn_save_request.Text = "SUBMIT REQUEST";
+            this.btn_save_request.UseVisualStyleBackColor = false;
+            this.btn_save_request.Click += new System.EventHandler(this.btn_save_request_Click);
             // 
             // label5
             // 
@@ -242,6 +201,7 @@
             // 
             // dgv_requesition_details
             // 
+            this.dgv_requesition_details.AllowUserToAddRows = false;
             this.dgv_requesition_details.BackgroundColor = System.Drawing.Color.PaleGreen;
             this.dgv_requesition_details.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_requesition_details.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -250,88 +210,146 @@
             this.Column3});
             this.dgv_requesition_details.Location = new System.Drawing.Point(523, 64);
             this.dgv_requesition_details.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_requesition_details.MultiSelect = false;
             this.dgv_requesition_details.Name = "dgv_requesition_details";
+            this.dgv_requesition_details.ReadOnly = true;
+            this.dgv_requesition_details.RowHeadersVisible = false;
+            this.dgv_requesition_details.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_requesition_details.Size = new System.Drawing.Size(665, 225);
             this.dgv_requesition_details.TabIndex = 57;
             // 
-            // btn_save_request
-            // 
-            this.btn_save_request.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_save_request.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_save_request.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save_request.Location = new System.Drawing.Point(28, 243);
-            this.btn_save_request.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_save_request.Name = "btn_save_request";
-            this.btn_save_request.Size = new System.Drawing.Size(459, 43);
-            this.btn_save_request.TabIndex = 58;
-            this.btn_save_request.Text = "SUBMIT REQUEST";
-            this.btn_save_request.UseVisualStyleBackColor = false;
-            // 
             // Column1
             // 
-            this.Column1.HeaderText = "Column1";
+            this.Column1.HeaderText = "Item Number";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Column2";
+            this.Column2.HeaderText = "Item";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Column3";
+            this.Column3.HeaderText = "Quantity";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // tb_requesition_number
+            // 
+            this.tb_requesition_number.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_requesition_number.Location = new System.Drawing.Point(273, 93);
+            this.tb_requesition_number.Margin = new System.Windows.Forms.Padding(5);
+            this.tb_requesition_number.Name = "tb_requesition_number";
+            this.tb_requesition_number.Size = new System.Drawing.Size(212, 26);
+            this.tb_requesition_number.TabIndex = 60;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 97);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 18);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "REQUISITION NUMBER:";
+            // 
+            // tb_requested_by
+            // 
+            this.tb_requested_by.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_requested_by.Location = new System.Drawing.Point(273, 178);
+            this.tb_requested_by.Margin = new System.Windows.Forms.Padding(5);
+            this.tb_requested_by.Name = "tb_requested_by";
+            this.tb_requested_by.Size = new System.Drawing.Size(212, 26);
+            this.tb_requested_by.TabIndex = 58;
+            // 
+            // cb_wardnames
+            // 
+            this.cb_wardnames.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_wardnames.FormattingEnabled = true;
+            this.cb_wardnames.Location = new System.Drawing.Point(273, 134);
+            this.cb_wardnames.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_wardnames.Name = "cb_wardnames";
+            this.cb_wardnames.Size = new System.Drawing.Size(212, 26);
+            this.cb_wardnames.TabIndex = 57;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(23, 138);
+            this.label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(212, 18);
+            this.label15.TabIndex = 56;
+            this.label15.Text = "REQUISITION FOR (WARD NAME):";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(23, 181);
+            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(100, 18);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "REQUESTED BY:";
             // 
             // dgv_requesition_list
             // 
+            this.dgv_requesition_list.AllowUserToAddRows = false;
             this.dgv_requesition_list.BackgroundColor = System.Drawing.Color.PaleGreen;
             this.dgv_requesition_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_requesition_list.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.dgv_requesition_list.Location = new System.Drawing.Point(25, 178);
             this.dgv_requesition_list.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_requesition_list.MultiSelect = false;
             this.dgv_requesition_list.Name = "dgv_requesition_list";
+            this.dgv_requesition_list.ReadOnly = true;
+            this.dgv_requesition_list.RowHeadersVisible = false;
+            this.dgv_requesition_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_requesition_list.Size = new System.Drawing.Size(1219, 310);
             this.dgv_requesition_list.TabIndex = 66;
             // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Requesition Number";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Column1";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Staff Number";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Column2";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Ward Number";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Column3";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Date Requested";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // button2
+            // tb_request_history_search
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(838, 23);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(171, 33);
-            this.button2.TabIndex = 66;
-            this.button2.Text = "REMOVE ITEM";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1020, 143);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 26);
-            this.textBox1.TabIndex = 68;
+            this.tb_request_history_search.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_request_history_search.Location = new System.Drawing.Point(1020, 143);
+            this.tb_request_history_search.Margin = new System.Windows.Forms.Padding(5);
+            this.tb_request_history_search.Name = "tb_request_history_search";
+            this.tb_request_history_search.Size = new System.Drawing.Size(224, 26);
+            this.tb_request_history_search.TabIndex = 68;
+            this.tb_request_history_search.TextChanged += new System.EventHandler(this.tb_request_history_search_TextChanged);
             // 
             // label6
             // 
@@ -355,20 +373,172 @@
             this.label7.TabIndex = 69;
             this.label7.Text = "Request History:";
             // 
+            // panel_add_stock
+            // 
+            this.panel_add_stock.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panel_add_stock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_add_stock.Controls.Add(this.label8);
+            this.panel_add_stock.Controls.Add(this.dgv_add_items);
+            this.panel_add_stock.Controls.Add(this.tb_item_search);
+            this.panel_add_stock.Controls.Add(this.label2);
+            this.panel_add_stock.Controls.Add(this.btn_cancel_add_stock);
+            this.panel_add_stock.Controls.Add(this.btn_add_stock);
+            this.panel_add_stock.Controls.Add(this.tb_stock_quantity);
+            this.panel_add_stock.Controls.Add(this.label19);
+            this.panel_add_stock.Controls.Add(this.label18);
+            this.panel_add_stock.Location = new System.Drawing.Point(361, 143);
+            this.panel_add_stock.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_add_stock.Name = "panel_add_stock";
+            this.panel_add_stock.Size = new System.Drawing.Size(563, 378);
+            this.panel_add_stock.TabIndex = 100;
+            this.panel_add_stock.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(46, 46);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(198, 18);
+            this.label8.TabIndex = 108;
+            this.label8.Text = "SELECT AN ITEM FROM THE LIST";
+            // 
+            // dgv_add_items
+            // 
+            this.dgv_add_items.AllowUserToAddRows = false;
+            this.dgv_add_items.BackgroundColor = System.Drawing.Color.PaleGreen;
+            this.dgv_add_items.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_add_items.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dgv_add_items.Location = new System.Drawing.Point(19, 123);
+            this.dgv_add_items.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_add_items.MultiSelect = false;
+            this.dgv_add_items.Name = "dgv_add_items";
+            this.dgv_add_items.ReadOnly = true;
+            this.dgv_add_items.RowHeadersVisible = false;
+            this.dgv_add_items.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_add_items.Size = new System.Drawing.Size(523, 181);
+            this.dgv_add_items.TabIndex = 107;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Item Number";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Item";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // tb_item_search
+            // 
+            this.tb_item_search.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_item_search.Location = new System.Drawing.Point(221, 85);
+            this.tb_item_search.Margin = new System.Windows.Forms.Padding(5);
+            this.tb_item_search.Name = "tb_item_search";
+            this.tb_item_search.Size = new System.Drawing.Size(321, 32);
+            this.tb_item_search.TabIndex = 106;
+            this.tb_item_search.TextChanged += new System.EventHandler(this.tb_item_search_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 89);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 24);
+            this.label2.TabIndex = 105;
+            this.label2.Text = "SEARCH ITEMS:";
+            // 
+            // btn_cancel_add_stock
+            // 
+            this.btn_cancel_add_stock.BackColor = System.Drawing.Color.Firebrick;
+            this.btn_cancel_add_stock.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cancel_add_stock.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel_add_stock.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_cancel_add_stock.Location = new System.Drawing.Point(290, 312);
+            this.btn_cancel_add_stock.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cancel_add_stock.Name = "btn_cancel_add_stock";
+            this.btn_cancel_add_stock.Size = new System.Drawing.Size(122, 43);
+            this.btn_cancel_add_stock.TabIndex = 103;
+            this.btn_cancel_add_stock.Text = "CANCEL";
+            this.btn_cancel_add_stock.UseVisualStyleBackColor = false;
+            this.btn_cancel_add_stock.Click += new System.EventHandler(this.btn_cancel_add_stock_Click);
+            // 
+            // btn_add_stock
+            // 
+            this.btn_add_stock.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_add_stock.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_add_stock.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_stock.Location = new System.Drawing.Point(420, 312);
+            this.btn_add_stock.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_add_stock.Name = "btn_add_stock";
+            this.btn_add_stock.Size = new System.Drawing.Size(122, 43);
+            this.btn_add_stock.TabIndex = 101;
+            this.btn_add_stock.Text = "ADD";
+            this.btn_add_stock.UseVisualStyleBackColor = false;
+            this.btn_add_stock.Click += new System.EventHandler(this.btn_add_stock_Click);
+            // 
+            // tb_stock_quantity
+            // 
+            this.tb_stock_quantity.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_stock_quantity.Location = new System.Drawing.Point(124, 317);
+            this.tb_stock_quantity.Margin = new System.Windows.Forms.Padding(5);
+            this.tb_stock_quantity.Name = "tb_stock_quantity";
+            this.tb_stock_quantity.Size = new System.Drawing.Size(153, 32);
+            this.tb_stock_quantity.TabIndex = 96;
+            this.tb_stock_quantity.TextChanged += new System.EventHandler(this.tb_stock_quantity_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(15, 320);
+            this.label19.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(99, 24);
+            this.label19.TabIndex = 95;
+            this.label19.Text = "QUANTITY:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(13, 13);
+            this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(238, 33);
+            this.label18.TabIndex = 100;
+            this.label18.Text = "ADD REQUEST ITEM";
+            // 
             // Requisitions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1269, 852);
+            this.Controls.Add(this.panel_add_stock);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_request_history_search);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgv_requesition_list);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Requisitions";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WARD REQUISITIONS";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -376,6 +546,9 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_requesition_details)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_requesition_list)).EndInit();
+            this.panel_add_stock.ResumeLayout(false);
+            this.panel_add_stock.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_add_items)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,23 +566,35 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tb_requesition_number;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dtp_request_date;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_additem;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgv_requesition_details;
         private System.Windows.Forms.Button btn_save_request;
         private System.Windows.Forms.Label linkback;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button btn_remove_item;
         private System.Windows.Forms.DataGridView dgv_requesition_list;
+        private System.Windows.Forms.TextBox tb_request_history_search;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Panel panel_add_stock;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView dgv_add_items;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.TextBox tb_item_search;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_cancel_add_stock;
+        private System.Windows.Forms.Button btn_add_stock;
+        private System.Windows.Forms.TextBox tb_stock_quantity;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
     }
 }
