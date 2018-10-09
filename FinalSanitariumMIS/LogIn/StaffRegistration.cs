@@ -117,6 +117,8 @@ namespace LogIn
             dgvWorkExperience.Rows.Clear();
             emptyAllInputFields();
 
+            MessageBox.Show("Record successfully saved!");
+
             DB2ResultSet max_staffID = DB.QueryWithResultSet("SELECT MAX(STAFF_NUMBER) as MAXID FROM STAFF");
 
             while (max_staffID.Read())
@@ -130,6 +132,8 @@ namespace LogIn
                     txtstaffnumber.Text = "10001";
                 }
             }
+
+            
         }
 
         private void btnaddqualification_Click(object sender, EventArgs e)

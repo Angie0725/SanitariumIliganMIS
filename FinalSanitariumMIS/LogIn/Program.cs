@@ -20,7 +20,7 @@ namespace LogIn
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StaffRegistration());
+            Application.Run(new StaffManagement());
         }
     }
 }
