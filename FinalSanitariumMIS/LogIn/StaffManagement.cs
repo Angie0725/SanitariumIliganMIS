@@ -16,6 +16,7 @@ namespace LogIn
         private FinalSanitariumMIS.Helpers.DatabaseHelper DB;
         private int selectedQuali = -1;
         private int selectedWE = -1;
+        public static string staffID = "";
 
         public StaffManagement()
         {
@@ -101,7 +102,10 @@ namespace LogIn
 
         private void btnPromoteDemote_Click(object sender, EventArgs e)
         {
-
+            StaffPositionManagement frmPosMgt = new StaffPositionManagement();
+            staffID = txtstaffnumber.Text;
+            frmPosMgt.Show();
+            this.Hide();
         }
 
         private void btnemployeebg_Click(object sender, EventArgs e)
