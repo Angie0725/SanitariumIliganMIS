@@ -112,6 +112,7 @@
             // 
             // txtfullname
             // 
+            this.txtfullname.Enabled = false;
             this.txtfullname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtfullname.Location = new System.Drawing.Point(189, 24);
             this.txtfullname.Margin = new System.Windows.Forms.Padding(4);

@@ -28,12 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -73,6 +69,11 @@
             this.btnaddWE = new System.Windows.Forms.Button();
             this.btnremoveWE = new System.Windows.Forms.Button();
             this.dgvworkexperiences = new System.Windows.Forms.DataGridView();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnchangeWE = new System.Windows.Forms.Button();
             this.dtp_work_experrience_finish = new System.Windows.Forms.DateTimePicker();
             this.dtp_work_experrience_start = new System.Windows.Forms.DateTimePicker();
@@ -87,15 +88,10 @@
             this.btnremoveQuali = new System.Windows.Forms.Button();
             this.btnchangeQuali = new System.Windows.Forms.Button();
             this.dgvqualifications = new System.Windows.Forms.DataGridView();
-            this.txtQualification = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtQualification = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffList)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -394,6 +390,7 @@
             // 
             // txtstaffnumber
             // 
+            this.txtstaffnumber.Enabled = false;
             this.txtstaffnumber.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtstaffnumber.Location = new System.Drawing.Point(157, 29);
             this.txtstaffnumber.Margin = new System.Windows.Forms.Padding(4);
@@ -470,7 +467,7 @@
             this.pnlEmployeeBG.Controls.Add(this.groupBox2);
             this.pnlEmployeeBG.Location = new System.Drawing.Point(12, 106);
             this.pnlEmployeeBG.Name = "pnlEmployeeBG";
-            this.pnlEmployeeBG.Size = new System.Drawing.Size(971, 369);
+            this.pnlEmployeeBG.Size = new System.Drawing.Size(971, 397);
             this.pnlEmployeeBG.TabIndex = 20;
             this.pnlEmployeeBG.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlEmployeeBG_Paint);
             // 
@@ -501,9 +498,9 @@
             this.groupBox3.Controls.Add(this.txtOrganization);
             this.groupBox3.Controls.Add(this.txtPosition);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(22, 173);
+            this.groupBox3.Location = new System.Drawing.Point(22, 184);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(926, 184);
+            this.groupBox3.Size = new System.Drawing.Size(926, 196);
             this.groupBox3.TabIndex = 41;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "WORK EXPERIENCE";
@@ -513,7 +510,7 @@
             this.btnaddWE.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnaddWE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnaddWE.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddWE.Location = new System.Drawing.Point(128, 136);
+            this.btnaddWE.Location = new System.Drawing.Point(128, 148);
             this.btnaddWE.Name = "btnaddWE";
             this.btnaddWE.Size = new System.Drawing.Size(97, 31);
             this.btnaddWE.TabIndex = 45;
@@ -526,7 +523,7 @@
             this.btnremoveWE.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnremoveWE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnremoveWE.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnremoveWE.Location = new System.Drawing.Point(334, 136);
+            this.btnremoveWE.Location = new System.Drawing.Point(334, 148);
             this.btnremoveWE.Name = "btnremoveWE";
             this.btnremoveWE.Size = new System.Drawing.Size(97, 31);
             this.btnremoveWE.TabIndex = 44;
@@ -538,14 +535,6 @@
             // 
             this.dgvworkexperiences.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvworkexperiences.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvworkexperiences.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle43;
             this.dgvworkexperiences.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvworkexperiences.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column11,
@@ -553,28 +542,50 @@
             this.Column13,
             this.Column14,
             this.Column15});
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvworkexperiences.DefaultCellStyle = dataGridViewCellStyle44;
             this.dgvworkexperiences.Location = new System.Drawing.Point(451, 29);
             this.dgvworkexperiences.Name = "dgvworkexperiences";
             this.dgvworkexperiences.RowHeadersVisible = false;
             this.dgvworkexperiences.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvworkexperiences.Size = new System.Drawing.Size(445, 138);
+            this.dgvworkexperiences.Size = new System.Drawing.Size(445, 150);
             this.dgvworkexperiences.TabIndex = 0;
             this.dgvworkexperiences.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvworkexperiences_CellContenDoubleClick);
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "WE_ID";
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 85;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "POSITION";
+            this.Column12.Name = "Column12";
+            this.Column12.Width = 111;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "ORGANIZATION";
+            this.Column13.Name = "Column13";
+            this.Column13.Width = 156;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "START_DATE";
+            this.Column14.Name = "Column14";
+            this.Column14.Width = 138;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "END_DATE";
+            this.Column15.Name = "Column15";
+            this.Column15.Width = 120;
             // 
             // btnchangeWE
             // 
             this.btnchangeWE.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnchangeWE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnchangeWE.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnchangeWE.Location = new System.Drawing.Point(231, 136);
+            this.btnchangeWE.Location = new System.Drawing.Point(231, 148);
             this.btnchangeWE.Name = "btnchangeWE";
             this.btnchangeWE.Size = new System.Drawing.Size(97, 31);
             this.btnchangeWE.TabIndex = 43;
@@ -671,7 +682,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(22, 35);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(926, 132);
+            this.groupBox2.Size = new System.Drawing.Size(926, 143);
             this.groupBox2.TabIndex = 40;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "QUALIFICATIONS";
@@ -681,7 +692,7 @@
             this.btnaddQuali.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnaddQuali.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnaddQuali.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddQuali.Location = new System.Drawing.Point(128, 79);
+            this.btnaddQuali.Location = new System.Drawing.Point(128, 93);
             this.btnaddQuali.Name = "btnaddQuali";
             this.btnaddQuali.Size = new System.Drawing.Size(97, 31);
             this.btnaddQuali.TabIndex = 42;
@@ -694,7 +705,7 @@
             this.btnremoveQuali.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnremoveQuali.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnremoveQuali.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnremoveQuali.Location = new System.Drawing.Point(334, 79);
+            this.btnremoveQuali.Location = new System.Drawing.Point(334, 93);
             this.btnremoveQuali.Name = "btnremoveQuali";
             this.btnremoveQuali.Size = new System.Drawing.Size(97, 31);
             this.btnremoveQuali.TabIndex = 41;
@@ -707,7 +718,7 @@
             this.btnchangeQuali.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnchangeQuali.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnchangeQuali.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnchangeQuali.Location = new System.Drawing.Point(231, 79);
+            this.btnchangeQuali.Location = new System.Drawing.Point(231, 93);
             this.btnchangeQuali.Name = "btnchangeQuali";
             this.btnchangeQuali.Size = new System.Drawing.Size(97, 31);
             this.btnchangeQuali.TabIndex = 40;
@@ -719,33 +730,33 @@
             // 
             this.dgvqualifications.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvqualifications.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvqualifications.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle45;
             this.dgvqualifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvqualifications.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column9,
             this.Column10});
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle48.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle48.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvqualifications.DefaultCellStyle = dataGridViewCellStyle48;
             this.dgvqualifications.Location = new System.Drawing.Point(451, 27);
             this.dgvqualifications.Name = "dgvqualifications";
             this.dgvqualifications.RowHeadersVisible = false;
             this.dgvqualifications.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvqualifications.Size = new System.Drawing.Size(445, 83);
+            this.dgvqualifications.Size = new System.Drawing.Size(445, 97);
             this.dgvqualifications.TabIndex = 0;
             this.dgvqualifications.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvqualification_CellContentDoubleClick);
+            // 
+            // Column9
+            // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column9.HeaderText = "Q_ID";
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 71;
+            // 
+            // Column10
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column10.HeaderText = "DESCRIPTION";
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 145;
             // 
             // txtQualification
             // 
@@ -767,52 +778,6 @@
             this.label15.Size = new System.Drawing.Size(90, 14);
             this.label15.TabIndex = 33;
             this.label15.Text = "QUALIFICATION:";
-            // 
-            // Column9
-            // 
-            dataGridViewCellStyle46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle46;
-            this.Column9.HeaderText = "Q_ID";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 64;
-            // 
-            // Column10
-            // 
-            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle47;
-            this.Column10.HeaderText = "DESCRIPTION";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 124;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "WE_ID";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 75;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "POSITION";
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 96;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "ORGANIZATION";
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 132;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "START_DATE";
-            this.Column14.Name = "Column14";
-            this.Column14.Width = 118;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "END_DATE";
-            this.Column15.Name = "Column15";
-            this.Column15.Width = 104;
             // 
             // StaffManagement
             // 
