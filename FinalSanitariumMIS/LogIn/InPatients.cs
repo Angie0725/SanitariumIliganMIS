@@ -16,5 +16,10 @@ namespace LogIn
         {
             InitializeComponent();
         }
+
+        private void InPatients_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

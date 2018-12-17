@@ -251,7 +251,6 @@ namespace LogIn
                 {
                     if (!txtwardname.Text.Equals(""))
                     {
-                        
                         DB.Query("UPDATE WARD SET NAME = '" + txtwardname.Text + "', DESCRIPTION = '" + txtwarddesc.Text + "' WHERE WARD_NUMBER = '" + txtwardnum.Text + "'");
                         loadWardList();
                         MessageBox.Show("The ward has been successfully updated!");

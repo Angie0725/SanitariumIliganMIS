@@ -23,5 +23,10 @@ namespace LogIn
             frmMD.Show();
             this.Hide();
         }
+
+        private void PatientRegistration_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

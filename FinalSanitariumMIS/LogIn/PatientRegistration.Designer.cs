@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkback = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -65,7 +66,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.linkback = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -83,6 +83,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1248, 100);
             this.panel1.TabIndex = 2;
+            // 
+            // linkback
+            // 
+            this.linkback.AutoSize = true;
+            this.linkback.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkback.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.linkback.Location = new System.Drawing.Point(1042, 68);
+            this.linkback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkback.Name = "linkback";
+            this.linkback.Size = new System.Drawing.Size(189, 23);
+            this.linkback.TabIndex = 11;
+            this.linkback.Text = "Go back to Main Menu";
+            this.linkback.Click += new System.EventHandler(this.linkback_Click);
             // 
             // label4
             // 
@@ -479,19 +492,6 @@
             this.button1.Text = "UPDATE";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // linkback
-            // 
-            this.linkback.AutoSize = true;
-            this.linkback.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkback.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.linkback.Location = new System.Drawing.Point(1042, 68);
-            this.linkback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkback.Name = "linkback";
-            this.linkback.Size = new System.Drawing.Size(189, 23);
-            this.linkback.TabIndex = 11;
-            this.linkback.Text = "Go back to Main Menu";
-            this.linkback.Click += new System.EventHandler(this.linkback_Click);
-            // 
             // PatientRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,6 +506,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "PatientRegistration";
             this.Text = "PATIENT REGISTRATION";
+            this.Load += new System.EventHandler(this.PatientRegistration_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

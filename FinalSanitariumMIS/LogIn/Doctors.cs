@@ -84,5 +84,10 @@ namespace LogIn
                 dgv_masterlist.Rows.Add(d);
             }
         }
+
+        private void Doctors_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

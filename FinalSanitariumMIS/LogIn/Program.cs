@@ -20,7 +20,7 @@ namespace LogIn
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RoomManagement());
+            Application.Run(new StaffWardAllocation());
         }
     }
 }

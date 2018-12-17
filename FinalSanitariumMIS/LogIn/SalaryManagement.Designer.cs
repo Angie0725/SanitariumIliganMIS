@@ -32,13 +32,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -95,18 +95,6 @@
             this.groupBox1.TabIndex = 49;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "SALARY INFORMATION";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 302);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 35);
-            this.button1.TabIndex = 50;
-            this.button1.Text = "SAVE";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -168,6 +156,19 @@
             this.label15.Size = new System.Drawing.Size(87, 14);
             this.label15.TabIndex = 4;
             this.label15.Text = "SALARY GRADE:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 302);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(184, 35);
+            this.button1.TabIndex = 50;
+            this.button1.Text = "SAVE";
+            this.button1.UseVisualStyleBackColor = false;
+            
             // 
             // button2
             // 
