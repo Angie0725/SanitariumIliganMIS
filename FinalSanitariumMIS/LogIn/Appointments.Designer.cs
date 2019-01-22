@@ -74,7 +74,7 @@
             this.button1.TabIndex = 88;
             this.button1.Text = "UPDATE";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+         
             // 
             // button2
             // 
@@ -87,7 +87,7 @@
             this.button2.TabIndex = 87;
             this.button2.Text = "REGISTER";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+       
             // 
             // groupBox2
             // 
@@ -143,7 +143,7 @@
             this.button4.TabIndex = 90;
             this.button4.Text = "PICK A DOCTOR";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+     
             // 
             // textBox4
             // 
@@ -153,7 +153,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(160, 22);
             this.textBox4.TabIndex = 89;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            
             // 
             // label5
             // 
@@ -165,7 +165,7 @@
             this.label5.Size = new System.Drawing.Size(68, 14);
             this.label5.TabIndex = 88;
             this.label5.Text = "DOCTOR ID:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+       
             // 
             // dateTimePicker3
             // 

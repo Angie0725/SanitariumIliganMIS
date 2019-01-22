@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkback = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.linkback = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -75,6 +75,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1253, 100);
             this.panel1.TabIndex = 2;
+            // 
+            // linkback
+            // 
+            this.linkback.AutoSize = true;
+            this.linkback.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkback.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.linkback.Location = new System.Drawing.Point(1046, 70);
+            this.linkback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkback.Name = "linkback";
+            this.linkback.Size = new System.Drawing.Size(189, 23);
+            this.linkback.TabIndex = 11;
+            this.linkback.Text = "Go back to Main Menu";
             // 
             // label4
             // 
@@ -246,7 +258,7 @@
             this.label2.Size = new System.Drawing.Size(112, 19);
             this.label2.TabIndex = 61;
             this.label2.Text = "Patient\'s Drugs:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            
             // 
             // dataGridView2
             // 
@@ -359,7 +371,7 @@
             this.label15.Size = new System.Drawing.Size(75, 14);
             this.label15.TabIndex = 56;
             this.label15.Text = "DRUG NAME:";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
+         
             // 
             // button2
             // 
@@ -372,6 +384,7 @@
             this.button2.TabIndex = 78;
             this.button2.Text = "SAVE REQUEST";
             this.button2.UseVisualStyleBackColor = false;
+        
             // 
             // button3
             // 
@@ -384,18 +397,6 @@
             this.button3.TabIndex = 79;
             this.button3.Text = "CANCEL REQUEST";
             this.button3.UseVisualStyleBackColor = false;
-            // 
-            // linkback
-            // 
-            this.linkback.AutoSize = true;
-            this.linkback.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkback.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.linkback.Location = new System.Drawing.Point(1046, 70);
-            this.linkback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkback.Name = "linkback";
-            this.linkback.Size = new System.Drawing.Size(189, 23);
-            this.linkback.TabIndex = 11;
-            this.linkback.Text = "Go back to Main Menu";
             // 
             // MedicationRequisitions
             // 

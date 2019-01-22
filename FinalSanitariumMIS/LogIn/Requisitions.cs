@@ -41,5 +41,9 @@ namespace LogIn
             DB2ResultSet rs = DB.QueryWithResultSet("SELECT * FROM REQUESITION");
         }
 
+        private void btn_save_request_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
