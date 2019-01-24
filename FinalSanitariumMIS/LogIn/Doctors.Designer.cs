@@ -38,16 +38,16 @@
             this.tb_lastname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cb_clinic_number = new System.Windows.Forms.ComboBox();
             this.tb_address = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tb_doctor_id = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tb_firstname = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_reigster = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cb_clinic_number = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_masterlist)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -107,18 +107,18 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cb_clinic_number);
+            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.tb_tel_no);
             this.groupBox2.Controls.Add(this.tb_lastname);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.cb_clinic_number);
             this.groupBox2.Controls.Add(this.tb_address);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.tb_doctor_id);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.tb_firstname);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(19, 121);
             this.groupBox2.Name = "groupBox2";
@@ -130,8 +130,8 @@
             // tb_tel_no
             // 
             this.tb_tel_no.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_tel_no.Location = new System.Drawing.Point(166, 214);
-            this.tb_tel_no.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_tel_no.Location = new System.Drawing.Point(166, 217);
+            this.tb_tel_no.Margin = new System.Windows.Forms.Padding(4);
             this.tb_tel_no.Name = "tb_tel_no";
             this.tb_tel_no.Size = new System.Drawing.Size(160, 22);
             this.tb_tel_no.TabIndex = 82;
@@ -140,7 +140,7 @@
             // 
             this.tb_lastname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_lastname.Location = new System.Drawing.Point(166, 93);
-            this.tb_lastname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_lastname.Margin = new System.Windows.Forms.Padding(4);
             this.tb_lastname.Name = "tb_lastname";
             this.tb_lastname.Size = new System.Drawing.Size(160, 22);
             this.tb_lastname.TabIndex = 81;
@@ -160,27 +160,18 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(18, 217);
+            this.label7.Location = new System.Drawing.Point(18, 220);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(118, 14);
             this.label7.TabIndex = 79;
             this.label7.Text = "TELEPHONE NUMBER:";
             // 
-            // cb_clinic_number
-            // 
-            this.cb_clinic_number.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_clinic_number.FormattingEnabled = true;
-            this.cb_clinic_number.Location = new System.Drawing.Point(204, 122);
-            this.cb_clinic_number.Name = "cb_clinic_number";
-            this.cb_clinic_number.Size = new System.Drawing.Size(122, 22);
-            this.cb_clinic_number.TabIndex = 74;
-            // 
             // tb_address
             // 
             this.tb_address.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_address.Location = new System.Drawing.Point(166, 151);
-            this.tb_address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_address.Location = new System.Drawing.Point(166, 154);
+            this.tb_address.Margin = new System.Windows.Forms.Padding(4);
             this.tb_address.Multiline = true;
             this.tb_address.Name = "tb_address";
             this.tb_address.Size = new System.Drawing.Size(160, 55);
@@ -190,7 +181,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 154);
+            this.label5.Location = new System.Drawing.Point(18, 157);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 14);
@@ -201,7 +192,7 @@
             // 
             this.tb_doctor_id.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_doctor_id.Location = new System.Drawing.Point(166, 34);
-            this.tb_doctor_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_doctor_id.Margin = new System.Windows.Forms.Padding(4);
             this.tb_doctor_id.Name = "tb_doctor_id";
             this.tb_doctor_id.Size = new System.Drawing.Size(160, 22);
             this.tb_doctor_id.TabIndex = 60;
@@ -221,7 +212,7 @@
             // 
             this.tb_firstname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_firstname.Location = new System.Drawing.Point(166, 68);
-            this.tb_firstname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_firstname.Margin = new System.Windows.Forms.Padding(4);
             this.tb_firstname.Name = "tb_firstname";
             this.tb_firstname.Size = new System.Drawing.Size(160, 22);
             this.tb_firstname.TabIndex = 58;
@@ -236,17 +227,6 @@
             this.label15.Size = new System.Drawing.Size(73, 14);
             this.label15.TabIndex = 56;
             this.label15.Text = "FIRST NAME:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(18, 125);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 14);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "CLINIC NUMBER:";
             // 
             // btn_update
             // 
@@ -273,6 +253,25 @@
             this.btn_reigster.Text = "REGISTER";
             this.btn_reigster.UseVisualStyleBackColor = false;
             this.btn_reigster.Click += new System.EventHandler(this.btn_reigster_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 128);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(92, 14);
+            this.label6.TabIndex = 83;
+            this.label6.Text = "CLINIC NUMBER:";
+            // 
+            // cb_clinic_number
+            // 
+            this.cb_clinic_number.FormattingEnabled = true;
+            this.cb_clinic_number.Location = new System.Drawing.Point(166, 123);
+            this.cb_clinic_number.Name = "cb_clinic_number";
+            this.cb_clinic_number.Size = new System.Drawing.Size(160, 24);
+            this.cb_clinic_number.TabIndex = 84;
             // 
             // Doctors
             // 
@@ -307,18 +306,18 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cb_clinic_number;
         private System.Windows.Forms.TextBox tb_address;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tb_doctor_id;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tb_firstname;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tb_lastname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb_tel_no;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_reigster;
+        private System.Windows.Forms.ComboBox cb_clinic_number;
+        private System.Windows.Forms.Label label6;
     }
 }

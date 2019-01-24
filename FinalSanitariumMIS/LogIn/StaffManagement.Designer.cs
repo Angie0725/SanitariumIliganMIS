@@ -465,11 +465,10 @@
             this.pnlEmployeeBG.Controls.Add(this.lblEmpName);
             this.pnlEmployeeBG.Controls.Add(this.groupBox3);
             this.pnlEmployeeBG.Controls.Add(this.groupBox2);
-            this.pnlEmployeeBG.Location = new System.Drawing.Point(12, 106);
+            this.pnlEmployeeBG.Location = new System.Drawing.Point(12, 111);
             this.pnlEmployeeBG.Name = "pnlEmployeeBG";
             this.pnlEmployeeBG.Size = new System.Drawing.Size(971, 397);
             this.pnlEmployeeBG.TabIndex = 20;
-            this.pnlEmployeeBG.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlEmployeeBG_Paint);
             // 
             // lblEmpName
             // 

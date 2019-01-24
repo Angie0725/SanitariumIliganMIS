@@ -20,7 +20,9 @@ namespace LogIn
         public Suppliers()
         {
             InitializeComponent();
-            RefreshMasterList();
+        
+
+            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Nicksplat93", "Angelie_Buen", "sanita");
         }
 
         private void linkback_Click(object sender, EventArgs e)
@@ -32,70 +34,128 @@ namespace LogIn
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
-            if (dgv_masterlist.CurrentRow.Index == -1)
+            if (!tb_supplier_number.Text.Equals("") && !tb_supplier_name.Text.Equals("") && !tb_address.Text.Equals("") && !tb_tel_no.Text.Equals("") && !tb_fax_no.Text.Equals(""))
             {
-                MessageBox.Show("Please select a supplier from the Master List of Suppliers");
-                return;
-            }
+                DB2ResultSet check = DB.QueryWithResultSet("SELECT * FROM SUPPLIER WHERE SUPPLIER_NUMBER = " + Convert.ToInt32(tb_supplier_number.Text));
+                if (check.Read())
+                {
+                    DB.Query("UPDATE SUPPLIER SET " +
+                    " SUPPLIER_NAME = '" + tb_supplier_name.Text +
+                    "', ADDRESS = '" + tb_address.Text +
+                    "', TELNUMBER = " + tb_tel_no.Text +
+                    ", FAXNUMBER = " + tb_fax_no.Text +
+                    " WHERE SUPPLIER_NUMBER = " + Convert.ToInt32(tb_supplier_number.Text));
 
-            tb_supplier_number.Text = dgv_masterlist.CurrentRow.Cells[0].Value.ToString();
-            tb_supplier_name.Text = dgv_masterlist.CurrentRow.Cells[1].Value.ToString();
-            tb_address.Text = dgv_masterlist.CurrentRow.Cells[2].Value.ToString();
-            tb_tel_no.Text = dgv_masterlist.CurrentRow.Cells[3].Value.ToString();
-            tb_fax_no.Text = dgv_masterlist.CurrentRow.Cells[4].Value.ToString();
+                    tb_supplier_number.Clear();
+                    tb_supplier_name.Clear();
+                    tb_address.Clear();
+                    tb_tel_no.Clear();
+                    tb_fax_no.Clear();
+                    MessageBox.Show("Record successfully updated!");
+                    dgv_masterlist.Rows.Clear();
+                    RefreshMasterList();
+                }
+                else
+                {
+                    MessageBox.Show("That Supplier Number does not exist. Please select from the Suppliers List on the right.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please make sure all fields are correctly filled out.");
+            }
         }
 
         private void btnsave_Click(object sender, EventArgs e)
         {
-            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper();
-
-            DB2ResultSet rs = DB.QueryWithResultSet("SELECT * FROM SUPPLIER WHERE supplier_number = '" + tb_supplier_number.Text + "'");
-
-            if (rs.Read())
+            if (!tb_supplier_number.Text.Equals("") && !tb_supplier_name.Text.Equals("") && !tb_address.Text.Equals("") && !tb_tel_no.Text.Equals("") && !tb_fax_no.Text.Equals(""))
             {
-                DB.Query("UPDATE SUPPLIER SET " +
-                    "SUPPLIER_NUMBER = " + tb_supplier_number.Text + "," +
-                    "SUPPLIER_NAME = '" + tb_supplier_name.Text + "'," +
-                    "ADDRESS = '" + tb_address.Text + "'," +
-                    "TELNUMBER = " + tb_tel_no.Text + "," +
-                    "FAXNUMBER = " + tb_fax_no.Text + " WHERE SUPPLIER_NUMBER = " + 
-                    dgv_masterlist.CurrentRow.Cells[0].Value.ToString());
+                DB2ResultSet check = DB.QueryWithResultSet("SELECT * FROM SUPPLIER WHERE SUPPLIER_NUMBER = " + Convert.ToInt32(tb_supplier_number.Text));
+                if (check.Read())
+                {
+                    DialogResult res = MessageBox.Show("That Supplier Number already exists! Let us give you a NEW Supplier Number.", "Existing Supplier Number", MessageBoxButtons.OKCancel);
+
+                    if (res == DialogResult.OK)
+                    {
+                        DB2ResultSet max_salID = DB.QueryWithResultSet("SELECT MAX(Supplier_Number) as MAXID FROM SUPPLIER");
+
+                        while (max_salID.Read())
+                        {
+                            try
+                            {
+                                tb_supplier_number.Text = (Convert.ToInt32(max_salID["MAXID"]) + 1).ToString();
+                            }
+                            catch (Exception er)
+                            {
+                                tb_supplier_number.Text = "1";
+                            }
+                        }
+                    }
+
+                }
+                else
+                {
+                    DB.Query("INSERT INTO SUPPLIER VALUES("
+                    + Convert.ToInt32(tb_supplier_number.Text) + ",'"
+                    + tb_supplier_name.Text + "','"
+                    + tb_address.Text + "',"
+                    + tb_tel_no.Text + ","
+                    + tb_fax_no.Text
+                    + ")");
+
+                    dgv_masterlist.Rows.Clear();
+                    RefreshMasterList();
+
+                    MessageBox.Show("New Supplier has been saved!");
+                }
             }
             else
             {
-                DB.Query("INSERT INTO SUPPLIER VALUES (" +
-                    tb_supplier_number.Text + ",'" + tb_supplier_name.Text + "','" +
-                    tb_address.Text + "'," + tb_tel_no.Text + "," + tb_fax_no.Text + ")");
+                MessageBox.Show("Please make sure all fields are correctly filled out.");
             }
+
+            dgv_masterlist.Rows.Clear();
+            RefreshMasterList();
         }
 
         private void RefreshMasterList()
         {
-            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper();
 
-            DB2ResultSet rs = DB.QueryWithResultSet("SELECT * FROM SUPPLIER");
-
-            dgv_masterlist.Rows.Clear();
-
-            while(rs.Read())
+            string[] salist = new string[5];
+            DB2ResultSet suppliers = DB.QueryWithResultSet("SELECT * FROM SUPPLIER");
+            while (suppliers.Read())
             {
-                Object[] d = new Object[5];
+                salist[0] = suppliers["SUPPLIER_NUMBER"].ToString();
+                salist[1] = suppliers["SUPPLIER_NAME"].ToString();
+                salist[2] = suppliers["ADDRESS"].ToString();
+                salist[3] = suppliers["TELNUMBER"].ToString();
+                salist[4] = suppliers["FAXNUMBER"].ToString();
 
-                d[0] = rs.GetString(0);
-                d[1] = rs.GetString(1);
-                d[2] = rs.GetString(2);
-                d[3] = rs.GetString(3);
-                d[4] = rs.GetString(4);
-
-                dgv_masterlist.Rows.Add(d);
+                dgv_masterlist.Rows.Add(salist);
             }
         }
 
-        private void Suppliers_FormClosed(object sender, FormClosedEventArgs e)
+        private void Suppliers_Load(object sender, EventArgs e)
         {
-            InventoryManagement frm = new InventoryManagement();
-            frm.Show();
-            this.Dispose();
+            RefreshMasterList();
         }
+
+        private void masterlist_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rownum = e.RowIndex;
+
+            tb_supplier_number.Text = dgv_masterlist.Rows[rownum].Cells[0].Value.ToString();
+            tb_supplier_name.Text = dgv_masterlist.Rows[rownum].Cells[1].Value.ToString();
+            tb_address.Text = dgv_masterlist.Rows[rownum].Cells[2].Value.ToString();
+            tb_tel_no.Text = dgv_masterlist.Rows[rownum].Cells[3].Value.ToString();
+            tb_fax_no.Text = dgv_masterlist.Rows[rownum].Cells[4].Value.ToString();
+        }
+
+        //private void Suppliers_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    InventoryManagement frm = new InventoryManagement();
+        //    frm.Show();
+        //    this.Dispose();
+        //}
     }
 }

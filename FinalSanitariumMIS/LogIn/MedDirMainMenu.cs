@@ -61,8 +61,8 @@ namespace LogIn
 
         private void MedDirMainMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Program.LoginScreen.Show();
-            this.Dispose();
+            //Program.LoginScreen.Show();
+            //this.Dispose();
         }
     }
 }

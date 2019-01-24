@@ -8,11 +8,11 @@ namespace LogIn
 {
     static class Program
     {
-        public static Form1 LoginScreen;
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
+        //public static Form1 LoginScreen;
+        ///// <summary>
+        ///// The main entry point for the application.
+        ///// </summary>
+        //[STAThread]
 
 
         static void Main()
@@ -20,7 +20,7 @@ namespace LogIn
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StaffWardAllocation());
+            Application.Run(new Suppliers());
         }
     }
 }

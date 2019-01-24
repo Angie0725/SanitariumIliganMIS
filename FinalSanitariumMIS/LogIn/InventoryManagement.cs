@@ -20,6 +20,8 @@ namespace LogIn
         {
             InitializeComponent();
             RefreshMasterList();
+
+            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Nicksplat93", "Angelie_Buen", "sanita");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -99,7 +101,7 @@ namespace LogIn
                 modifier = "WHERE " + cb_filter.SelectedItem.ToString() + " LIKE '" + tb_search.Text + "%'"; 
             }
 
-            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper();
+            //DB = new FinalSanitariumMIS.Helpers.DatabaseHelper();
 
             DB2ResultSet rs = DB.QueryWithResultSet("SELECT * FROM SUPPLY " + modifier);
 
@@ -216,6 +218,11 @@ namespace LogIn
             MedDirMainMenu frmMD = new MedDirMainMenu();
             frmMD.Show();
             this.Hide();
+        }
+
+        private void InventoryManagement_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

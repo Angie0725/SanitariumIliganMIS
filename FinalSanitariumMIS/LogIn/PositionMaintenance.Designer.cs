@@ -31,20 +31,23 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnsave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtdescription = new System.Windows.Forms.TextBox();
+            this.txttitle = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtpositionID = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dgposition = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnupdate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgposition)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,26 +83,26 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "SANITARIUM HOSPITAL";
             // 
-            // button1
+            // btnsave
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(11, 302);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 35);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "SAVE";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnsave.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsave.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsave.Location = new System.Drawing.Point(11, 302);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(184, 35);
+            this.btnsave.TabIndex = 56;
+            this.btnsave.Text = "SAVE";
+            this.btnsave.UseVisualStyleBackColor = false;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtdescription);
+            this.groupBox1.Controls.Add(this.txttitle);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtpositionID);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(11, 115);
@@ -109,23 +112,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "POSITION INFORMATION";
             // 
-            // comboBox1
+            // txtdescription
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(157, 96);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(195, 22);
-            this.comboBox1.TabIndex = 22;
+            this.txtdescription.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdescription.Location = new System.Drawing.Point(157, 96);
+            this.txtdescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtdescription.Multiline = true;
+            this.txtdescription.Name = "txtdescription";
+            this.txtdescription.Size = new System.Drawing.Size(195, 54);
+            this.txtdescription.TabIndex = 10;
             // 
-            // textBox2
+            // txttitle
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(157, 68);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 22);
-            this.textBox2.TabIndex = 9;
+            this.txttitle.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttitle.Location = new System.Drawing.Point(157, 68);
+            this.txttitle.Margin = new System.Windows.Forms.Padding(4);
+            this.txttitle.Name = "txttitle";
+            this.txttitle.Size = new System.Drawing.Size(195, 22);
+            this.txttitle.TabIndex = 9;
             // 
             // label13
             // 
@@ -134,9 +138,9 @@
             this.label13.Location = new System.Drawing.Point(19, 99);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 14);
+            this.label13.Size = new System.Drawing.Size(79, 14);
             this.label13.TabIndex = 7;
-            this.label13.Text = "SALARY SCALE:";
+            this.label13.Text = "DESCRIPTION:";
             // 
             // label14
             // 
@@ -149,14 +153,14 @@
             this.label14.TabIndex = 6;
             this.label14.Text = "POSITION TITLE:";
             // 
-            // textBox3
+            // txtpositionID
             // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(157, 29);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(195, 22);
-            this.textBox3.TabIndex = 5;
+            this.txtpositionID.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpositionID.Location = new System.Drawing.Point(157, 29);
+            this.txtpositionID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtpositionID.Name = "txtpositionID";
+            this.txtpositionID.Size = new System.Drawing.Size(195, 22);
+            this.txtpositionID.TabIndex = 5;
             // 
             // label15
             // 
@@ -180,26 +184,53 @@
             this.label11.TabIndex = 58;
             this.label11.Text = "Position List:";
             // 
-            // dataGridView1
+            // dgposition
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.PaleGreen;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(397, 132);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(349, 205);
-            this.dataGridView1.TabIndex = 59;
+            this.dgposition.AllowUserToDeleteRows = false;
+            this.dgposition.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgposition.BackgroundColor = System.Drawing.Color.PaleGreen;
+            this.dgposition.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgposition.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dgposition.Location = new System.Drawing.Point(397, 132);
+            this.dgposition.Name = "dgposition";
+            this.dgposition.RowHeadersVisible = false;
+            this.dgposition.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgposition.Size = new System.Drawing.Size(349, 205);
+            this.dgposition.TabIndex = 59;
+            this.dgposition.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgposition_CellContentDoubleClick);
             // 
-            // button2
+            // Column1
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(202, 302);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 35);
-            this.button2.TabIndex = 57;
-            this.button2.Text = "UPDATE";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Column1.HeaderText = "POSITION_ID";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "TITLE";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 62;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "DESCRIPTION";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 105;
+            // 
+            // btnupdate
+            // 
+            this.btnupdate.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnupdate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdate.Location = new System.Drawing.Point(202, 302);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(184, 35);
+            this.btnupdate.TabIndex = 57;
+            this.btnupdate.Text = "UPDATE";
+            this.btnupdate.UseVisualStyleBackColor = false;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // PositionMaintenance
             // 
@@ -207,18 +238,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 353);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnsave);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dgposition);
+            this.Controls.Add(this.btnupdate);
             this.Name = "PositionMaintenance";
             this.Text = "POSITION MAINTENANCE";
+            this.Load += new System.EventHandler(this.PositionMaintenance_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgposition)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,16 +261,19 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txttitle;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtpositionID;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dgposition;
+        private System.Windows.Forms.Button btnupdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.TextBox txtdescription;
     }
 }

@@ -22,7 +22,7 @@ namespace LogIn
         {
             InitializeComponent();
 
-            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Nicksplat93", "ANGELIE BUEN", "sanita");
+            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Nicksplat93", "Angelie_Buen", "sanita");
         }
 
         private void StaffManagement_Load(object sender, EventArgs e)
@@ -69,7 +69,7 @@ namespace LogIn
                     "' WHERE STAFF_NUMBER = " + Convert.ToInt32(txtstaffnumber.Text));
 
                 emptyAllInputFields();
-                MessageBox.Show("Record successfully update!");
+                MessageBox.Show("Record successfully updated!");
             }
         }
 
@@ -110,50 +110,70 @@ namespace LogIn
 
         private void btnemployeebg_Click(object sender, EventArgs e)
         {
-            pnlEmployeeBG.Show();
+            if (!txtstaffnumber.Text.Equals(""))
+            {
+                pnlEmployeeBG.Show();
 
-        }
+                lblEmpName.Text = txtstaffnumber.Text + " - " + txtfirstname.Text + " " + txtlastname.Text;
 
-        private void pnlEmployeeBG_Paint(object sender, PaintEventArgs e)
-        {
-           
-            lblEmpName.Text = txtstaffnumber.Text + " - " + txtfirstname.Text + " " + txtlastname.Text;
+                loadQualificationList();
+                loadWorkExperiencesList();
+            }
+            else
+            {
+                MessageBox.Show("Please select an employee from the list.");
+            }
 
-            loadQualificationList();
-            loadWorkExperiencesList();
 
-            
+
+
         }
 
         private void loadQualificationList()
         {
-            DB2ResultSet quali = DB.QueryWithResultSet("SELECT * FROM QUALIFICATION WHERE STAFF_NUMBER = " + Convert.ToInt32(txtstaffnumber.Text));
-            string[] qtb = new string[2];
-
-            while (quali.Read())
+            try
             {
-                qtb[0] = quali["QUALIFICATION_ID"].ToString();
-                qtb[1] = quali["DESCRIPTION"].ToString();
+                DB2ResultSet quali = DB.QueryWithResultSet("SELECT * FROM QUALIFICATION WHERE STAFF_NUMBER = " + Convert.ToInt32(txtstaffnumber.Text));
+                string[] qtb = new string[2];
 
-                dgvqualifications.Rows.Add(qtb);
+                while (quali.Read())
+                {
+                    qtb[0] = quali["QUALIFICATION_ID"].ToString();
+                    qtb[1] = quali["DESCRIPTION"].ToString();
+
+                    dgvqualifications.Rows.Add(qtb);
+                }
             }
+            catch(Exception er)
+            {
+                MessageBox.Show("Please select an employee from the list.");
+            }
+            
         }
 
         private void loadWorkExperiencesList()
         {
-            DB2ResultSet we = DB.QueryWithResultSet("SELECT * FROM WORKEXPERIENCE WHERE STAFF_NUMBER = " + Convert.ToInt32(txtstaffnumber.Text));
-            string[] wtb = new string[5];
-
-            while (we.Read())
+            try
             {
-                wtb[0] = we["WORKEXPERIENCE_ID"].ToString();
-                wtb[1] = we["POSITION"].ToString();
-                wtb[2] = we["ORGANIZATION"].ToString();
-                wtb[3] = we["START_DATE"].ToString();
-                wtb[4] = we["END_DATE"].ToString();
+                DB2ResultSet we = DB.QueryWithResultSet("SELECT * FROM WORKEXPERIENCE WHERE STAFF_NUMBER = " + Convert.ToInt32(txtstaffnumber.Text));
+                string[] wtb = new string[5];
 
-                dgvworkexperiences.Rows.Add(wtb);
+                while (we.Read())
+                {
+                    wtb[0] = we["WORKEXPERIENCE_ID"].ToString();
+                    wtb[1] = we["POSITION"].ToString();
+                    wtb[2] = we["ORGANIZATION"].ToString();
+                    wtb[3] = we["START_DATE"].ToString();
+                    wtb[4] = we["END_DATE"].ToString();
+
+                    dgvworkexperiences.Rows.Add(wtb);
+                }
             }
+            catch(Exception er)
+            {
+                MessageBox.Show("Please select an employee from the list.");
+            }
+            
         }
 
         private void dgvqualification_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)

@@ -16,8 +16,8 @@ namespace FinalSanitariumMIS.Helpers
 
         // Default credentials used to auto initialize DB2 Connection
         private String SCHEMA = "sanita";
-        private String USERID = "BILL-LAWRENCE";
-        private String PASSWORD = "Rheamaesabas12";
+        private String USERID = "Angelie_Buen";
+        private String PASSWORD = "Nicksplat93";
         private String SERVERIP = "127.0.0.1";
         private String PORT = "50000";
 

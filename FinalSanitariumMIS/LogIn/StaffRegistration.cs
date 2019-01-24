@@ -19,7 +19,7 @@ namespace LogIn
         {
             InitializeComponent();
             emptyAllInputFields();
-            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Nicksplat93", "ANGELIE BUEN", "sanita");
+            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Nicksplat93", "Angelie_Buen", "sanita");
         }
 
         private void btn_register_Click(object sender, EventArgs e)
@@ -121,17 +121,19 @@ namespace LogIn
 
             DB2ResultSet max_staffID = DB.QueryWithResultSet("SELECT MAX(STAFF_NUMBER) as MAXID FROM STAFF");
 
-            while (max_staffID.Read())
+            
+            try
             {
-                try
+                while (max_staffID.Read())
                 {
                     txtstaffnumber.Text = (Convert.ToInt32(max_staffID["MAXID"]) + 1).ToString();
                 }
-                catch (Exception er)
-                {
-                    txtstaffnumber.Text = "10001";
-                }
             }
+            catch (Exception er)
+            {
+                txtstaffnumber.Text = "10001";
+            }
+            
 
             
         }
@@ -253,17 +255,19 @@ namespace LogIn
 
             DB2ResultSet max_staffID = DB.QueryWithResultSet("SELECT MAX(STAFF_NUMBER) as MAXID FROM STAFF");
             
-            while (max_staffID.Read())
+            
+            try
             {
-                try
+                while (max_staffID.Read())
                 {
                     txtstaffnumber.Text = (Convert.ToInt32(max_staffID["MAXID"]) + 1).ToString();
                 }
-                catch(Exception er)
-                {
-                    txtstaffnumber.Text = "10001";
-                }
             }
+            catch(Exception er)
+            {
+                txtstaffnumber.Text = "10001";
+            }
+            
 
   
                 
