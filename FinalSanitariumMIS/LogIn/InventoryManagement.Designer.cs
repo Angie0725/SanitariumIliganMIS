@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.linkback = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblsuppliername = new System.Windows.Forms.Label();
             this.tb_supplier = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -80,8 +80,9 @@
             this.btn_suppliers = new System.Windows.Forms.Button();
             this.btn_update_supply = new System.Windows.Forms.Button();
             this.panel_add_stock = new System.Windows.Forms.Panel();
+            this.lblitemnum = new System.Windows.Forms.Label();
             this.btn_cancel_add_stock = new System.Windows.Forms.Button();
-            this.label_product_name = new System.Windows.Forms.Label();
+            this.lblitemname = new System.Windows.Forms.Label();
             this.btn_add_stock = new System.Windows.Forms.Button();
             this.tb_stock_quantity = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -100,27 +101,12 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel1.Controls.Add(this.linkback);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(-2, -1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1084, 100);
+            this.panel1.Size = new System.Drawing.Size(1232, 100);
             this.panel1.TabIndex = 90;
-            // 
-            // linkback
-            // 
-            this.linkback.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkback.AutoSize = true;
-            this.linkback.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkback.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.linkback.Location = new System.Drawing.Point(887, 69);
-            this.linkback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkback.Name = "linkback";
-            this.linkback.Size = new System.Drawing.Size(189, 23);
-            this.linkback.TabIndex = 100;
-            this.linkback.Text = "Go back to Main Menu";
-            this.linkback.Click += new System.EventHandler(this.linkback_Click);
             // 
             // label4
             // 
@@ -146,6 +132,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblsuppliername);
             this.groupBox2.Controls.Add(this.tb_supplier);
             this.groupBox2.Controls.Add(this.label21);
             this.groupBox2.Controls.Add(this.label14);
@@ -168,19 +155,31 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(19, 113);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(349, 462);
+            this.groupBox2.Size = new System.Drawing.Size(321, 462);
             this.groupBox2.TabIndex = 91;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "SUPPLY DETAILS";
             // 
+            // lblsuppliername
+            // 
+            this.lblsuppliername.AutoSize = true;
+            this.lblsuppliername.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsuppliername.Location = new System.Drawing.Point(141, 277);
+            this.lblsuppliername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblsuppliername.Name = "lblsuppliername";
+            this.lblsuppliername.Size = new System.Drawing.Size(16, 14);
+            this.lblsuppliername.TabIndex = 96;
+            this.lblsuppliername.Text = "...";
+            // 
             // tb_supplier
             // 
             this.tb_supplier.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_supplier.Location = new System.Drawing.Point(166, 251);
-            this.tb_supplier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_supplier.Location = new System.Drawing.Point(144, 251);
+            this.tb_supplier.Margin = new System.Windows.Forms.Padding(4);
             this.tb_supplier.Name = "tb_supplier";
             this.tb_supplier.Size = new System.Drawing.Size(160, 22);
             this.tb_supplier.TabIndex = 7;
+            this.tb_supplier.TextChanged += new System.EventHandler(this.tb_supplier_TextChanged);
             // 
             // label21
             // 
@@ -189,15 +188,15 @@
             this.label21.Location = new System.Drawing.Point(18, 254);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(58, 14);
+            this.label21.Size = new System.Drawing.Size(107, 14);
             this.label21.TabIndex = 95;
-            this.label21.Text = "SUPPLIER:";
+            this.label21.Text = "SUPPLIER NUMBER:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(168, 324);
+            this.label14.Location = new System.Drawing.Point(146, 342);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(95, 14);
@@ -208,7 +207,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(163, 310);
+            this.label11.Location = new System.Drawing.Point(141, 328);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(130, 14);
@@ -217,17 +216,14 @@
             // 
             // cb_type_of_supply
             // 
+            this.cb_type_of_supply.BackColor = System.Drawing.Color.White;
             this.cb_type_of_supply.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_type_of_supply.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_type_of_supply.FormattingEnabled = true;
-            this.cb_type_of_supply.Items.AddRange(new object[] {
-            "Supply",
-            "Drug"});
-            this.cb_type_of_supply.Location = new System.Drawing.Point(166, 285);
+            this.cb_type_of_supply.Location = new System.Drawing.Point(144, 303);
             this.cb_type_of_supply.Name = "cb_type_of_supply";
             this.cb_type_of_supply.Size = new System.Drawing.Size(160, 22);
             this.cb_type_of_supply.TabIndex = 8;
-            this.cb_type_of_supply.SelectedIndexChanged += new System.EventHandler(this.cb_type_of_supply_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -239,9 +235,9 @@
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(21, 348);
+            this.groupBox1.Location = new System.Drawing.Point(21, 372);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(305, 97);
+            this.groupBox1.Size = new System.Drawing.Size(283, 77);
             this.groupBox1.TabIndex = 92;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DRUG DETAILS";
@@ -250,7 +246,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(19, 69);
+            this.label8.Location = new System.Drawing.Point(10, 57);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 14);
@@ -261,7 +257,7 @@
             // 
             this.textBox8.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(166, 221);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(160, 22);
             this.textBox8.TabIndex = 84;
@@ -279,29 +275,27 @@
             // 
             // tb_dosage
             // 
-            this.tb_dosage.Enabled = false;
             this.tb_dosage.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_dosage.Location = new System.Drawing.Point(101, 26);
-            this.tb_dosage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_dosage.Location = new System.Drawing.Point(101, 18);
+            this.tb_dosage.Margin = new System.Windows.Forms.Padding(4);
             this.tb_dosage.Name = "tb_dosage";
-            this.tb_dosage.Size = new System.Drawing.Size(184, 22);
+            this.tb_dosage.Size = new System.Drawing.Size(175, 22);
             this.tb_dosage.TabIndex = 9;
             // 
             // cb_method_administration
             // 
-            this.cb_method_administration.Enabled = false;
             this.cb_method_administration.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_method_administration.FormattingEnabled = true;
-            this.cb_method_administration.Location = new System.Drawing.Point(139, 61);
+            this.cb_method_administration.Location = new System.Drawing.Point(136, 49);
             this.cb_method_administration.Name = "cb_method_administration";
-            this.cb_method_administration.Size = new System.Drawing.Size(146, 22);
+            this.cb_method_administration.Size = new System.Drawing.Size(140, 22);
             this.cb_method_administration.TabIndex = 10;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(19, 29);
+            this.label12.Location = new System.Drawing.Point(10, 21);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 14);
@@ -312,7 +306,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(19, 52);
+            this.label13.Location = new System.Drawing.Point(10, 40);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(56, 14);
@@ -323,7 +317,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(18, 288);
+            this.label10.Location = new System.Drawing.Point(18, 306);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 14);
@@ -333,8 +327,8 @@
             // tb_unit
             // 
             this.tb_unit.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_unit.Location = new System.Drawing.Point(166, 191);
-            this.tb_unit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_unit.Location = new System.Drawing.Point(144, 191);
+            this.tb_unit.Margin = new System.Windows.Forms.Padding(4);
             this.tb_unit.Name = "tb_unit";
             this.tb_unit.Size = new System.Drawing.Size(160, 22);
             this.tb_unit.TabIndex = 5;
@@ -353,8 +347,8 @@
             // tb_cost_per_unit
             // 
             this.tb_cost_per_unit.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_cost_per_unit.Location = new System.Drawing.Point(166, 221);
-            this.tb_cost_per_unit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_cost_per_unit.Location = new System.Drawing.Point(144, 221);
+            this.tb_cost_per_unit.Margin = new System.Windows.Forms.Padding(4);
             this.tb_cost_per_unit.Name = "tb_cost_per_unit";
             this.tb_cost_per_unit.Size = new System.Drawing.Size(160, 22);
             this.tb_cost_per_unit.TabIndex = 6;
@@ -373,8 +367,8 @@
             // tb_reorder_level
             // 
             this.tb_reorder_level.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_reorder_level.Location = new System.Drawing.Point(166, 161);
-            this.tb_reorder_level.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_reorder_level.Location = new System.Drawing.Point(144, 161);
+            this.tb_reorder_level.Margin = new System.Windows.Forms.Padding(4);
             this.tb_reorder_level.Name = "tb_reorder_level";
             this.tb_reorder_level.Size = new System.Drawing.Size(160, 22);
             this.tb_reorder_level.TabIndex = 4;
@@ -393,8 +387,8 @@
             // tb_description
             // 
             this.tb_description.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_description.Location = new System.Drawing.Point(166, 98);
-            this.tb_description.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_description.Location = new System.Drawing.Point(144, 98);
+            this.tb_description.Margin = new System.Windows.Forms.Padding(4);
             this.tb_description.Multiline = true;
             this.tb_description.Name = "tb_description";
             this.tb_description.Size = new System.Drawing.Size(160, 55);
@@ -414,8 +408,8 @@
             // tb_supply_no
             // 
             this.tb_supply_no.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_supply_no.Location = new System.Drawing.Point(166, 34);
-            this.tb_supply_no.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_supply_no.Location = new System.Drawing.Point(144, 34);
+            this.tb_supply_no.Margin = new System.Windows.Forms.Padding(4);
             this.tb_supply_no.Name = "tb_supply_no";
             this.tb_supply_no.Size = new System.Drawing.Size(160, 22);
             this.tb_supply_no.TabIndex = 1;
@@ -434,8 +428,8 @@
             // tb_supply_name
             // 
             this.tb_supply_name.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_supply_name.Location = new System.Drawing.Point(166, 68);
-            this.tb_supply_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_supply_name.Location = new System.Drawing.Point(144, 68);
+            this.tb_supply_name.Margin = new System.Windows.Forms.Padding(4);
             this.tb_supply_name.Name = "tb_supply_name";
             this.tb_supply_name.Size = new System.Drawing.Size(160, 22);
             this.tb_supply_name.TabIndex = 2;
@@ -455,12 +449,12 @@
             // 
             this.btn_save_supply.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btn_save_supply.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_save_supply.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save_supply.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save_supply.Location = new System.Drawing.Point(19, 587);
             this.btn_save_supply.Name = "btn_save_supply";
-            this.btn_save_supply.Size = new System.Drawing.Size(172, 35);
+            this.btn_save_supply.Size = new System.Drawing.Size(160, 35);
             this.btn_save_supply.TabIndex = 11;
-            this.btn_save_supply.Text = "SAVE SUPPLY";
+            this.btn_save_supply.Text = "SAVE SUPPLY DETAILS";
             this.btn_save_supply.UseVisualStyleBackColor = false;
             this.btn_save_supply.Click += new System.EventHandler(this.btn_save_supply_Click);
             // 
@@ -470,16 +464,17 @@
             this.dgv_inventory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_inventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_inventory.BackgroundColor = System.Drawing.Color.PaleGreen;
             this.dgv_inventory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_inventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_inventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_inventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_inventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -493,7 +488,7 @@
             this.Column8,
             this.Column9,
             this.Column10});
-            this.dgv_inventory.Location = new System.Drawing.Point(384, 137);
+            this.dgv_inventory.Location = new System.Drawing.Point(346, 147);
             this.dgv_inventory.MultiSelect = false;
             this.dgv_inventory.Name = "dgv_inventory";
             this.dgv_inventory.ReadOnly = true;
@@ -501,74 +496,86 @@
             this.dgv_inventory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgv_inventory.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_inventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_inventory.Size = new System.Drawing.Size(677, 438);
+            this.dgv_inventory.Size = new System.Drawing.Size(862, 428);
             this.dgv_inventory.TabIndex = 93;
+            this.dgv_inventory.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.inventory_CellContentDoubleClick);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Item/Drug #";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 93;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Item/Drug Name";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 114;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Description";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 96;
             // 
             // Column11
             // 
             this.Column11.HeaderText = "Quantity Available";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
+            this.Column11.Width = 123;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Reorder Level";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 103;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Unit";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Width = 55;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Cost Per Unit";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Width = 78;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Supplier";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            this.Column7.Width = 78;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "Type";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
+            this.Column8.Width = 60;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "Dosage";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
+            this.Column9.Width = 75;
             // 
             // Column10
             // 
             this.Column10.HeaderText = "Method of Administration";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
+            this.Column10.Width = 157;
             // 
             // btn_show_add_stock_panel
             // 
@@ -576,9 +583,9 @@
             this.btn_show_add_stock_panel.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btn_show_add_stock_panel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_show_add_stock_panel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_show_add_stock_panel.Location = new System.Drawing.Point(384, 587);
+            this.btn_show_add_stock_panel.Location = new System.Drawing.Point(346, 587);
             this.btn_show_add_stock_panel.Name = "btn_show_add_stock_panel";
-            this.btn_show_add_stock_panel.Size = new System.Drawing.Size(335, 35);
+            this.btn_show_add_stock_panel.Size = new System.Drawing.Size(428, 35);
             this.btn_show_add_stock_panel.TabIndex = 94;
             this.btn_show_add_stock_panel.Text = "ADD STOCK";
             this.btn_show_add_stock_panel.UseVisualStyleBackColor = false;
@@ -588,7 +595,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(380, 115);
+            this.label16.Location = new System.Drawing.Point(342, 115);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(89, 19);
@@ -600,33 +607,21 @@
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(856, 111);
+            this.label17.Location = new System.Drawing.Point(896, 116);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 19);
+            this.label17.Size = new System.Drawing.Size(143, 19);
             this.label17.TabIndex = 96;
-            this.label17.Text = "Filter:";
+            this.label17.Text = "Type of Supply Filter:";
             // 
             // cb_filter
             // 
             this.cb_filter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_filter.BackColor = System.Drawing.Color.White;
             this.cb_filter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_filter.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_filter.FormattingEnabled = true;
-            this.cb_filter.Items.AddRange(new object[] {
-            "ALL",
-            "ITEM_NUMBER",
-            "SUPPLIER_NUMBER",
-            "ITEM_NAME",
-            "DESCRIPTION",
-            "QUANTITY",
-            "REORDER_LEVEL",
-            "UNIT",
-            "COST_PER_UNIT",
-            "ITEM_TYPE",
-            "DOSAGE",
-            "METHOD_OF_ADMINISTRATION"});
-            this.cb_filter.Location = new System.Drawing.Point(901, 111);
+            this.cb_filter.Location = new System.Drawing.Point(1046, 116);
             this.cb_filter.Name = "cb_filter";
             this.cb_filter.Size = new System.Drawing.Size(162, 22);
             this.cb_filter.TabIndex = 13;
@@ -638,24 +633,24 @@
             this.btn_suppliers.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btn_suppliers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_suppliers.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_suppliers.Location = new System.Drawing.Point(726, 587);
+            this.btn_suppliers.Location = new System.Drawing.Point(780, 587);
             this.btn_suppliers.Name = "btn_suppliers";
-            this.btn_suppliers.Size = new System.Drawing.Size(335, 35);
+            this.btn_suppliers.Size = new System.Drawing.Size(428, 35);
             this.btn_suppliers.TabIndex = 97;
             this.btn_suppliers.Text = "VIEW SUPPLIERS";
             this.btn_suppliers.UseVisualStyleBackColor = false;
-            this.btn_suppliers.Click += new System.EventHandler(this.button3_Click);
+            this.btn_suppliers.Click += new System.EventHandler(this.btn_suppliers_Click);
             // 
             // btn_update_supply
             // 
             this.btn_update_supply.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btn_update_supply.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_update_supply.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update_supply.Location = new System.Drawing.Point(195, 587);
+            this.btn_update_supply.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update_supply.Location = new System.Drawing.Point(180, 587);
             this.btn_update_supply.Name = "btn_update_supply";
-            this.btn_update_supply.Size = new System.Drawing.Size(172, 35);
+            this.btn_update_supply.Size = new System.Drawing.Size(160, 35);
             this.btn_update_supply.TabIndex = 98;
-            this.btn_update_supply.Text = "UPDATE SUPPLY";
+            this.btn_update_supply.Text = "UPDATE SUPPLY DETAILS";
             this.btn_update_supply.UseVisualStyleBackColor = false;
             this.btn_update_supply.Click += new System.EventHandler(this.btn_update_supply_Click);
             // 
@@ -663,17 +658,29 @@
             // 
             this.panel_add_stock.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel_add_stock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_add_stock.Controls.Add(this.lblitemnum);
             this.panel_add_stock.Controls.Add(this.btn_cancel_add_stock);
-            this.panel_add_stock.Controls.Add(this.label_product_name);
+            this.panel_add_stock.Controls.Add(this.lblitemname);
             this.panel_add_stock.Controls.Add(this.btn_add_stock);
             this.panel_add_stock.Controls.Add(this.tb_stock_quantity);
             this.panel_add_stock.Controls.Add(this.label19);
             this.panel_add_stock.Controls.Add(this.label18);
-            this.panel_add_stock.Location = new System.Drawing.Point(532, 245);
+            this.panel_add_stock.Location = new System.Drawing.Point(597, 246);
             this.panel_add_stock.Name = "panel_add_stock";
             this.panel_add_stock.Size = new System.Drawing.Size(402, 217);
             this.panel_add_stock.TabIndex = 99;
             this.panel_add_stock.Visible = false;
+            // 
+            // lblitemnum
+            // 
+            this.lblitemnum.AutoSize = true;
+            this.lblitemnum.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblitemnum.Location = new System.Drawing.Point(27, 52);
+            this.lblitemnum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblitemnum.Name = "lblitemnum";
+            this.lblitemnum.Size = new System.Drawing.Size(120, 19);
+            this.lblitemnum.TabIndex = 104;
+            this.lblitemnum.Text = "ITEM NUMBER...";
             // 
             // btn_cancel_add_stock
             // 
@@ -681,7 +688,7 @@
             this.btn_cancel_add_stock.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cancel_add_stock.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel_add_stock.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_cancel_add_stock.Location = new System.Drawing.Point(199, 167);
+            this.btn_cancel_add_stock.Location = new System.Drawing.Point(297, 166);
             this.btn_cancel_add_stock.Name = "btn_cancel_add_stock";
             this.btn_cancel_add_stock.Size = new System.Drawing.Size(92, 35);
             this.btn_cancel_add_stock.TabIndex = 103;
@@ -689,23 +696,23 @@
             this.btn_cancel_add_stock.UseVisualStyleBackColor = false;
             this.btn_cancel_add_stock.Click += new System.EventHandler(this.btn_cancel_add_stock_Click);
             // 
-            // label_product_name
+            // lblitemname
             // 
-            this.label_product_name.AutoSize = true;
-            this.label_product_name.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_product_name.Location = new System.Drawing.Point(26, 71);
-            this.label_product_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_product_name.Name = "label_product_name";
-            this.label_product_name.Size = new System.Drawing.Size(172, 19);
-            this.label_product_name.TabIndex = 102;
-            this.label_product_name.Text = "PRODUCT NAME HERE...";
+            this.lblitemname.AutoSize = true;
+            this.lblitemname.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblitemname.Location = new System.Drawing.Point(26, 71);
+            this.lblitemname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblitemname.Name = "lblitemname";
+            this.lblitemname.Size = new System.Drawing.Size(172, 19);
+            this.lblitemname.TabIndex = 102;
+            this.lblitemname.Text = "PRODUCT NAME HERE...";
             // 
             // btn_add_stock
             // 
             this.btn_add_stock.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_add_stock.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_add_stock.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add_stock.Location = new System.Drawing.Point(296, 167);
+            this.btn_add_stock.Location = new System.Drawing.Point(199, 166);
             this.btn_add_stock.Name = "btn_add_stock";
             this.btn_add_stock.Size = new System.Drawing.Size(92, 35);
             this.btn_add_stock.TabIndex = 101;
@@ -717,7 +724,7 @@
             // 
             this.tb_stock_quantity.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_stock_quantity.Location = new System.Drawing.Point(108, 128);
-            this.tb_stock_quantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_stock_quantity.Margin = new System.Windows.Forms.Padding(4);
             this.tb_stock_quantity.Name = "tb_stock_quantity";
             this.tb_stock_quantity.Size = new System.Drawing.Size(281, 27);
             this.tb_stock_quantity.TabIndex = 96;
@@ -748,8 +755,8 @@
             // 
             this.tb_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_search.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_search.Location = new System.Drawing.Point(694, 111);
-            this.tb_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_search.Location = new System.Drawing.Point(717, 116);
+            this.tb_search.Margin = new System.Windows.Forms.Padding(4);
             this.tb_search.Name = "tb_search";
             this.tb_search.Size = new System.Drawing.Size(160, 22);
             this.tb_search.TabIndex = 12;
@@ -760,7 +767,7 @@
             this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(637, 111);
+            this.label22.Location = new System.Drawing.Point(654, 116);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(56, 19);
@@ -771,7 +778,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1231, 628);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.tb_search);
             this.Controls.Add(this.panel_add_stock);
@@ -788,7 +795,6 @@
             this.Name = "InventoryManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sanitarium Hospital : Inventory Management";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InventoryManagement_FormClosed);
             this.Load += new System.EventHandler(this.InventoryManagement_Load);
             this.panel1.ResumeLayout(false);
@@ -847,11 +853,10 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox tb_stock_quantity;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label_product_name;
+        private System.Windows.Forms.Label lblitemname;
         private System.Windows.Forms.Button btn_add_stock;
         private System.Windows.Forms.TextBox tb_supplier;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label linkback;
         private System.Windows.Forms.Button btn_cancel_add_stock;
         private System.Windows.Forms.TextBox tb_search;
         private System.Windows.Forms.Label label22;
@@ -866,5 +871,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.Label lblsuppliername;
+        private System.Windows.Forms.Label lblitemnum;
     }
 }

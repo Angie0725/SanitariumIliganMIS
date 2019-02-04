@@ -56,10 +56,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 49);
+            this.label4.Location = new System.Drawing.Point(51, 52);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(482, 41);
+            this.label4.Size = new System.Drawing.Size(382, 33);
             this.label4.TabIndex = 7;
             this.label4.Text = "Management Information System";
             // 
@@ -69,10 +69,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 6);
+            this.label3.Location = new System.Drawing.Point(66, 10);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(450, 54);
+            this.label3.Size = new System.Drawing.Size(355, 42);
             this.label3.TabIndex = 6;
             this.label3.Text = "SANITARIUM HOSPITAL";
             // 
@@ -83,7 +83,7 @@
             this.label1.Location = new System.Drawing.Point(27, 129);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 23);
+            this.label1.Size = new System.Drawing.Size(83, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "USERNAME:";
             // 
@@ -94,7 +94,7 @@
             this.label2.Location = new System.Drawing.Point(27, 163);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 23);
+            this.label2.Size = new System.Drawing.Size(83, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "PASSWORD:";
             // 
@@ -104,7 +104,7 @@
             this.txtusername.Location = new System.Drawing.Point(138, 126);
             this.txtusername.Margin = new System.Windows.Forms.Padding(4);
             this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(308, 30);
+            this.txtusername.Size = new System.Drawing.Size(308, 26);
             this.txtusername.TabIndex = 3;
             // 
             // txtpassword
@@ -113,7 +113,7 @@
             this.txtpassword.Location = new System.Drawing.Point(138, 160);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtpassword.Name = "txtpassword";
-            this.txtpassword.Size = new System.Drawing.Size(308, 30);
+            this.txtpassword.Size = new System.Drawing.Size(308, 26);
             this.txtpassword.TabIndex = 4;
             this.txtpassword.UseSystemPasswordChar = true;
             // 
@@ -132,7 +132,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(487, 263);

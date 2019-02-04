@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using IBM.Data.DB2;
-using FinalSanitariumMIS;
+//using FinalSanitariumMIS;
 
 namespace LogIn
 {
@@ -19,21 +19,32 @@ namespace LogIn
         public Form1()
         {
             InitializeComponent();
+            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Nicksplat93", "Angelie_Buen", "sanita");
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper();
+            
 
-            DB2ResultSet rs = DB.QueryWithResultSet("SELECT * FROM VW_ACCOUNT WHERE USERNAME = '" + txtusername.Text + "' AND PASSCODE = '" + txtpassword.Text + "'");
+            DB2ResultSet rs = DB.QueryWithResultSet("SELECT * FROM ACCOUNT WHERE USERNAME = '" + txtusername.Text + "' AND PASSCODE = '" + txtpassword.Text + "'");
 
             if(rs.Read())
             {
-                Models.SessionMeta session = new Models.SessionMeta();
+                LoginDetails obj = new LoginDetails();
+                int staffNum = 0;
+                //this.Visible = false;
+                //new MedDirMainMenu().Visible = true;
 
-                this.Visible = false;
+                while (rs.Read())
+                {
+                    staffNum = Convert.ToInt32(rs["STAFF_NUMBER"].ToString());
+                }
 
-                new MedDirMainMenu().Visible = true;
+                obj.setStaffNum(staffNum);
+
+                MessageBox.Show("Success: " + obj.getStaffNum());
+            
+                
   
             }
             else 

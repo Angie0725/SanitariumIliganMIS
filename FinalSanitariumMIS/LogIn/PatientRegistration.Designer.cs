@@ -34,42 +34,50 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbmaritalstat = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtpbirthdate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cbsex = new System.Windows.Forms.ComboBox();
+            this.txtpatienttelnum = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtpatientlname = new System.Windows.Forms.TextBox();
+            this.txtpatientaddress = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtpatientnum = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtpatientfname = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtrelationship = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtnoktelnum = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtnoklname = new System.Windows.Forms.TextBox();
+            this.txtnokaddress = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtnoknum = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtnokfname = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dgpatientlist = new System.Windows.Forms.DataGridView();
+            this.btnregister = new System.Windows.Forms.Button();
+            this.btnupdate = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgpatientlist)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,19 +130,19 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cbmaritalstat);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.dateTimePicker3);
+            this.groupBox2.Controls.Add(this.dtpbirthdate);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.cbsex);
+            this.groupBox2.Controls.Add(this.txtpatienttelnum);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.txtpatientlname);
+            this.groupBox2.Controls.Add(this.txtpatientaddress);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtpatientnum);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txtpatientfname);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,14 +164,14 @@
             this.label8.TabIndex = 73;
             this.label8.Text = "MARITAL STATUS:";
             // 
-            // comboBox1
+            // cbmaritalstat
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(204, 278);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(122, 22);
-            this.comboBox1.TabIndex = 72;
+            this.cbmaritalstat.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmaritalstat.FormattingEnabled = true;
+            this.cbmaritalstat.Location = new System.Drawing.Point(204, 278);
+            this.cbmaritalstat.Name = "cbmaritalstat";
+            this.cbmaritalstat.Size = new System.Drawing.Size(122, 22);
+            this.cbmaritalstat.TabIndex = 72;
             // 
             // label7
             // 
@@ -176,13 +184,13 @@
             this.label7.TabIndex = 71;
             this.label7.Text = "SEX:";
             // 
-            // dateTimePicker3
+            // dtpbirthdate
             // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(166, 222);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(160, 22);
-            this.dateTimePicker3.TabIndex = 70;
+            this.dtpbirthdate.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpbirthdate.Location = new System.Drawing.Point(166, 222);
+            this.dtpbirthdate.Name = "dtpbirthdate";
+            this.dtpbirthdate.Size = new System.Drawing.Size(160, 22);
+            this.dtpbirthdate.TabIndex = 70;
             // 
             // label6
             // 
@@ -195,23 +203,23 @@
             this.label6.TabIndex = 69;
             this.label6.Text = "BIRTH DATE:";
             // 
-            // comboBox3
+            // cbsex
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(204, 250);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(122, 22);
-            this.comboBox3.TabIndex = 57;
+            this.cbsex.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbsex.FormattingEnabled = true;
+            this.cbsex.Location = new System.Drawing.Point(204, 250);
+            this.cbsex.Name = "cbsex";
+            this.cbsex.Size = new System.Drawing.Size(122, 22);
+            this.cbsex.TabIndex = 57;
             // 
-            // textBox5
+            // txtpatienttelnum
             // 
-            this.textBox5.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(166, 193);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(160, 22);
-            this.textBox5.TabIndex = 68;
+            this.txtpatienttelnum.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpatienttelnum.Location = new System.Drawing.Point(166, 193);
+            this.txtpatienttelnum.Margin = new System.Windows.Forms.Padding(4);
+            this.txtpatienttelnum.Name = "txtpatienttelnum";
+            this.txtpatienttelnum.Size = new System.Drawing.Size(160, 22);
+            this.txtpatienttelnum.TabIndex = 68;
             // 
             // label5
             // 
@@ -224,24 +232,24 @@
             this.label5.TabIndex = 67;
             this.label5.Text = "TELEPHONE NUMBER:";
             // 
-            // textBox4
+            // txtpatientlname
             // 
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(166, 97);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(160, 22);
-            this.textBox4.TabIndex = 66;
+            this.txtpatientlname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpatientlname.Location = new System.Drawing.Point(166, 97);
+            this.txtpatientlname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtpatientlname.Name = "txtpatientlname";
+            this.txtpatientlname.Size = new System.Drawing.Size(160, 22);
+            this.txtpatientlname.TabIndex = 66;
             // 
-            // textBox3
+            // txtpatientaddress
             // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(166, 127);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(160, 58);
-            this.textBox3.TabIndex = 64;
+            this.txtpatientaddress.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpatientaddress.Location = new System.Drawing.Point(166, 127);
+            this.txtpatientaddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtpatientaddress.Multiline = true;
+            this.txtpatientaddress.Name = "txtpatientaddress";
+            this.txtpatientaddress.Size = new System.Drawing.Size(160, 58);
+            this.txtpatientaddress.TabIndex = 64;
             // 
             // label2
             // 
@@ -254,14 +262,14 @@
             this.label2.TabIndex = 63;
             this.label2.Text = "ADDRESS:";
             // 
-            // textBox1
+            // txtpatientnum
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(166, 34);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 22);
-            this.textBox1.TabIndex = 60;
+            this.txtpatientnum.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpatientnum.Location = new System.Drawing.Point(166, 34);
+            this.txtpatientnum.Margin = new System.Windows.Forms.Padding(4);
+            this.txtpatientnum.Name = "txtpatientnum";
+            this.txtpatientnum.Size = new System.Drawing.Size(160, 22);
+            this.txtpatientnum.TabIndex = 60;
             // 
             // label1
             // 
@@ -274,14 +282,14 @@
             this.label1.TabIndex = 59;
             this.label1.Text = "PATIENT NUMBER:";
             // 
-            // textBox2
+            // txtpatientfname
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(166, 71);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 22);
-            this.textBox2.TabIndex = 58;
+            this.txtpatientfname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpatientfname.Location = new System.Drawing.Point(166, 71);
+            this.txtpatientfname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtpatientfname.Name = "txtpatientfname";
+            this.txtpatientfname.Size = new System.Drawing.Size(160, 22);
+            this.txtpatientfname.TabIndex = 58;
             // 
             // label15
             // 
@@ -307,16 +315,16 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox11);
+            this.groupBox1.Controls.Add(this.txtrelationship);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.txtnoktelnum);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.txtnoklname);
+            this.groupBox1.Controls.Add(this.txtnokaddress);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.textBox9);
+            this.groupBox1.Controls.Add(this.txtnoknum);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.txtnokfname);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -327,14 +335,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "NEXT-OF-KIN INFORMATION";
             // 
-            // textBox11
+            // txtrelationship
             // 
-            this.textBox11.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(171, 218);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(150, 22);
-            this.textBox11.TabIndex = 70;
+            this.txtrelationship.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtrelationship.Location = new System.Drawing.Point(171, 218);
+            this.txtrelationship.Margin = new System.Windows.Forms.Padding(4);
+            this.txtrelationship.Name = "txtrelationship";
+            this.txtrelationship.Size = new System.Drawing.Size(150, 22);
+            this.txtrelationship.TabIndex = 70;
             // 
             // label9
             // 
@@ -347,14 +355,14 @@
             this.label9.TabIndex = 69;
             this.label9.Text = "RELATIONSHIP TO PATIENT:";
             // 
-            // textBox6
+            // txtnoktelnum
             // 
-            this.textBox6.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(161, 191);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(160, 22);
-            this.textBox6.TabIndex = 68;
+            this.txtnoktelnum.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnoktelnum.Location = new System.Drawing.Point(161, 191);
+            this.txtnoktelnum.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnoktelnum.Name = "txtnoktelnum";
+            this.txtnoktelnum.Size = new System.Drawing.Size(160, 22);
+            this.txtnoktelnum.TabIndex = 68;
             // 
             // label13
             // 
@@ -367,24 +375,24 @@
             this.label13.TabIndex = 67;
             this.label13.Text = "TELEPHONE NUMBER:";
             // 
-            // textBox7
+            // txtnoklname
             // 
-            this.textBox7.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(161, 95);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(160, 22);
-            this.textBox7.TabIndex = 66;
+            this.txtnoklname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnoklname.Location = new System.Drawing.Point(161, 95);
+            this.txtnoklname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnoklname.Name = "txtnoklname";
+            this.txtnoklname.Size = new System.Drawing.Size(160, 22);
+            this.txtnoklname.TabIndex = 66;
             // 
-            // textBox8
+            // txtnokaddress
             // 
-            this.textBox8.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(161, 125);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(160, 58);
-            this.textBox8.TabIndex = 64;
+            this.txtnokaddress.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnokaddress.Location = new System.Drawing.Point(161, 125);
+            this.txtnokaddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnokaddress.Multiline = true;
+            this.txtnokaddress.Name = "txtnokaddress";
+            this.txtnokaddress.Size = new System.Drawing.Size(160, 58);
+            this.txtnokaddress.TabIndex = 64;
             // 
             // label14
             // 
@@ -397,14 +405,14 @@
             this.label14.TabIndex = 63;
             this.label14.Text = "ADDRESS:";
             // 
-            // textBox9
+            // txtnoknum
             // 
-            this.textBox9.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(161, 32);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(160, 22);
-            this.textBox9.TabIndex = 60;
+            this.txtnoknum.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnoknum.Location = new System.Drawing.Point(161, 32);
+            this.txtnoknum.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnoknum.Name = "txtnoknum";
+            this.txtnoknum.Size = new System.Drawing.Size(160, 22);
+            this.txtnoknum.TabIndex = 60;
             // 
             // label16
             // 
@@ -417,14 +425,14 @@
             this.label16.TabIndex = 59;
             this.label16.Text = "NEXT-OF-KIN NUMBER:";
             // 
-            // textBox10
+            // txtnokfname
             // 
-            this.textBox10.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(161, 69);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(160, 22);
-            this.textBox10.TabIndex = 58;
+            this.txtnokfname.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnokfname.Location = new System.Drawing.Point(161, 69);
+            this.txtnokfname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnokfname.Name = "txtnokfname";
+            this.txtnokfname.Size = new System.Drawing.Size(160, 22);
+            this.txtnokfname.TabIndex = 58;
             // 
             // label17
             // 
@@ -459,49 +467,111 @@
             this.label10.TabIndex = 75;
             this.label10.Text = "PATIENT MASTERLIST:";
             // 
-            // dataGridView1
+            // dgpatientlist
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.PaleGreen;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(743, 139);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(480, 297);
-            this.dataGridView1.TabIndex = 76;
+            this.dgpatientlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgpatientlist.BackgroundColor = System.Drawing.Color.PaleGreen;
+            this.dgpatientlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgpatientlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
+            this.dgpatientlist.Location = new System.Drawing.Point(743, 139);
+            this.dgpatientlist.Name = "dgpatientlist";
+            this.dgpatientlist.RowHeadersVisible = false;
+            this.dgpatientlist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgpatientlist.Size = new System.Drawing.Size(480, 297);
+            this.dgpatientlist.TabIndex = 76;
+            this.dgpatientlist.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgpatientlist_CellDoubleClick);
             // 
-            // button2
+            // btnregister
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(384, 401);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 35);
-            this.button2.TabIndex = 79;
-            this.button2.Text = "REGISTER";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnregister.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnregister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnregister.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnregister.Location = new System.Drawing.Point(384, 401);
+            this.btnregister.Name = "btnregister";
+            this.btnregister.Size = new System.Drawing.Size(165, 35);
+            this.btnregister.TabIndex = 79;
+            this.btnregister.Text = "REGISTER";
+            this.btnregister.UseVisualStyleBackColor = false;
+            this.btnregister.Click += new System.EventHandler(this.btnregister_Click);
             // 
-            // button1
+            // btnupdate
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(560, 401);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 35);
-            this.button1.TabIndex = 80;
-            this.button1.Text = "UPDATE";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnupdate.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnupdate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdate.Location = new System.Drawing.Point(560, 401);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(165, 35);
+            this.btnupdate.TabIndex = 80;
+            this.btnupdate.Text = "UPDATE";
+            this.btnupdate.UseVisualStyleBackColor = false;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "PID";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "FIRSTNAME";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 94;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "LASTNAME";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 90;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "ADDRESS";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 84;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "TELNUMBER";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 99;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "BIRTHDATE";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 94;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "SEX";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 53;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "MARITALSTATUS";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 122;
             // 
             // PatientRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1243, 452);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnupdate);
+            this.Controls.Add(this.btnregister);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgpatientlist);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
@@ -514,7 +584,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgpatientlist)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -526,39 +596,47 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtpatientlname;
+        private System.Windows.Forms.TextBox txtpatientaddress;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtpatientnum;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtpatientfname;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox cbsex;
+        private System.Windows.Forms.TextBox txtpatienttelnum;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dtpbirthdate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbmaritalstat;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtnoktelnum;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtnoklname;
+        private System.Windows.Forms.TextBox txtnokaddress;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtnoknum;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtnokfname;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtrelationship;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgpatientlist;
+        private System.Windows.Forms.Button btnregister;
+        private System.Windows.Forms.Button btnupdate;
         private System.Windows.Forms.Label linkback;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }

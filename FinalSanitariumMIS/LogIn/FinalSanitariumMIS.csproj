@@ -33,6 +33,26 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="IBM.Data.DB2, Version=9.7.4.4, Culture=neutral, PublicKeyToken=7c307b91aa13d208, processorArchitecture=AMD64" />
     <Reference Include="System" />
@@ -59,6 +79,12 @@
     </Compile>
     <Compile Include="ChargeNurseMainMenu.Designer.cs">
       <DependentUpon>ChargeNurseMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DischargePatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DischargePatient.Designer.cs">
+      <DependentUpon>DischargePatient.cs</DependentUpon>
     </Compile>
     <Compile Include="Doctors.cs">
       <SubType>Form</SubType>
@@ -90,6 +116,13 @@
     </Compile>
     <Compile Include="InventoryManagement.Designer.cs">
       <DependentUpon>InventoryManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginDetails.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MedDirMainMenu.cs">
       <SubType>Form</SubType>
@@ -178,6 +211,9 @@
     <EmbeddedResource Include="ChargeNurseMainMenu.resx">
       <DependentUpon>ChargeNurseMainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DischargePatient.resx">
+      <DependentUpon>DischargePatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Doctors.resx">
       <DependentUpon>Doctors.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryManagement.resx">
       <DependentUpon>InventoryManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MedDirMainMenu.resx">
       <DependentUpon>MedDirMainMenu.cs</DependentUpon>

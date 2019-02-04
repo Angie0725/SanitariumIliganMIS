@@ -8,6 +8,16 @@ namespace LogIn.Models
 {
     public class SessionMeta
     {
-        public int usertype;
+        public int staffNum = 0;
+
+        private int getStaffNum()
+        {
+            return this.staffNum;
+        }
+
+        private void setStaffNum(int staffNum)
+        {
+            this.staffNum = staffNum;
+        }
     }
 }

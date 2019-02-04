@@ -134,3 +134,4 @@ C:\Users\Angelie_Buen\Documents\SanitariumNew\SanitariumIliganMIS\FinalSanitariu
 C:\Users\Angelie_Buen\Documents\SanitariumNew\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\FinalSanitariumMIS.csproj.CopyComplete
 C:\Users\Angelie_Buen\Documents\SanitariumNew\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.exe
 C:\Users\Angelie_Buen\Documents\SanitariumNew\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.pdb
+C:\Users\Angelie_Buen\Documents\SanitariumNew\SanitariumIliganMIS\FinalSanitariumMIS\LogIn\obj\Debug\LogIn.LoginForm.resources
