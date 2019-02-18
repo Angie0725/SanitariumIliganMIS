@@ -17,31 +17,10 @@ namespace LogIn
             InitializeComponent();
         }
 
-        private void btnpatientregistration_Click(object sender, EventArgs e)
-        {
-            PatientRegistration frmPR = new PatientRegistration();
-            frmPR.Show();
-            this.Dispose();
-        }
-
         private void btnhumanresource_Click(object sender, EventArgs e)
         {
             HRMainMenu frmHR = new HRMainMenu();
             frmHR.Show();
-            this.Dispose();
-        }
-
-        private void btnrequisitions_Click(object sender, EventArgs e)
-        {
-            Requisitions frmReq = new Requisitions();
-            frmReq.Show();
-            this.Dispose();
-        }
-
-        private void btnappointments_Click(object sender, EventArgs e)
-        {
-            Appointments frmAppoint = new Appointments();
-            frmAppoint.Show();
             this.Dispose();
         }
 
@@ -52,17 +31,43 @@ namespace LogIn
             this.Dispose();
         }
 
-        private void btnrooms_Click(object sender, EventArgs e)
+        private void MedDirMainMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
-            RoomManagement frmRM = new RoomManagement();
-            frmRM.Show();
+            DialogResult logout = MessageBox.Show("Are you sure you want to log out?", "Confirm Log Out", MessageBoxButtons.YesNo);
+
+            if(logout == DialogResult.Yes)
+            {
+                LoginForm frmlogin = new LoginForm();
+                frmlogin.Show();
+                this.Dispose();
+            }
+            
+        }
+
+        private void MedDirMainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnusermgt_Click(object sender, EventArgs e)
+        {
+            UserManagement frmUserMgt = new UserManagement();
+            frmUserMgt.Show();
             this.Dispose();
         }
 
-        private void MedDirMainMenu_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnchargenurse_Click(object sender, EventArgs e)
         {
-            //Program.LoginScreen.Show();
-            //this.Dispose();
+            ChargeNurseMainMenu frmChargeNurse = new ChargeNurseMainMenu();
+            frmChargeNurse.Show();
+            this.Dispose();
+        }
+
+        private void btnstaff_Click(object sender, EventArgs e)
+        {
+            StaffMainMenu frmStaff = new StaffMainMenu();
+            frmStaff.Show();
+            this.Dispose();
         }
     }
 }

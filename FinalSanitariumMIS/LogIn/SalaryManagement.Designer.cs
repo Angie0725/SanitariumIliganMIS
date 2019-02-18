@@ -245,6 +245,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "SalaryManagement";
             this.Text = "SALARY MANAGEMENT";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SalaryManagement_FormClosing);
             this.Load += new System.EventHandler(this.SalaryManagement_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +46,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnadditem = new System.Windows.Forms.Button();
             this.dg_requestitems = new System.Windows.Forms.DataGridView();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.btnremoveitem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -67,10 +71,6 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.pnlAddItems.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -83,7 +83,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel1.Controls.Add(this.pnlAddItems);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
@@ -122,7 +121,7 @@
             this.pnlAddItems.Controls.Add(this.dg_requestitems);
             this.pnlAddItems.Controls.Add(this.label5);
             this.pnlAddItems.Controls.Add(this.btnremoveitem);
-            this.pnlAddItems.Location = new System.Drawing.Point(442, 51);
+            this.pnlAddItems.Location = new System.Drawing.Point(12, 106);
             this.pnlAddItems.Name = "pnlAddItems";
             this.pnlAddItems.Size = new System.Drawing.Size(613, 481);
             this.pnlAddItems.TabIndex = 70;
@@ -246,14 +245,14 @@
             // 
             this.dg_requestitems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dg_requestitems.BackgroundColor = System.Drawing.Color.PaleGreen;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_requestitems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_requestitems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dg_requestitems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_requestitems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column10,
@@ -266,6 +265,30 @@
             this.dg_requestitems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_requestitems.Size = new System.Drawing.Size(569, 155);
             this.dg_requestitems.TabIndex = 57;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "REQITEM_ID";
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 114;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ITEM_NUMBER";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 131;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "ITEM_NAME";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 111;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "QUANTITY";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 102;
             // 
             // label5
             // 
@@ -421,14 +444,14 @@
             // 
             this.dg_requestdetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dg_requestdetails.BackgroundColor = System.Drawing.Color.PaleGreen;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_requestdetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_requestdetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dg_requestdetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_requestdetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
@@ -497,36 +520,13 @@
             this.label6.TabIndex = 67;
             this.label6.Text = "*Double-Click a Record to View or Add Requested Items";
             // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "REQITEM_ID";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 114;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ITEM_NUMBER";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 131;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "ITEM_NAME";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 111;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "QUANTITY";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 102;
-            // 
             // Requisitions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(637, 599);
+            this.Controls.Add(this.pnlAddItems);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dg_requestdetails);
@@ -534,6 +534,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Requisitions";
             this.Text = "WARD REQUISITIONS";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Requisitions_FormClosing);
             this.Load += new System.EventHandler(this.Requisitions_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

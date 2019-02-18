@@ -317,5 +317,12 @@ namespace LogIn
                 loadWorkExperiencesList();
             }
         }
+
+        private void StaffManagement_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            HRMainMenu frmHR = new HRMainMenu();
+            frmHR.Show();
+            this.Dispose();
+        }
     }
 }

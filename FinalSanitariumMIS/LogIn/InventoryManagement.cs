@@ -284,12 +284,7 @@ namespace LogIn
             cb_method_administration.SelectedIndex = -1;
         }
 
-        private void InventoryManagement_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            MedDirMainMenu frmMD = new MedDirMainMenu();
-            frmMD.Show();
-            this.Hide();
-        }
+        
 
         private void tb_supplier_TextChanged(object sender, EventArgs e)
         {
@@ -418,6 +413,13 @@ namespace LogIn
                     dgv_inventory.Rows.Add(supplylist);
                 }
             }
+        }
+
+        private void InventoryManagement_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MedDirMainMenu frmMD = new MedDirMainMenu();
+            frmMD.Show();
+            this.Dispose();
         }
     }
 }

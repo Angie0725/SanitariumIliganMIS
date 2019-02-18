@@ -66,7 +66,7 @@ namespace LogIn
                 loadAdmittedPatients();
             }
 
-            
+             
 
 
         }
@@ -103,6 +103,13 @@ namespace LogIn
         {
             dgdscharged.Rows.Clear();
             pnldischarged.Visible = false;
+        }
+
+        private void Discharge_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            StaffMainMenu frmStaff = new StaffMainMenu();
+            frmStaff.Show();
+            this.Dispose();
         }
     }
 }

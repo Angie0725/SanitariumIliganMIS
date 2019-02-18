@@ -30,39 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HRMainMenu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.linkback = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btn_StaffRegistration = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnstaffmgt = new System.Windows.Forms.Button();
+            this.btnstaffreg = new System.Windows.Forms.Button();
+            this.btnsalarymgt = new System.Windows.Forms.Button();
+            this.btnposmaintenance = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel1.Controls.Add(this.linkback);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-2, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(683, 100);
             this.panel1.TabIndex = 38;
-            // 
-            // linkback
-            // 
-            this.linkback.AutoSize = true;
-            this.linkback.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkback.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.linkback.Location = new System.Drawing.Point(488, 73);
-            this.linkback.Name = "linkback";
-            this.linkback.Size = new System.Drawing.Size(189, 23);
-            this.linkback.TabIndex = 11;
-            this.linkback.Text = "Go back to Main Menu";
-            this.linkback.Click += new System.EventHandler(this.linkback_Click);
             // 
             // label4
             // 
@@ -86,86 +71,73 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "SANITARIUM HOSPITAL";
             // 
-            // button2
+            // btnstaffmgt
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(267, 131);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 121);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Staff Management";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnstaffmgt.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnstaffmgt.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnstaffmgt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnstaffmgt.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnstaffmgt.Image = ((System.Drawing.Image)(resources.GetObject("btnstaffmgt.Image")));
+            this.btnstaffmgt.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnstaffmgt.Location = new System.Drawing.Point(183, 166);
+            this.btnstaffmgt.Name = "btnstaffmgt";
+            this.btnstaffmgt.Size = new System.Drawing.Size(148, 121);
+            this.btnstaffmgt.TabIndex = 40;
+            this.btnstaffmgt.Text = "Staff Management";
+            this.btnstaffmgt.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnstaffmgt.UseVisualStyleBackColor = false;
+            this.btnstaffmgt.Click += new System.EventHandler(this.btnstaffmgt_Click);
             // 
-            // btn_StaffRegistration
+            // btnstaffreg
             // 
-            this.btn_StaffRegistration.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_StaffRegistration.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btn_StaffRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_StaffRegistration.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_StaffRegistration.Image = ((System.Drawing.Image)(resources.GetObject("btn_StaffRegistration.Image")));
-            this.btn_StaffRegistration.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_StaffRegistration.Location = new System.Drawing.Point(113, 131);
-            this.btn_StaffRegistration.Name = "btn_StaffRegistration";
-            this.btn_StaffRegistration.Size = new System.Drawing.Size(148, 121);
-            this.btn_StaffRegistration.TabIndex = 39;
-            this.btn_StaffRegistration.Text = "Staff Registration";
-            this.btn_StaffRegistration.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_StaffRegistration.UseVisualStyleBackColor = false;
-            this.btn_StaffRegistration.Click += new System.EventHandler(this.btn_StaffRegistration_Click);
+            this.btnstaffreg.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnstaffreg.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnstaffreg.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnstaffreg.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnstaffreg.Image = ((System.Drawing.Image)(resources.GetObject("btnstaffreg.Image")));
+            this.btnstaffreg.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnstaffreg.Location = new System.Drawing.Point(29, 166);
+            this.btnstaffreg.Name = "btnstaffreg";
+            this.btnstaffreg.Size = new System.Drawing.Size(148, 121);
+            this.btnstaffreg.TabIndex = 39;
+            this.btnstaffreg.Text = "Staff Registration";
+            this.btnstaffreg.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnstaffreg.UseVisualStyleBackColor = false;
+            this.btnstaffreg.Click += new System.EventHandler(this.btnstaffreg_Click);
             // 
-            // button3
+            // btnsalarymgt
             // 
-            this.button3.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(421, 131);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 121);
-            this.button3.TabIndex = 41;
-            this.button3.Text = "Staff-Ward Allocation";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnsalarymgt.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnsalarymgt.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnsalarymgt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsalarymgt.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalarymgt.Image = ((System.Drawing.Image)(resources.GetObject("btnsalarymgt.Image")));
+            this.btnsalarymgt.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnsalarymgt.Location = new System.Drawing.Point(337, 166);
+            this.btnsalarymgt.Name = "btnsalarymgt";
+            this.btnsalarymgt.Size = new System.Drawing.Size(148, 121);
+            this.btnsalarymgt.TabIndex = 42;
+            this.btnsalarymgt.Text = "Salary Maintenance";
+            this.btnsalarymgt.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnsalarymgt.UseVisualStyleBackColor = false;
+            this.btnsalarymgt.Click += new System.EventHandler(this.btnsalarymgt_Click);
             // 
-            // button4
+            // btnposmaintenance
             // 
-            this.button4.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(191, 258);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(148, 121);
-            this.button4.TabIndex = 42;
-            this.button4.Text = "Salary Maintenance";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(345, 258);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(148, 121);
-            this.button5.TabIndex = 43;
-            this.button5.Text = "Position Maintenance";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnposmaintenance.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnposmaintenance.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnposmaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnposmaintenance.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnposmaintenance.Image = ((System.Drawing.Image)(resources.GetObject("btnposmaintenance.Image")));
+            this.btnposmaintenance.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnposmaintenance.Location = new System.Drawing.Point(491, 166);
+            this.btnposmaintenance.Name = "btnposmaintenance";
+            this.btnposmaintenance.Size = new System.Drawing.Size(148, 121);
+            this.btnposmaintenance.TabIndex = 43;
+            this.btnposmaintenance.Text = "Position Maintenance";
+            this.btnposmaintenance.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnposmaintenance.UseVisualStyleBackColor = false;
+            this.btnposmaintenance.Click += new System.EventHandler(this.btnposmaintenance_Click);
             // 
             // HRMainMenu
             // 
@@ -173,14 +145,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(678, 405);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btn_StaffRegistration);
+            this.Controls.Add(this.btnposmaintenance);
+            this.Controls.Add(this.btnsalarymgt);
+            this.Controls.Add(this.btnstaffmgt);
+            this.Controls.Add(this.btnstaffreg);
             this.Controls.Add(this.panel1);
             this.Name = "HRMainMenu";
             this.Text = "PERSONNEL OFFICER - MAIN MENU";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HR_FormClosing);
+            this.Load += new System.EventHandler(this.HRMainMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -192,11 +165,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btn_StaffRegistration;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label linkback;
+        private System.Windows.Forms.Button btnstaffmgt;
+        private System.Windows.Forms.Button btnstaffreg;
+        private System.Windows.Forms.Button btnsalarymgt;
+        private System.Windows.Forms.Button btnposmaintenance;
     }
 }

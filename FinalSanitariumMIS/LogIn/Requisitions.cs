@@ -262,5 +262,12 @@ namespace LogIn
 
             dtpreqdate.Value = Convert.ToDateTime(dg_requestdetails.Rows[rownum].Cells[3].Value.ToString());
         }
+
+        private void Requisitions_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            StaffMainMenu frmStaff = new StaffMainMenu();
+            frmStaff.Show();
+            this.Dispose();
+        }
     }
 }

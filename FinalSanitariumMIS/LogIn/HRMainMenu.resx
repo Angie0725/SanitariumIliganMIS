@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnstaffmgt.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
@@ -152,7 +152,7 @@
         DcaDhcz/F6sDyA+uzQv2alLtGnTAim++Bc6lxAWS2bRrAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_StaffRegistration.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnstaffreg.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
@@ -185,36 +185,7 @@
         D0jOO9CVcOf7AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        AABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnsalarymgt.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
@@ -261,7 +232,7 @@
         rkJggg==
 </value>
   </data>
-  <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnposmaintenance.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ

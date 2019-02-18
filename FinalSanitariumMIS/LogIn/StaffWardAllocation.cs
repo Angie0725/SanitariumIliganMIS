@@ -20,7 +20,7 @@ namespace LogIn
         {
             InitializeComponent();
 
-            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Nicksplat93", "ANGELIE BUEN", "sanita");
+            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Nicksplat93", "Angelie_Buen", "sanita");
         }
 
         private void StaffWardAllocation_Load(object sender, EventArgs e)
@@ -175,6 +175,13 @@ namespace LogIn
             txtstaffnumber.Text = dgvwardallocation.Rows[rownum].Cells[0].Value.ToString();
             cbward.SelectedItem = dgvwardallocation.Rows[rownum].Cells[3].Value.ToString();
             dtpdateassigned.Value = Convert.ToDateTime(dgvwardallocation.Rows[rownum].Cells[4].Value);
+        }
+
+        private void StaffWardAlloc_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ChargeNurseMainMenu frmCN = new ChargeNurseMainMenu();
+            frmCN.Show();
+            this.Dispose();
         }
     }
 }

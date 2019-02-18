@@ -15,6 +15,7 @@ namespace LogIn
     {
         private FinalSanitariumMIS.Helpers.DatabaseHelper DB;
         private int staffNum = 0;
+        private int acctype = 0;
 
         public LoginForm()
         {
@@ -30,14 +31,40 @@ namespace LogIn
             {
                 LoginDetails obj = new LoginDetails();
                 
-                staffNum = Convert.ToInt32(rs["STAFF_NUMBER"].ToString());
+                staffNum = Convert.ToInt32(rs["STAFF_NUMBER"]);
+                acctype = Convert.ToInt32(rs["ACCOUNT_TYPE"]);
 
                 obj.setStaffNum(staffNum);
                 
 
-                Requisitions frmReq = new Requisitions();
-                frmReq.Show();
-                //this.Hide();
+                if(acctype == 1)
+                {
+                    obj.setPOSnum(0);
+                    MedDirMainMenu frmMedDir = new MedDirMainMenu();
+                    frmMedDir.Show();
+                    this.Hide();
+                }
+                else if (acctype == 2)
+                {
+                    obj.setPOSnum(1);
+                    HRMainMenu frmHR = new HRMainMenu();
+                    frmHR.Show();
+                    this.Hide();
+                }
+                else if (acctype == 3)
+                {
+                    obj.setPOSnum(1);
+                    ChargeNurseMainMenu frmChargeNurse = new ChargeNurseMainMenu();
+                    frmChargeNurse.Show();
+                    this.Dispose();
+                }
+                else if (acctype == 5)
+                {
+                    obj.setPOSnum(1);
+                    StaffMainMenu frmStaff = new StaffMainMenu();
+                    frmStaff.Show();
+                    this.Hide();
+                }
 
             }
             else

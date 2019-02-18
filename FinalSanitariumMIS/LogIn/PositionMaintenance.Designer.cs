@@ -245,6 +245,7 @@
             this.Controls.Add(this.btnupdate);
             this.Name = "PositionMaintenance";
             this.Text = "POSITION MAINTENANCE";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PositionMaintenance_FormClosing);
             this.Load += new System.EventHandler(this.PositionMaintenance_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

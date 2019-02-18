@@ -45,11 +45,11 @@
             this.pnldischarged = new System.Windows.Forms.Panel();
             this.btnclosedsch = new System.Windows.Forms.Button();
             this.dgdscharged = new System.Windows.Forms.DataGridView();
-            this.label13 = new System.Windows.Forms.Label();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dginpatients)).BeginInit();
             this.pnldischarged.SuspendLayout();
@@ -230,17 +230,6 @@
             this.dgdscharged.Size = new System.Drawing.Size(446, 277);
             this.dgdscharged.TabIndex = 84;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(20, 42);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(166, 19);
-            this.label13.TabIndex = 83;
-            this.label13.Text = "DISCHARGED PARENTS:";
-            // 
             // Column8
             // 
             this.Column8.HeaderText = "DPID";
@@ -265,6 +254,17 @@
             this.Column11.Name = "Column11";
             this.Column11.Width = 138;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(20, 42);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(166, 19);
+            this.label13.TabIndex = 83;
+            this.label13.Text = "DISCHARGED PARENTS:";
+            // 
             // DischargePatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +278,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "DischargePatient";
             this.Text = "DISCHARGE PATIENT";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Discharge_FormClosing);
             this.Load += new System.EventHandler(this.DischargePatient_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

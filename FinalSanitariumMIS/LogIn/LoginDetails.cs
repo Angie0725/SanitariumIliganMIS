@@ -9,6 +9,7 @@ namespace LogIn
     public class LoginDetails
     {
         private static int staffNum = 0;
+        private static int pos = 0;
 
         public int getStaffNum()
         {
@@ -18,6 +19,16 @@ namespace LogIn
         public void setStaffNum(int x)
         {
             staffNum = x;
+        }
+
+        public int getPOSnum()
+        {
+            return pos;
+        }
+
+        public void setPOSnum(int p)
+        {
+            pos = p;
         }
     }
 }

@@ -436,6 +436,7 @@
             this.Controls.Add(this.panelheader);
             this.Name = "StaffWardAllocation";
             this.Text = "STAFF-WARD ALLOCATION";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StaffWardAlloc_FormClosing);
             this.Load += new System.EventHandler(this.StaffWardAllocation_Load);
             this.panelheader.ResumeLayout(false);
             this.panelheader.PerformLayout();

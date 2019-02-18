@@ -462,6 +462,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "RoomManagement";
             this.Text = "ROOM MANAGEMENT";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RoomManagement_FormClosing);
             this.Load += new System.EventHandler(this.RoomManagement_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

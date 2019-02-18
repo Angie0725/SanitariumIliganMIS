@@ -127,5 +127,12 @@ namespace LogIn
                 MessageBox.Show("Please select (DOUBLE-CLICK) an existing record from the Salary List on the right.");
             }
         }
+
+        private void SalaryManagement_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            HRMainMenu frmHR = new HRMainMenu();
+            frmHR.Show();
+            this.Dispose();
+        }
     }
 }

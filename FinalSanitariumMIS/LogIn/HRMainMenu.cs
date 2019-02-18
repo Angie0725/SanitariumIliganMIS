@@ -12,25 +12,68 @@ namespace LogIn
 {
     public partial class HRMainMenu : Form
     {
-        private FinalSanitariumMIS.Helpers.DatabaseHelper DB;
+        
         
         public HRMainMenu()
         {
             InitializeComponent();
-
-            DB = new FinalSanitariumMIS.Helpers.DatabaseHelper("127.0.0.1", "50000", "Rheamaesabas12", "BILL-LAWRENCE", "sanita");
         }
 
-        private void btn_StaffRegistration_Click(object sender, EventArgs e)
+        private void HR_FormClosing(object sender, FormClosingEventArgs e)
         {
-            StaffRegistration sr = new StaffRegistration();
-            sr.ShowDialog();
+            LoginDetails obj = new LoginDetails();
+            int posnum = obj.getPOSnum();
+
+            if(posnum == 0)
+            {
+                MedDirMainMenu frmMD = new MedDirMainMenu();
+                frmMD.Show();
+                this.Dispose();
+            }
+            else
+            {
+                DialogResult logout = MessageBox.Show("Are you sure you want to log out?", "Confirm Log Out", MessageBoxButtons.YesNo);
+
+                if (logout == DialogResult.Yes)
+                {
+                    LoginForm frmlogin = new LoginForm();
+                    frmlogin.Show();
+                    this.Dispose();
+                }
+            }
+            
         }
 
-        private void linkback_Click(object sender, EventArgs e)
+        private void HRMainMenu_Load(object sender, EventArgs e)
         {
-            MedDirMainMenu frmMD = new MedDirMainMenu();
-            frmMD.Show();
+
+        }
+
+        private void btnstaffmgt_Click(object sender, EventArgs e)
+        {
+            StaffManagement frmStaffMgt = new StaffManagement();
+            frmStaffMgt.Show();
+            this.Hide();
+        }
+
+        private void btnsalarymgt_Click(object sender, EventArgs e)
+        {
+            SalaryManagement frmSalaryMgt = new SalaryManagement();
+            frmSalaryMgt.Show();
+            this.Hide();
+        }
+
+        private void btnstaffreg_Click(object sender, EventArgs e)
+        {
+            StaffRegistration frmStaffreg = new StaffRegistration();
+            frmStaffreg.Show();
+            this.Hide();
+        }
+
+        private void btnposmaintenance_Click(object sender, EventArgs e)
+        {
+            PositionMaintenance frmPosMaintain = new PositionMaintenance();
+            frmPosMaintain.Show();
             this.Hide();
         }
     }

@@ -794,6 +794,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "StaffManagement";
             this.Text = "STAFF MANAGEMENT";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StaffManagement_FormClosing);
             this.Load += new System.EventHandler(this.StaffManagement_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

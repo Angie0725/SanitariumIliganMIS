@@ -262,5 +262,12 @@ namespace LogIn
                 }
             }
         }
+
+        private void RoomManagement_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ChargeNurseMainMenu frmCN = new ChargeNurseMainMenu();
+            frmCN.Show();
+            this.Dispose();
+        }
     }
 }

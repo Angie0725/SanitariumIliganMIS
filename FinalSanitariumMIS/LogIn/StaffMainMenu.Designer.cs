@@ -32,11 +32,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnpatientreg = new System.Windows.Forms.Button();
+            this.btnrequisitions = new System.Windows.Forms.Button();
+            this.btnappointments = new System.Windows.Forms.Button();
+            this.btnadmitpatient = new System.Windows.Forms.Button();
+            this.btndischargepatient = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(680, 100);
+            this.panel1.Size = new System.Drawing.Size(564, 100);
             this.panel1.TabIndex = 1;
             // 
             // label4
@@ -73,100 +73,107 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "SANITARIUM HOSPITAL";
             // 
-            // button1
+            // btnpatientreg
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(106, 131);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 121);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "Patient Registration";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnpatientreg.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnpatientreg.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnpatientreg.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnpatientreg.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpatientreg.Image = ((System.Drawing.Image)(resources.GetObject("btnpatientreg.Image")));
+            this.btnpatientreg.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnpatientreg.Location = new System.Drawing.Point(30, 129);
+            this.btnpatientreg.Name = "btnpatientreg";
+            this.btnpatientreg.Size = new System.Drawing.Size(302, 121);
+            this.btnpatientreg.TabIndex = 40;
+            this.btnpatientreg.Text = "Patient Registration";
+            this.btnpatientreg.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnpatientreg.UseVisualStyleBackColor = false;
+            this.btnpatientreg.Click += new System.EventHandler(this.btnpatientreg_Click);
             // 
-            // button2
+            // btnrequisitions
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(260, 131);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 121);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "Medication Requisitions";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnrequisitions.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnrequisitions.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnrequisitions.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnrequisitions.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnrequisitions.Image = ((System.Drawing.Image)(resources.GetObject("btnrequisitions.Image")));
+            this.btnrequisitions.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnrequisitions.Location = new System.Drawing.Point(384, 256);
+            this.btnrequisitions.Name = "btnrequisitions";
+            this.btnrequisitions.Size = new System.Drawing.Size(148, 121);
+            this.btnrequisitions.TabIndex = 41;
+            this.btnrequisitions.Text = "Ward Requisitions";
+            this.btnrequisitions.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnrequisitions.UseVisualStyleBackColor = false;
+            this.btnrequisitions.Click += new System.EventHandler(this.btnrequisitions_Click);
             // 
-            // button3
+            // btnappointments
             // 
-            this.button3.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(414, 131);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 121);
-            this.button3.TabIndex = 42;
-            this.button3.Text = "Set Appointments";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnappointments.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnappointments.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnappointments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnappointments.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnappointments.Image = ((System.Drawing.Image)(resources.GetObject("btnappointments.Image")));
+            this.btnappointments.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnappointments.Location = new System.Drawing.Point(384, 129);
+            this.btnappointments.Name = "btnappointments";
+            this.btnappointments.Size = new System.Drawing.Size(148, 121);
+            this.btnappointments.TabIndex = 42;
+            this.btnappointments.Text = "Set Appointments";
+            this.btnappointments.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnappointments.UseVisualStyleBackColor = false;
+            this.btnappointments.Click += new System.EventHandler(this.btnappointments_Click);
             // 
-            // button4
+            // btnadmitpatient
             // 
-            this.button4.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(189, 258);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(148, 121);
-            this.button4.TabIndex = 43;
-            this.button4.Text = "In-House Doctors";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnadmitpatient.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnadmitpatient.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnadmitpatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnadmitpatient.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadmitpatient.Image = ((System.Drawing.Image)(resources.GetObject("btnadmitpatient.Image")));
+            this.btnadmitpatient.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnadmitpatient.Location = new System.Drawing.Point(30, 256);
+            this.btnadmitpatient.Name = "btnadmitpatient";
+            this.btnadmitpatient.Size = new System.Drawing.Size(148, 121);
+            this.btnadmitpatient.TabIndex = 43;
+            this.btnadmitpatient.Text = "Admit Patient (In-Patients)";
+            this.btnadmitpatient.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnadmitpatient.UseVisualStyleBackColor = false;
+            this.btnadmitpatient.Click += new System.EventHandler(this.btnadmitpatient_Click);
             // 
-            // button5
+            // btndischargepatient
             // 
-            this.button5.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(343, 258);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(148, 121);
-            this.button5.TabIndex = 44;
-            this.button5.Text = "Patient Waiting List";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btndischargepatient.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btndischargepatient.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btndischargepatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btndischargepatient.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndischargepatient.Image = ((System.Drawing.Image)(resources.GetObject("btndischargepatient.Image")));
+            this.btndischargepatient.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btndischargepatient.Location = new System.Drawing.Point(184, 256);
+            this.btndischargepatient.Name = "btndischargepatient";
+            this.btndischargepatient.Size = new System.Drawing.Size(148, 121);
+            this.btndischargepatient.TabIndex = 44;
+            this.btndischargepatient.Text = "Discharge Patient";
+            this.btndischargepatient.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btndischargepatient.UseVisualStyleBackColor = false;
+            this.btndischargepatient.Click += new System.EventHandler(this.btndischargepatient_Click);
             // 
             // StaffMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(678, 405);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(563, 405);
+            this.Controls.Add(this.btndischargepatient);
+            this.Controls.Add(this.btnadmitpatient);
+            this.Controls.Add(this.btnappointments);
+            this.Controls.Add(this.btnrequisitions);
+            this.Controls.Add(this.btnpatientreg);
             this.Controls.Add(this.panel1);
             this.Name = "StaffMainMenu";
             this.Text = "STAFF - MAIN MENU";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Staff_FormClosing);
+            this.Load += new System.EventHandler(this.StaffMainMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -178,10 +185,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnpatientreg;
+        private System.Windows.Forms.Button btnrequisitions;
+        private System.Windows.Forms.Button btnappointments;
+        private System.Windows.Forms.Button btnadmitpatient;
+        private System.Windows.Forms.Button btndischargepatient;
     }
 }

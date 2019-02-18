@@ -231,5 +231,12 @@ namespace LogIn
                 txtrelationship.Text = rsnok["RELATIONSHIP"].ToString();
             }
         }
+
+        private void PatientReg_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            StaffMainMenu frmStaff = new StaffMainMenu();
+            frmStaff.Show();
+            this.Dispose();
+        }
     }
 }

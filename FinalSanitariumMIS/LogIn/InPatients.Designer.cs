@@ -32,6 +32,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlpatientlist = new System.Windows.Forms.Panel();
+            this.pnlSecPatientList = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dgSecPatList = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnclosepatients = new System.Windows.Forms.Button();
             this.dgpatientlist = new System.Windows.Forms.DataGridView();
@@ -45,6 +58,8 @@
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
             this.pnlwaitlist = new System.Windows.Forms.Panel();
+            this.btnremovewait = new System.Windows.Forms.Button();
+            this.btnvwpat = new System.Windows.Forms.Button();
             this.btnaddtowait = new System.Windows.Forms.Button();
             this.txtwaitpatient = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -56,6 +71,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dginpatients = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnviewpatients = new System.Windows.Forms.Button();
             this.lblPatientName = new System.Windows.Forms.Label();
@@ -73,14 +94,10 @@
             this.btnadmitpatient = new System.Windows.Forms.Button();
             this.btnwaitlist = new System.Windows.Forms.Button();
             this.cb_filter = new System.Windows.Forms.ComboBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.pnlpatientlist.SuspendLayout();
+            this.pnlSecPatientList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSecPatList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgpatientlist)).BeginInit();
             this.pnlwaitlist.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwaitlist)).BeginInit();
@@ -123,14 +140,131 @@
             // pnlpatientlist
             // 
             this.pnlpatientlist.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.pnlpatientlist.Controls.Add(this.pnlSecPatientList);
             this.pnlpatientlist.Controls.Add(this.label8);
             this.pnlpatientlist.Controls.Add(this.btnclosepatients);
             this.pnlpatientlist.Controls.Add(this.dgpatientlist);
             this.pnlpatientlist.Controls.Add(this.label13);
-            this.pnlpatientlist.Location = new System.Drawing.Point(103, 106);
+            this.pnlpatientlist.Location = new System.Drawing.Point(103, 105);
             this.pnlpatientlist.Name = "pnlpatientlist";
             this.pnlpatientlist.Size = new System.Drawing.Size(739, 399);
             this.pnlpatientlist.TabIndex = 83;
+            // 
+            // pnlSecPatientList
+            // 
+            this.pnlSecPatientList.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.pnlSecPatientList.Controls.Add(this.label9);
+            this.pnlSecPatientList.Controls.Add(this.button1);
+            this.pnlSecPatientList.Controls.Add(this.dgSecPatList);
+            this.pnlSecPatientList.Controls.Add(this.label14);
+            this.pnlSecPatientList.Location = new System.Drawing.Point(0, 1);
+            this.pnlSecPatientList.Name = "pnlSecPatientList";
+            this.pnlSecPatientList.Size = new System.Drawing.Size(739, 399);
+            this.pnlSecPatientList.TabIndex = 87;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(21, 63);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(269, 15);
+            this.label9.TabIndex = 86;
+            this.label9.Text = "*Double-Click a record to get Patient Information.";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Pink;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(689, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(47, 31);
+            this.button1.TabIndex = 85;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // dgSecPatList
+            // 
+            this.dgSecPatList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgSecPatList.BackgroundColor = System.Drawing.Color.PaleGreen;
+            this.dgSecPatList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgSecPatList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.dgSecPatList.Location = new System.Drawing.Point(24, 81);
+            this.dgSecPatList.Name = "dgSecPatList";
+            this.dgSecPatList.RowHeadersVisible = false;
+            this.dgSecPatList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgSecPatList.Size = new System.Drawing.Size(689, 296);
+            this.dgSecPatList.TabIndex = 84;
+            this.dgSecPatList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.secondPatlist_CellDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "PID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "FIRSTNAME";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 94;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "LASTNAME";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 90;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "ADDRESS";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 84;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "TELNUMBER";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 99;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "BIRTHDATE";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 94;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "SEX";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 53;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "MARITALSTATUS";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 122;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(20, 27);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(156, 19);
+            this.label14.TabIndex = 83;
+            this.label14.Text = "PATIENT MASTERLIST:";
             // 
             // label8
             // 
@@ -240,23 +374,51 @@
             // pnlwaitlist
             // 
             this.pnlwaitlist.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.pnlwaitlist.Controls.Add(this.btnremovewait);
+            this.pnlwaitlist.Controls.Add(this.btnvwpat);
             this.pnlwaitlist.Controls.Add(this.btnaddtowait);
             this.pnlwaitlist.Controls.Add(this.txtwaitpatient);
             this.pnlwaitlist.Controls.Add(this.label12);
             this.pnlwaitlist.Controls.Add(this.btnclose);
             this.pnlwaitlist.Controls.Add(this.dgwaitlist);
             this.pnlwaitlist.Controls.Add(this.label1);
-            this.pnlwaitlist.Location = new System.Drawing.Point(206, 106);
+            this.pnlwaitlist.Location = new System.Drawing.Point(208, 105);
             this.pnlwaitlist.Name = "pnlwaitlist";
             this.pnlwaitlist.Size = new System.Drawing.Size(524, 411);
             this.pnlwaitlist.TabIndex = 10;
+            // 
+            // btnremovewait
+            // 
+            this.btnremovewait.BackColor = System.Drawing.Color.Salmon;
+            this.btnremovewait.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnremovewait.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnremovewait.Location = new System.Drawing.Point(24, 365);
+            this.btnremovewait.Name = "btnremovewait";
+            this.btnremovewait.Size = new System.Drawing.Size(472, 32);
+            this.btnremovewait.TabIndex = 90;
+            this.btnremovewait.Text = "REMOVE FROM WAITLIST";
+            this.btnremovewait.UseVisualStyleBackColor = false;
+            this.btnremovewait.Click += new System.EventHandler(this.btnremovewait_Click);
+            // 
+            // btnvwpat
+            // 
+            this.btnvwpat.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnvwpat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnvwpat.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvwpat.Location = new System.Drawing.Point(296, 56);
+            this.btnvwpat.Name = "btnvwpat";
+            this.btnvwpat.Size = new System.Drawing.Size(92, 22);
+            this.btnvwpat.TabIndex = 89;
+            this.btnvwpat.Text = "VIEW PATIENTS";
+            this.btnvwpat.UseVisualStyleBackColor = false;
+            this.btnvwpat.Click += new System.EventHandler(this.btnvwpat_Click);
             // 
             // btnaddtowait
             // 
             this.btnaddtowait.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnaddtowait.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnaddtowait.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddtowait.Location = new System.Drawing.Point(296, 56);
+            this.btnaddtowait.Location = new System.Drawing.Point(394, 56);
             this.btnaddtowait.Name = "btnaddtowait";
             this.btnaddtowait.Size = new System.Drawing.Size(102, 22);
             this.btnaddtowait.TabIndex = 88;
@@ -310,7 +472,7 @@
             this.dgwaitlist.Name = "dgwaitlist";
             this.dgwaitlist.RowHeadersVisible = false;
             this.dgwaitlist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwaitlist.Size = new System.Drawing.Size(472, 296);
+            this.dgwaitlist.Size = new System.Drawing.Size(472, 275);
             this.dgwaitlist.TabIndex = 84;
             // 
             // Column8
@@ -371,6 +533,42 @@
             this.dginpatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dginpatients.Size = new System.Drawing.Size(548, 355);
             this.dginpatients.TabIndex = 78;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "INPATIENT_ID";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 106;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "PATIENT_NUMBER";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 131;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "BED_NUMBER";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 107;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "DATE_ARRIVED";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 115;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "DATE_INWARD";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 112;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "DURATION";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 89;
             // 
             // groupBox2
             // 
@@ -567,42 +765,6 @@
             this.cb_filter.Size = new System.Drawing.Size(162, 22);
             this.cb_filter.TabIndex = 97;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "INPATIENT_ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 106;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "PATIENT_NUMBER";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 131;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "BED_NUMBER";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 107;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "DATE_ARRIVED";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 115;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "DATE_INWARD";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 112;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "DURATION";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 89;
-            // 
             // InPatients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -619,11 +781,15 @@
             this.Controls.Add(this.panel1);
             this.Name = "InPatients";
             this.Text = "IN-PATIENTS ADMISSION";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InPatients_FormClosing);
             this.Load += new System.EventHandler(this.InPatients_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlpatientlist.ResumeLayout(false);
             this.pnlpatientlist.PerformLayout();
+            this.pnlSecPatientList.ResumeLayout(false);
+            this.pnlSecPatientList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSecPatList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgpatientlist)).EndInit();
             this.pnlwaitlist.ResumeLayout(false);
             this.pnlwaitlist.PerformLayout();
@@ -689,5 +855,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Button btnvwpat;
+        private System.Windows.Forms.Panel pnlSecPatientList;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgSecPatList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnremovewait;
     }
 }

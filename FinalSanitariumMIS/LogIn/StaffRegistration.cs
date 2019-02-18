@@ -213,11 +213,9 @@ namespace LogIn
 
         private void StaffRegistration_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show(null, "Close the Staff Registration Form", "Confirm Action", MessageBoxButtons.YesNo) == DialogResult.No)
-            {
-                emptyAllInputFields();
-                e.Cancel = true;
-            }
+            HRMainMenu frmHR = new HRMainMenu();
+            frmHR.Show();
+            this.Dispose();
         }
 
         private void StaffRegistration_Load(object sender, EventArgs e)

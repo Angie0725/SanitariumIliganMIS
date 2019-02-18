@@ -64,8 +64,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dgpatientlist = new System.Windows.Forms.DataGridView();
-            this.btnregister = new System.Windows.Forms.Button();
-            this.btnupdate = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +72,8 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnregister = new System.Windows.Forms.Button();
+            this.btnupdate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -489,32 +489,6 @@
             this.dgpatientlist.TabIndex = 76;
             this.dgpatientlist.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgpatientlist_CellDoubleClick);
             // 
-            // btnregister
-            // 
-            this.btnregister.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnregister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnregister.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnregister.Location = new System.Drawing.Point(384, 401);
-            this.btnregister.Name = "btnregister";
-            this.btnregister.Size = new System.Drawing.Size(165, 35);
-            this.btnregister.TabIndex = 79;
-            this.btnregister.Text = "REGISTER";
-            this.btnregister.UseVisualStyleBackColor = false;
-            this.btnregister.Click += new System.EventHandler(this.btnregister_Click);
-            // 
-            // btnupdate
-            // 
-            this.btnupdate.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnupdate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnupdate.Location = new System.Drawing.Point(560, 401);
-            this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(165, 35);
-            this.btnupdate.TabIndex = 80;
-            this.btnupdate.Text = "UPDATE";
-            this.btnupdate.UseVisualStyleBackColor = false;
-            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "PID";
@@ -563,6 +537,32 @@
             this.Column8.Name = "Column8";
             this.Column8.Width = 122;
             // 
+            // btnregister
+            // 
+            this.btnregister.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnregister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnregister.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnregister.Location = new System.Drawing.Point(384, 401);
+            this.btnregister.Name = "btnregister";
+            this.btnregister.Size = new System.Drawing.Size(165, 35);
+            this.btnregister.TabIndex = 79;
+            this.btnregister.Text = "REGISTER";
+            this.btnregister.UseVisualStyleBackColor = false;
+            this.btnregister.Click += new System.EventHandler(this.btnregister_Click);
+            // 
+            // btnupdate
+            // 
+            this.btnupdate.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnupdate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdate.Location = new System.Drawing.Point(560, 401);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(165, 35);
+            this.btnupdate.TabIndex = 80;
+            this.btnupdate.Text = "UPDATE";
+            this.btnupdate.UseVisualStyleBackColor = false;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
+            // 
             // PatientRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -577,6 +577,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "PatientRegistration";
             this.Text = "PATIENT REGISTRATION";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PatientReg_FormClosing);
             this.Load += new System.EventHandler(this.PatientRegistration_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

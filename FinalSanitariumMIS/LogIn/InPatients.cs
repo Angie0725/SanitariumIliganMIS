@@ -60,6 +60,7 @@ namespace LogIn
         {
             pnlwaitlist.Visible = false;
             pnlpatientlist.Visible = false;
+            pnlSecPatientList.Visible = false;
 
             DB2ResultSet rsbeds = DB.QueryWithResultSet("SELECT * FROM BED WHERE AVAILABILITY = 'AVAILABLE'");
             
@@ -76,6 +77,7 @@ namespace LogIn
                 if (wait == DialogResult.Yes)
                 {
                     loadWaitList();
+
                     pnlwaitlist.Visible = true;
 
                 }
@@ -190,6 +192,7 @@ namespace LogIn
                 patients[7] = rspatient["MARITAL_STATUS"].ToString();
 
                 dgpatientlist.Rows.Add(patients);
+               
             }
         }
         private void btnviewpatients_Click(object sender, EventArgs e)
@@ -204,9 +207,66 @@ namespace LogIn
             int rownum = e.RowIndex;
 
             txtpatientnum.Text = dgpatientlist.Rows[rownum].Cells[0].Value.ToString();
-
+      
             pnlpatientlist.Visible = false;
 
+        }
+
+        private void loadSecPatientList()
+        {
+            string[] patients = new string[8];
+            DB2ResultSet rspatient = DB.QueryWithResultSet("SELECT * FROM PATIENT");
+            while (rspatient.Read())
+            {
+                patients[0] = rspatient["PATIENT_NUMBER"].ToString();
+                patients[1] = rspatient["FIRSTNAME"].ToString();
+                patients[2] = rspatient["LASTNAME"].ToString();
+                patients[3] = rspatient["ADDRESS"].ToString();
+                patients[4] = rspatient["TELNUMBER"].ToString();
+                patients[5] = rspatient["BIRTHDATE"].ToString();
+                patients[6] = rspatient["SEX"].ToString();
+                patients[7] = rspatient["MARITAL_STATUS"].ToString();
+
+                
+                dgSecPatList.Rows.Add(patients);
+            }
+        }
+
+        private void btnvwpat_Click(object sender, EventArgs e)
+        {
+
+            dgSecPatList.Rows.Clear();
+            loadSecPatientList();
+            pnlSecPatientList.Visible = true;
+        }
+
+        private void secondPatlist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rownum = e.RowIndex;
+
+            txtwaitpatient.Text = dgSecPatList.Rows[rownum].Cells[0].Value.ToString();
+
+            pnlSecPatientList.Visible = false;
+        }
+
+        private void btnremovewait_Click(object sender, EventArgs e)
+        {
+            int selrow = dgwaitlist.CurrentRow.Index;
+
+            DialogResult removeWait = MessageBox.Show("Are you sure you want to remove this patient from the waiting list?", "Confirm Deletion", MessageBoxButtons.YesNo);
+            if (removeWait == DialogResult.Yes)
+            {
+                DB.Query("DELETE FROM WAITLIST WHERE ORDERNUM = " + Convert.ToInt32(dgwaitlist.Rows[selrow].Cells[0].Value));
+                loadWaitList();
+            }
+
+        }
+
+        private void InPatients_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            StaffMainMenu frmStaff = new StaffMainMenu();
+            frmStaff.Show();
+            this.Dispose();
         }
     }
 }
